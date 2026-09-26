@@ -29,7 +29,18 @@ and Enrichr (206 terms, KEGG_2021_Human) - were run on this set; both
 return the Chagas pathway itself as the top term (p = 1.7e-234 and
 2.0e-277 respectively), an engine-independent confirmation that the
 anchor set is disease-coherent and that both pipelines are wired
-correctly. Reactome (TGF-beta signaling, R-HSA-170834) and QuickGO
+correctly. The second-rank terms agree across
+engines too: Toll-like receptor signaling (g:Profiler KEGG p = 8.5e-67;
+Enrichr p = 4.8e-89) and lipid-and-atherosclerosis (p = 7.4e-60 and
+5.8e-83) - innate-immune and vascular-remodeling biology, the same axes
+the discovery arm's target-program enrichments land on in section 9. The
+Open Targets anchor figures cited in section 2 (890 associated targets;
+TGFB1 top host target, score 0.089) regenerate from the saved GraphQL
+response (sources/services/opentargets/chagas_targets_top20.json), and
+the drug/structure counts - ChEMBL 9 indication records across 6
+molecules (CHEMBL110 benznidazole, CHEMBL1487, CHEMBL1397, CHEMBL1631694,
+CHEMBL290960, CHEMBL6068503) and 39 cruzipain PDB entries - were
+re-verified against the saved responses before appearing here. Reactome (TGF-beta signaling, R-HSA-170834) and QuickGO
 (cruzipain GO annotations) supply pathway context; STRING supplies the
 parasite-side network neighborhood of cruzipain in T. cruzi CL Brener.
 
