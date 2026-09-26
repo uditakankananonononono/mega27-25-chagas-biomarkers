@@ -84,14 +84,41 @@ set: PI3K-Akt signaling (KEGG p=5.8e-22; WP p=6.8e-19) and focal
 adhesion/PI3K-Akt/mTOR (p=1.5e-18) - the pathway context is
 engine-stable, not an Enrichr artifact (results/gprofiler_cardiac18_strong.json).
 
-## 9.4 Honest status box
+## 9.4 Honest status box (updated 2026-09-27)
 PASSED: record floor (716), provenance model, benchmark-beat (H1'),
 novelty screen (gate c), judge round 01 with landed redesign, gate (b)
 enrichment in the cardiac-cellular cohort (18/20) with a 6-candidate
 both-tissue core (miR-1-3p, miR-122-5p, miR-192-5p, miR-30c-5p,
-miR-145-5p, miR-194-5p).
+miR-145-5p, miR-194-5p), the 40-distinct-service inventory (after the
+re-use count correction, section 5), the module score (CORE6 monotone,
+KW p = 1.7e-11, c-index 0.756 - descriptive, in-sample), the
+druggability overlay (49/344 Approved-Drug targets - target-program
+framing only) and the module-coherence evidence (STRING 1051 vs 418
+expected edges, p < 1e-16, corroborated by IntAct counts).
 PARTIAL: gate (b) in blood (6/20; three candidates null).
-PENDING: module score, druggability overlay, 9 more judge rounds,
-9 more services, full paper assembly.
+REPORTED NEGATIVES: the frozen H1 binary benchmark (Run 1), the
+18-member superset as a signed module (c-index 0.509), miR-206 and
+miR-374b-5p in the cardiac cohort, three blood-null candidates.
+PENDING: judge rounds 02-10 (round 02 staged, token-gated), full paper
+assembly toward the 50-page floor, and the OPEN world-benchmark audit
+flag - no external champion comparison exists, and none is claimed.
 The module claim now rests on the 6-candidate both-tissue core; the
 cardiac-only 12 are secondary support. No single-marker claim.
+
+## 9.5 What the module does not explain
+Three honest gaps bound the discovery claim. First, direction of
+causality: a serum miRNA whose validated cardiac targets move in the
+predicted direction is consistent with cardiomyocyte injury leaking both
+the miRNA and the transcriptomic scar, but equally consistent with the
+miRNA trafficking into the heart and driving the change - the data do
+not distinguish, and the claim wording ("tracks") was frozen precisely
+to avoid implying either. Second, the blood compartment: the module's
+blood visibility (6/20) was measured on an early-stage seropositive
+contrast, not on graded CCC - a graded blood-mRNA cohort does not exist
+in the compendium, so the blood arm's relationship to severity (rather
+than to serostatus) is untested. Third, member stability: CORE6 was
+selected by an AND rule across two cohorts, not by resampling; a
+bootstrap membership analysis would quantify how often each of the six
+re-enters the core, and is a named next analysis rather than a completed
+one. None of these gaps is hidden from the claim; each defines a
+checkable follow-up.
