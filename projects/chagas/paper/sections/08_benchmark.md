@@ -71,13 +71,17 @@ better than any single marker - and the margin over the clinical baseline
 confounders most often mistaken for severity signal in cohorts this size.
 The descriptive secondaries tell a consistent story without carrying
 benchmark weight: the frozen ordinal macro-AUC was 0.779 in the Run-1
-audit (n=146, descriptive-only status per Addendum 1), and the
-independent confirmation run of the locked H1' pipeline
-(scripts/h1prime_ordinal.py, results/h1prime_ordinal.json) reproduced the
-beat at model 0.787 vs clinical 0.628 vs single 0.714 - the small
-third-decimal differences from the CI run reflect the two scripts'
-resampling streams, and both runs are logged with their commit hashes
-rather than harmonized after the fact.
+audit (n=146, descriptive-only status per Addendum 1). The H1' run
+itself (2026-09-26T21:35 IST) executed two committed scripts against the
+same locked design - h1prime_ordinal.py and h1prime_ci.py - which report
+the model at 0.787 on both, the clinical baseline at 0.628 and 0.620
+respectively, and the best single miRNA at 0.714 and 0.713; both
+scripts, both result files, and the commit hashes are in the run log
+rather than harmonized after the fact. The audit trail also preserves a
+caught error: an initial version of the CI script had a scoring bug (a
+score vector was subtracted instead of a concordance index computed), it
+was caught by sanity bounds, fixed, and rerun - the kind of bug that a
+results-only paper never shows.
 
 ## 8.4 What the beat does and does not mean
 The comparators are honest but internal: no external cohort with graded
