@@ -3,10 +3,12 @@
 Status: ACTIVE lane with executed preregistered results - not a finished
 paper, and no master-spec completion claims are made here. Current gate
 state (honest, 2026-09-27): 716 byte-verified records (corrected from
-750; commit ef7b29a) across 16 human series; 40 distinct external tools
+750; commit ef7b29a) across 15 human series; 40 distinct external tools
 (count-corrected, SERVICE_LEDGER.md); 11 numbered formulas
-(paper/sections/06b_formulas.md); paper skeleton sections 1-11 with real
-results written in but far from the 50+ page target; judge rounds 1/10.
+(paper/sections/06b_formulas.md); paper sections 1-11 with real
+results written in; measured working build 25 A4 text pages at
+11pt mathptmx (paper/build.sh, regenerable - 2026-09-27), far from the
+50+ page floor; judge rounds 1/10.
 
 Executed results: ordinal severity model beats both locked internal
 comparators (c-index 0.787 vs 0.620 clinical, vs 0.713 best single
