@@ -8,7 +8,16 @@ PREREGISTRATION.md). PMIDs were verified per series in ACQUISITION_LOG.md.
 - GSE299582 (n=192, serum miRNA-seq). The largest acquired cohort and the
   primary severity dataset: chronic Chagas cardiomyopathy (CCC) graded
   mild/moderate/severe plus controls. Anchors preregistered hypothesis H1
-  (benchmark-beat severity classification). PMID 41574750.
+  (benchmark-beat severity classification). PMID 41574750. Composition
+  from the frozen per-sample characteristics (all 192 rows carry age,
+  gender, disease-form and severity fields): 104 CCC samples graded mild
+  (37), moderate (37) and severe (30); 46 indeterminate-form samples; 42
+  non-chagasic controls. Sex split 103 female / 89 male; recorded ages
+  span 30-83 years. The near-balance of mild and moderate grades and the
+  smaller severe grade shape every severity-graded analysis downstream:
+  ordinal tests have reasonable support across the full grade ladder, but
+  pairwise severe-vs-control contrasts run on 30 cases and are reported
+  with that power limitation attached.
 - GSE244827 (n=33, whole-blood RNA-seq; prior-tagged under P31, retained
   as provenance). Asymptomatic/early-CCC vs seronegative; orthogonal
   replication cohort for H2 cross-modal convergence. PMID 40290486.
@@ -64,10 +73,33 @@ Disease spectrum: indeterminate/asymptomatic, graded CCC (mild to severe),
 congenital transmission, and in-vitro infection models - the full natural
 history except acute-phase sampling, which no public human series offered
 at sweep time (gap logged). Tissue breadth: heart, blood, serum, placenta,
-PBMC, DC, macrophage, cardiomyocyte lines. Technology breadth: five assay
-families across 13 platforms. The atlas is deliberately heterogeneous:
+PBMC, DC, macrophage, cardiomyocyte lines. Technology breadth: five assay families across nine
+platforms, enumerated from the frozen crosswalks rather than from series
+text: GPL14550 (GSE84796 array), GPL16791 (GSE107376, GSE328447 and the
+human arm of GSE158986), GPL17301 (GSE129676), GPL18573 (GSE203525),
+GPL21145 (GSE191082 methylation), GPL24676 (GSE191081, GSE244827,
+GSE295194, GSE311812, GSE333874), GPL28868 (GSE154421 SNP array),
+GPL29219 (the second arm of GSE158986's dual-organism design, 6 samples
+against 6 on GPL16791), and GPL30173 (GSE299582, GSE348071). The atlas is deliberately heterogeneous:
 the preregistered convergence test (H2) uses that heterogeneity as the
 replication filter rather than treating it as noise to be normalized away.
+
+## 4.6b Label vocabulary by design family
+Labels are assigned per series by scripts/label_crosswalks.py under
+explicit per-series rules, with zero unmapped rows at verification time.
+Clinical-cohort series use case/control (with the underlying severity or
+form retained in characteristics); in-vitro mechanism series use the
+honest treatment vocabulary instead: infected/control (GSE158986),
+treated/control (GSE328447), variant/reference (GSE348071). Three series
+carry their primary contrast inside the sample record rather than in the
+label column: GSE154421 (all 92 rows are benznidazole-treated Chagas
+patients; the adverse-reaction yes/no field is the real contrast),
+GSE203525 (20 CCC/indeterminate patient lines; the line-status and
+reinfection contrasts live in characteristics), and GSE333874 (all 31
+rows placental; the transmitter/non-transmitter contrast lives in
+characteristics). A reader who groups naively by the label column will
+misread these three series; the crosswalk characteristics are the
+authoritative record.
 
 ## 4.7 Prior-tagged series (provenance only, not re-counted)
 GSE84796 and GSE244827 remain in the crosswalk set so that a reader can
@@ -81,7 +113,7 @@ through the prior manifest.
 | GSE107376 | 9 | GPL16791 | case 6, control 3 |
 | GSE129676 | 16 | GPL17301 | case 8, control 8 |
 | GSE154421 | 92 | GPL28868 | case 92 (genotype contrast within) |
-| GSE158986 | 12 | GPL16791 | infected 6, control 6 |
+| GSE158986 | 12 | GPL16791 + GPL29219 | infected 6, control 6 |
 | GSE191081 | 22 | GPL24676 | case 8, control 14 |
 | GSE191082 | 158 | GPL21145 | case 104, control 54 |
 | GSE203525 | 20 | GPL18573 | case 20 (line-level contrasts within) |

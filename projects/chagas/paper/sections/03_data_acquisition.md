@@ -74,3 +74,74 @@ placenta, macrophage), single-cell RNA-seq (PBMC), spatial transcriptomics
 methylation (blood), and SNP pharmacogenomics. Organism: Homo sapiens
 throughout; parasite-side context is supplied by service retrievals
 (section 5), not by mixing organisms into the human cohort atlas.
+
+## 3.8 Verification statistics and the spot-check record
+The first acquisition pass preserved 411 per-sample SOFT files plus 11
+series-level files, every one sha256-hashed at fetch time. The hermetic
+verifier re-hashes all of them on every run and checks SOFT
+well-formedness, GSM uniqueness across series, disjointness from the six
+previously tagged series, non-empty labels, and record accounting; all
+checks pass at the current tip. Hash-matching alone only proves we kept
+what we downloaded, not that the download was ever faithful, so the
+protocol adds live spot re-verification: after the first pass, 21 GSMs
+drawn at random (seed 25, about 5% of 411) were re-fetched independently
+and all 21 refetched byte strings reproduced their recorded sha256 with
+zero mismatches; a separate single-record reproduction at acquisition time
+(GSM9683415) also matched its recorded sha256 exactly. One structural
+caveat is logged rather than smoothed over: series-matrix files exist on
+the GEO FTP mirror for 10 of 11 first-pass series, while GSE158986
+(dual-organism RNA-seq) ships supplementary count files only, so its
+downstream processing path differs from the series-matrix path and is
+documented as such.
+
+## 3.9 Label-assignment machinery
+Labels are not read off accession titles. scripts/label_crosswalks.py
+applies explicit per-series rules over the frozen characteristics and
+titles, and the verifier fails if any row is left unmapped; the current
+corpus has zero unmapped rows. The vocabulary is deliberately split
+between clinical cohorts (case/control, with severity and disease form
+retained verbatim in characteristics) and mechanism contrasts
+(infected/treated/variant/reference - section 4.6b). A worked example of
+why this machinery exists: the GSE311812 series design text states five
+transmitter blood samples, but the deposited sample titles record six; we
+treated the titles as the record of truth (25 case / 21 control) and
+logged the discrepancy in ACQUISITION_LOG.md rather than silently
+choosing either number.
+
+## 3.10 The GSE244827 matrix-column bijection
+The GSE244827 expression matrix column headers (B052..H754, 33 libraries)
+are laboratory codes that do not describe themselves, and the acquisition
+crosswalk rows carry no B-code field, so column-to-label assignment could
+not be taken from either artifact alone. We resolved it against live GEO:
+each GSM's SOFT record carries its CHAVA B-code in !Sample_description
+(e.g. GSM7830424 -> B052). All 33 records were re-fetched on 2026-09-27
+00:35 IST; the resulting map (sources/GSE244827_column_label_map.csv) is
+bijective with the 33 matrix columns and confirms that acquisition-time
+GSM order matches matrix column order exactly. Labels then come from the
+frozen crosswalk (10 case / 23 control), not from the live page. One
+honest caveat is recorded in prereg/RUN_LOG.md: the re-fetched SOFT page
+bytes do not hash-match the acquisition-time crosswalk hashes because the
+page carries dynamic content, but the B-code and label metadata lines are
+stable and mutually consistent with the matrix header. The analysis
+script (scripts/h2_gate_b_enrichment.py) asserts the bijection and the
+per-group sizes before computing anything and fails loudly on mismatch,
+so a future matrix-or-map drift breaks the run instead of silently
+mislabelling samples. The same pattern - assert group structure on the
+live header rather than assume it - is applied to GSE203525 (6 CCC + 6
+indeterminate at 0hpi verified against the header).
+
+## 3.11 Rejected-series register
+Relevance screening rejected more candidates than it accepted, and every
+rejection is logged with its reason in ACQUISITION_LOG.md so the corpus
+boundary is auditable. Concrete rejections from the 2026-09-26 sweep:
+GSE78975 (anxiety-disorder methylome; keyword match only, no Chagas
+content), GSE27353 and GSE27054 (thymocyte hormone studies; no Chagas
+content), and GSE7047 (a 2007 infected-cell-line array whose platform
+GPL1053 is already implicated in the program's skip_labels exclusions).
+GSE191083 was acquired and then removed by the hermetic verifier itself:
+its uniqueness check showed the series is the super-series container of
+GSE191081 and GSE191082, so all 180 of its GSMs duplicate records already
+held through the component series. That removal is exactly the failure
+the uniqueness gate exists to catch, and it is why compendium counts are
+always recomputed from the frozen crosswalks rather than quoted from
+status text (section 3.6).
