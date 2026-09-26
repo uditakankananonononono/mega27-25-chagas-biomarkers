@@ -21,6 +21,10 @@ PREREGISTRATION.md). PMIDs were verified per series in ACQUISITION_LOG.md.
 - GSE244827 (n=33, whole-blood RNA-seq; prior-tagged under P31, retained
   as provenance). Asymptomatic/early-CCC vs seronegative; orthogonal
   replication cohort for H2 cross-modal convergence. PMID 40290486.
+  Crosswalk composition: cardiac-stage field CARD 16 / non-CARD 17 with
+  sex 19F/14M recorded per donor; the label column (10 case / 23 control)
+  follows the frozen crosswalk, and the matrix-column identity is the
+  verified B-code bijection of section 3.10.
 
 ## 4.2 Cardiac tissue and cardiomyocyte models
 - GSE84796 (n=17, expression array; prior-tagged). Cunha-Neto CCC heart
@@ -29,44 +33,82 @@ PREREGISTRATION.md). PMIDs were verified per series in ACQUISITION_LOG.md.
   leave-one-person-out is documented in NOVELTY_PLAN.md.
 - GSE203525 (n=20, RNA-seq, patient hiPSC-derived cardiomyocytes). CCC vs
   indeterminate patient lines, with and without T. cruzi reinfection;
-  graded by donor clinical status. PMID 35873155.
+  graded by donor clinical status. PMID 35873155. Crosswalk composition:
+  12 CCC-donor and 8 indeterminate-donor cardiomyocyte samples, split
+  10 non-infected / 10 infected with T. cruzi Y strain. This is the
+  gate-(b) cardiac cohort; the analysis contrast (CCC vs indeterminate
+  at 0hpi-equivalent, 6 vs 6) is asserted against the live header
+  before every run (section 3.10).
 - GSE129676 (n=16, RNA-seq, hiPSC-CM). Chagas-patient vs control
   cardiomyocyte infection timecourse. Timecourse design labels are
   honest treatment contrasts, not clinical labels. PMID 31105048.
+  Crosswalk composition: 8 Chagas-disease and 8 control donor lines,
+  four libraries each at 0h, 24h, 48h and 72h post-infection - the
+  only time-resolved cardiomyocyte design in the atlas.
 - GSE348071 (n=32, RNA-seq, AC16 cells + patient iPSC-CM). DHODH R135C
   mitochondrial vulnerability in CCC; stimulation contrasts
   (e.g. IFN-gamma) labelled as such. Unpublished at acquisition time;
-  flagged for citation monitoring.
+  flagged for citation monitoring. Crosswalk composition: 16 AC16 and
+  16 patient iPSC-CM libraries across three genotype arms - 8 reference
+  C/C, 16 heterozygous p.Arg135Cys (C/T), 8 CRISPR-corrected C/C - and
+  three 48-hour treatments (16 untreated, 8 IFN-gamma, 8 IFN-gamma +
+  TNF-alpha). The CRISPR-corrected arm is the design's strength: it
+  isolates the variant's effect from donor background.
 
 ## 4.3 Congenital transmission
 - GSE311812 (n=46, RNA-seq + Visium spatial). Maternal blood and placenta
   with transmitter/non-transmitter contrast; the only spatial dataset in
-  the compendium. PMID 41648170.
+  the compendium. PMID 41648170. Crosswalk composition: 24 peripheral
+  blood, 20 central-placenta (fetal side) and 2 central chorionic-villi
+  records. The transmitter count discrepancy (6 in titles vs 5 in the
+  design text) is resolved in section 3.9; labels follow the titles.
 - GSE333874 (n=31, small RNA-seq, placenta). Congenital-transmission
   miRNAs; tissue-restricted complement to the serum miRNA severity cohort.
   PMID 42523576.
-- GSE107376 (n=9, expression array, placenta). Seropositive vs
-  seronegative mothers; smallest cohort, retained for transmission-theme
-  completeness with its power limitation stated. PMID 29545200.
+- GSE107376 (n=9, expression array, middle-section placenta). Seropositive
+  vs seronegative mothers; smallest cohort, retained for transmission-theme
+  completeness with its power limitation stated. PMID 29545200. Crosswalk
+  composition: 6 seropositive mothers (3 PCR-positive, 3 PCR-negative) and
+  3 seronegative mothers - serostatus and PCR status are recorded
+  separately, so the tiny n does not force the two into one axis.
 
 ## 4.4 Innate immune response models
 - GSE158986 (n=12, RNA-seq, monocyte-derived dendritic cells). Human
   first-contact response to T. cruzi; treatment-contrast labels.
-  PMID 33897690.
+  PMID 33897690. Dual-platform deposit (6 libraries on GPL16791, 6 on
+  GPL29219, section 4.6) with donor and replicate fields preserved per
+  library; the only series in the atlas without a GEO series-matrix
+  file (supplementary counts only, section 3.8).
 - GSE328447 (n=4, small RNA-seq, THP1 macrophages). isomiR response in an
   infection model; retained as an exploratory isomiR lead with explicit
-  small-n caution. PMID 42614816.
+  small-n caution. PMID 42614816. The recorded treatment contrast is
+  verbatim: miR-1246+1 mimic transfection vs control mimic transfection
+  (2+2) - a mimic-intervention design, labelled treated/control and used
+  as nothing more than an exploratory lead.
 - GSE295194 (n=16, scRNA-seq PBMC with sample tags). CCC vs indeterminate
   CD4 T-cell peptide response; single-cell modality. PMID 40391216.
+  Crosswalk composition: 16 wild-type PBMC libraries with batch, cell-type
+  and genotype fields; all 16 carry the case label with the
+  donor-status/peptide-response contrast inside the sample records
+  (section 4.6b).
 
 ## 4.5 Methylation and pharmacogenomics (context modalities)
-- GSE191081 (n=22) and GSE191082 (n=158), DNA methylation. The CCC
-  methylation study pair; 180 GSMs acquired with the super-series
-  GSE191083 deliberately dropped after the uniqueness check flagged it as
-  a container that would double-count its children. GSE154421 (n=92, SNP
-  pharmacogenomics) covers benznidazole-response genotypes - a treatment-
-  response modality orthogonal to every expression cohort. These three
-  series are context for discussion, not expression endpoints.
+- GSE191081 (n=22, heart LV-wall RNA-seq) and GSE191082 (n=158,
+  methylation tiling array: 144 blood, 14 heart). The CCC methylation
+  study pair; 180 GSMs acquired with the super-series GSE191083
+  deliberately dropped after the uniqueness check flagged it as a
+  container that would double-count its children. GSE191081's group
+  field is three-way - 8 chronic chagasic cardiomyopathy, 8 dilated
+  cardiomyopathy, 6 non-chagasic control - and the label column
+  collapses it to case/control (CCC vs the rest), so any disease-
+  specificity question must read the group field, not the label.
+  GSE191082 labels 104 case / 54 control across its two tissues.
+  GSE154421 (n=92, SNP pharmacogenomics) covers benznidazole-response
+  genotypes - a treatment-response modality orthogonal to every
+  expression cohort; its real contrast, adverse reaction to
+  benznidazole (63 yes / 29 no), lives in the characteristics, and all
+  92 donors are Chagas patients. These three series are context for
+  discussion, not expression endpoints.
 
 ## 4.6 Atlas-level properties
 Disease spectrum: indeterminate/asymptomatic, graded CCC (mild to severe),
