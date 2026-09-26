@@ -1,15 +1,27 @@
 # 2. Introduction: the burden and the biomarker gap
 ## 2.1 The disease
-Chagas disease (American trypanosomiasis, Trypanosoma cruzi) affects
-roughly 6-7 million people, mostly in Latin America (WHO fact sheet,
-retrieved 2026-09-26, sources/services/who/). After an often-unnoticed
-acute phase, infection persists for life; 20-30% of those infected
-eventually develop chronic Chagas cardiomyopathy, the form that kills.
-The tragedy is mechanical: patients feel well while fibrosis and
-conduction damage accumulate, and by the time symptoms declare, the
-myocardium is already remodeled. The CDC's diagnostic guidance
-(sources/services/cdc/) confirms the tools that exist - serology, PCR,
-imaging - answer "infected?" and "damaged?" but not "progressing?".
+Chagas disease (American trypanosomiasis, Trypanosoma cruzi) infects
+approximately 8 million people worldwide, mostly across 21 continental
+Latin American countries, kills more than 10,000 people a year, and
+places more than 100 million at risk of infection (WHO fact sheet,
+retrieved and hashed 2026-09-26, sources/services/who/; earlier drafts
+of this section quoted the older 6-7 million estimate - the retrieved
+document says 8 million, and the retrieved document governs).
+Transmission runs through triatomine vectors, congenital passage during
+pregnancy or birth, contaminated food, transfusion, transplantation and
+laboratory accidents. After an often-unnoticed acute phase - a chagoma
+or Romana's sign at most - the parasites sequester in heart and
+digestive muscle, and one to three decades later up to a third of
+chronically infected people develop cardiac alterations and one in ten
+digestive, neurological or mixed forms. The disease is curable if
+antiparasitic treatment (benznidazole or nifurtimox) is given early, in
+the acute phase; in chronic infection, treatment and follow-up can at
+best curb progression. The tragedy is mechanical: patients feel well
+while fibrosis and conduction damage accumulate, and by the time
+symptoms declare, the myocardium is already remodeled. The CDC's
+diagnostic guidance (sources/services/cdc/) confirms the tools that
+exist - serology, PCR, imaging - answer "infected?" and "damaged?" but
+not "progressing?".
 ## 2.2 The gap this project attacks
 A marker that tracks progression would change triage: who needs annual
 echocardiography, who needs treatment escalation, who is safe to watch.
