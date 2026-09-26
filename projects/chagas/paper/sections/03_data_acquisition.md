@@ -65,8 +65,9 @@ to every claim in this paper. The corrected, live-verified total is
 (Open Targets disease entry EFO_0008559), against a program floor of 120.
 
 ## 3.7 Record inventory
-The 700 crosswalk GSM rows span 16 crosswalk files (15 series plus the
-prior GSE84796 provenance file); 650 rows are new acquisitions and 50 are
+The 700 crosswalk GSM rows span 16 crosswalk files covering 15 distinct series
+(the sixteenth file is the prior provenance file for GSE84796,
+GSE84796_used_sample_crosswalk.csv, not a separate series); 650 rows are new acquisitions and 50 are
 prior-tagged rows retained as provenance. Modalities: bulk RNA-seq (blood,
 hiPSC-cardiomyocyte, dendritic cell, placenta), small/miRNA-seq (serum,
 placenta, macrophage), single-cell RNA-seq (PBMC), spatial transcriptomics

@@ -1,4 +1,4 @@
-# 4. Cohort atlas: sixteen annotated series
+# 4. Cohort atlas: fifteen annotated series
 
 Each entry: accession, n samples, assay, biological question, label status,
 and the role the cohort plays in the preregistered analyses (prereg/

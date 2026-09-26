@@ -3,7 +3,7 @@ Chagas disease kills through a slow, silent progression from asymptomatic
 infection to chronic cardiomyopathy (CCC), and the field still lacks
 validated markers that track that progression. This project builds a
 provenance-first compendium of 716 individually byte-verified public
-records across 16 human Chagas series - serum miRNA, blood and tissue
+records across 15 human Chagas series - serum miRNA, blood and tissue
 RNA-seq, single-cell, spatial, methylation and pharmacogenomics - and runs
 two preregistered analyses on the only severity-graded serum miRNA cohort
 (GSE299582, n=192). First, a locked ordinal severity model
