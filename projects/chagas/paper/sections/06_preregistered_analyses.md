@@ -131,3 +131,33 @@ records and asserted in code. Both disclosures strengthen the run; the
 design did not move. The module score and druggability overlay followed
 per C3 (section 9): the both-tissue core satisfies every C3 tier; the
 in-sample nature of the score is stated wherever the number appears.
+
+## 6.7 Judge round 01: the record behind Addendum 3
+Round 01 ran 2026-09-26T21:21 IST via the text-paste route (ChatGPT Free
+thread 6ab7e9ef; prompt and full response preserved verbatim in
+judge_rounds/01_prompt.txt and 01_response.txt and re-read in full before
+the consult ended). The persona then was a simulated competition-style
+critique; the framing has since been standardized to an expert research
+reviewer (competition framing dropped), and the advisory status is
+unchanged: judge content is input, never authority - every adopted change
+was locked by us in Addendum 3 before any run used it. The verdict:
+prediction weak, biology promising, novelty moderate, with the standing
+warning that "the biggest mistake would be trying to resurrect the binary
+classifier." Its three routings, and what we did with them. Q1 (H1
+redesign): abandon the benchmark-beat as primary - "structurally
+unsalvageable", the -55.7 R2 being catastrophic instability at n=45 test,
+not a tuning problem - and re-register ordinal severity prediction with
+nested CV and pre-specified metrics against clinical and single-marker
+baselines; post-hoc metric rescue, ordinal-vs-DEM benchmarking and
+protein-subset benchmarking were each rejected with stated reasons.
+Adopted as C1. Q2 (H2 routing): first choice miRNA-to-validated-target
+direction-predicted enrichment (miRTarBase, CLIP-supported preferred,
+explicitly not bare prediction-database fishing), second gene-level
+convergence reframing, third placenta miRNA (biologically poor match),
+and a standing demotion of monotonic-trend evidence to dose-response
+support, never replication. Adopted as C2. Q3 (novelty): the multi-omic
+severity module score with a pharmacogenomic druggability overlay, with
+the claim sentence that now anchors section 9. Adopted as C3. The
+round's throughline - let the failed classifier stay failed and rebuild
+the claim on what the data actually support - is the reason this paper
+has a section 8 at all.
