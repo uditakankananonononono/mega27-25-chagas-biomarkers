@@ -35,3 +35,68 @@ used are stable and mutually consistent. Target-program druggability
 (Open Targets tractability) does not imply the miRNAs themselves are
 druggable. Enrichr pathway context is post-hoc and descriptive, outside
 the preregistered gates.
+
+## 10.2 Compendium-level limitations
+The 716 records are records, not independent studies: they span 15
+independent series, and the GSM samples are nested within their GSE
+parents. Any reader who treats the record count as a cohort count will
+overstate the evidence base by two orders of magnitude; the per-disease
+gate counts records, and we report both numbers together for exactly this
+reason. Provenance is single-source: every record comes from NCBI GEO, so
+a GEO-side metadata error that is internally consistent would survive our
+checks - byte-hashing proves fidelity to the source, not truth of the
+source. De-duplication trusts GEO's super-series structure: the
+GSE191083 catch worked because the container was declared, and an
+undeclared overlap of the same samples across unrelated series would be
+harder to detect at series level. The 750->716 correction (section 3.6)
+is itself evidence that expansion-time counts are fragile; the standing
+rule - recompute from frozen crosswalks, never quote status text - exists
+because this failure already happened once in this lane. Live
+re-verification samples 5-10% of records per run, not the whole corpus;
+an unsampled record could in principle have changed upstream, though the
+hermetic hash check still bounds what we use to what we recorded.
+
+## 10.3 Statistical limitations
+Every performance number in sections 7-9 is computed inside one cohort
+family. Nested 5x3 cross-validation with feature selection inside the
+outer fold controls the obvious optimism, but the out-of-fold predictions
+remain pooled across resamples of the same 146 donors; the bootstrap
+confidence intervals on their differences measure resampling stability,
+not transportability. The severe grade is 30 samples, so any
+severe-specific subgroup claim is underpowered by construction. The
+gate-(b) enrichment null is size-preserving over random gene sets; it
+does not preserve the correlation structure of co-expressed genes, so its
+p-values are calibrated for the question "would an arbitrary set of this
+size do as well" and not for "would a correlated set do as well". The
+module score's members and weights come from the same cohort that scores
+them (in-sample, descriptive); the KW p=1.7e-11 and c-index 0.756 for
+CORE6 quantify separation inside GSE299582 only. Kruskal-Wallis across
+four grades is a heterogeneity test; monotonicity is assessed separately
+and reported as dose-response support, not as a replication event.
+
+## 10.4 Service and evidence-currency limitations
+Three services carry version or access caveats that bound their evidence.
+miRTarBase is pinned to v8.0 (2022) via a Wayback snapshot of the
+publisher URL because the live site returns 404/400; validated-target
+sets may miss post-2022 evidence, and the pin is disclosed in the
+judge-round record. Enrichr results are tied to a specific userListId and
+library versions at run time; reruns can drift as libraries update. Open
+Targets tractability and target-disease association scores are
+live-service outputs captured as JSON snapshots; the service's underlying
+data releases move, so the druggability overlay is a dated snapshot, not
+a standing fact. WHO/CDC burden figures are retrieved-and-hashed web
+documents whose numbers update on the source's schedule.
+
+## 10.5 What would close each gap
+In order of leverage: (i) an external severity-graded serum miRNA cohort
+would convert the section-8 internal beat into a transport claim - none
+is public at sweep time; (ii) a longitudinal seropositive cohort with
+adjudicated cardiac outcomes would unlock the progression-marker question
+that section 2.3b shows is currently out of reach; (iii) a miRTarBase
+version refresh, once the live service is reachable, would tighten gate
+(b) without changing its rule; (iv) same-molecule placenta or blood
+miRNA cohorts would let the discovery arm test replication in the strict
+sense Addendum 3 currently routes around. Each item is a named, checkable
+next step, not a rhetorical hedge: if any becomes available, the lane's
+standing rules require it to be acquired, hashed, and registered before
+outcomes are examined.
