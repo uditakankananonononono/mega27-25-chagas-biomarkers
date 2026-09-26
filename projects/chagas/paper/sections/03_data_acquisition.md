@@ -146,3 +146,24 @@ held through the component series. That removal is exactly the failure
 the uniqueness gate exists to catch, and it is why compendium counts are
 always recomputed from the frozen crosswalks rather than quoted from
 status text (section 3.6).
+
+## 3.12 The acquisition timeline, in passes
+The compendium was built in two passes plus corrections, each logged
+with its own verification record. Pass one (2026-09-26) closed the
+67-record shortfall to the 120-record floor: 11 new series, 411 new GSM
+records, chosen by the live eutils sweep (25 hits, relevance-screened)
+with the six previously tagged series excluded; the hermetic verifier
+passed and 21/21 spot re-fetches matched their recorded hashes. Pass two
+(same day, on direction to acquire the reserved leads) added 3 series
+and 271 GSMs - the methylation pair GSE191081/GSE191082 and the
+benznidazole pharmacogenomics series GSE154421 - and immediately
+produced the lane's two teaching errors: GSE191083 was acquired and
+removed within the pass when the uniqueness check exposed it as the
+super-series container of the methylation pair, and the expansion total
+was corrected 750 -> 716 when live recomputation showed GSE244827 had
+been re-acquired despite already sitting in the prior manifest (the
+exclusion list had not been updated before the pass). Both corrections
+are recorded append-only (ACQUISITION_LOG.md, commit ef7b29a) and both
+are why every count in this paper is recomputed from the frozen
+crosswalks at claim time: the errors were caught precisely because the
+verifier, not the narrative, keeps the books.
