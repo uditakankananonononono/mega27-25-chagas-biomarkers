@@ -23,6 +23,26 @@ Kuleshov et al. 2016, NAR 44:W90-97) GO BP 2025 / KEGG 2021 / WikiPathways
 GraphQL tractability. GEO/SRA and eutils per ACQUISITION_LOG.
 
 
+## 11.1 Per-series reference map
+Every cohort in the atlas is anchored to its publication record; PMIDs
+were verified per series at acquisition (ACQUISITION_LOG.md), not copied
+from secondary sources. GSE299582 -> PMID 41574750 (Roma et al. 2026,
+J Infect Dis 234(2):277-287; the severity-miRNA source paper, also the
+frozen comparator context and the Addendum-2 exclusion source);
+GSE244827 -> PMID 40290486; GSE203525 -> PMID 35873155; GSE129676 ->
+PMID 31105048; GSE158986 -> PMID 33897690; GSE295194 -> PMID 40391216;
+GSE107376 -> PMID 29545200; GSE311812 -> PMID 41648170; GSE333874 ->
+PMID 42523576; GSE328447 -> PMID 42614816; GSE348071 -> unpublished at
+acquisition (flagged for citation monitoring); GSE191081/GSE191082 ->
+methylation study pair per ACQUISITION_LOG; GSE154421 -> benznidazole
+pharmacogenomics per ACQUISITION_LOG; GSE84796 -> Cunha-Neto CCC heart
+tissue study (prior-tagged). Comparator and constraint literature:
+PMID 34479416 (Choudhuri et al. 2021, the ELISA prognosis panel whose
+0.688 R2 anchored failed H1), PMID 38203212 (2024 prospective
+parasite-DNA + 47-protein ten-year decline model), PMID 23393012 (the
+499-donor ten-year outcomes cohort), and the WHO fact sheet and CDC DPDx
+pages retrieved-and-hashed under sources/services/.
+
 ## Appendix B: crosswalk schema (frozen)
 Every per-series crosswalk (sources/<GSE>_sample_crosswalk.csv) carries:
 gsm, source_url (canonical acc.cgi full-text URL), sha256 (of the stored
