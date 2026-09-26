@@ -145,3 +145,17 @@ gate (b) enrichment, module score, druggability overlay.
 mygene.info independently confirms BioMart symbol mapping (344/352 both);
 8 legacy symbols named and kept. Pharos blocked (HTTP errors, endpoint
 moved). miRBase live lookup logged as service for the 375-alias proof.
+
+## COUNT CORRECTION - gate-(a) prose numbers - 2026-09-27T02:58 IST (revival agent)
+The H2 GATE (a) RUN entry above (2026-09-26T20:34) states "2114 miRNAs
+tested (after drop of all-zero rows), gate (a) passing 28". The committed
+artifacts from that same run record otherwise: results/h2_gate_a_summary.json
+(tested 2632, gate_a_passing 21, candidates 20), results/h2_gate_a_passing.csv
+(21 rows = 1 REPLICATION + 20 CANDIDATE), and
+results/h2_severity_association_all.csv (2,632 rows, matching the full
+matrix; the committed script performs no all-zero-row drop). The
+candidates count (20) agrees everywhere and downstream work (gate b's 20
+tests, the CORE6 core) is unaffected. The 2114/28 prose figures were a
+narrative transcription error; corrected here append-only per standing
+convention (same rule as the 750->716 record correction). Paper section 7
+now quotes the artifact numbers.

@@ -5,16 +5,22 @@ GSE299582 (Roma et al. 2026) was acquired as the program's severity-graded
 anchor because it is the only public human Chagas cohort pairing graded
 chronic cardiomyopathy (37 mild, 37 moderate, 30 severe) with adequate
 controls (42 non-ChD) and an indeterminate seropositive arm (46) in one
-assay. The frozen four-group analysis (Kruskal-Wallis, 2,114 expressed
-miRNAs) found 28 miRNAs separating the severity spectrum at FDR <= 0.05
-with a severe-versus-mild shift of at least half a log2 unit
-(results/h2_severity_association_all.csv; run logged in prereg/RUN_LOG.md).
+assay. The frozen four-group analysis (Kruskal-Wallis over the full
+2,632-miRNA matrix, n=146) found 21 miRNAs separating the severity
+spectrum at FDR <= 0.05 with a severe-versus-mild shift of at least half
+a log2 unit (results/h2_severity_association_all.csv and
+results/h2_gate_a_summary.json; run logged in prereg/RUN_LOG.md - see the
+count-correction note appended there: the original prose line read
+"2,114 tested, 28 passing", but the committed artifacts and summary JSON
+from the same run record 2,632 tested and 21 passing, and the artifacts
+govern).
 
 ## 7.2 Twenty candidates clear the novelty screen
 After the frozen exclusion screen - the 121-abstract named-marker list
 extended by the source paper's own abstract-named miRNAs (Addendum 2) -
-20 of the 28 remain candidates never named as Chagas biomarkers in the
-screened literature. The five strongest by FDR: miR-182-5p (4.0e-8,
+20 of the 21 remain candidates never named as Chagas biomarkers in the
+screened literature; the single excluded row is miR-223-3p, named in the
+source paper's abstract and therefore REPLICATION-class. The five strongest by FDR: miR-182-5p (4.0e-8,
 decreasing across severity), miR-1-3p (2.2e-5, increasing), miR-206
 (2.9e-5, decreasing), miR-30c-5p (8.5e-5, increasing), and miR-1294
 (1.7e-4, increasing). The source paper's headline severity miRNA,
@@ -73,7 +79,7 @@ validated-target enrichment (10,000 permutations; miRTarBase v8.0).
 
 
 ## 7.6 Gate-(a) association table (machine-generated from results/h2_gate_a_passing.csv)
-All 28 miRNAs passing the frozen screen (KW FDR <= 0.05, |severe-vs-mild| >= 0.5 log2CPM).
+All 21 miRNAs passing the frozen screen (KW FDR <= 0.05, |severe-vs-mild| >= 0.5 log2CPM).
 class: CANDIDATE = absent from the frozen literature screen; REPLICATION = named before.
 Medians are log2 CPM per severity group.
 
