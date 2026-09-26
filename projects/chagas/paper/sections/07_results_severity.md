@@ -106,3 +106,34 @@ Medians are log2 CPM per severity group.
 | hsa-miR-194-5p | 3.28e-02 | +0.99 | 4.11 | 4.79 | 5.33 | 5.78 | CANDIDATE |
 | hsa-miR-375-3p | 4.55e-02 | -0.64 | 6.86 | 8.24 | 7.68 | 7.61 | CANDIDATE |
 | hsa-miR-1301-3p | 4.58e-02 | -1.49 | 2.35 | 5.30 | 4.15 | 3.81 | CANDIDATE |
+
+## 7.7 Reading the gate-(b) table (effect sizes, not just verdicts)
+The verdict cells compress a two-dimensional result; the effect sizes
+behind them carry the honest detail. In the cardiac cohort the passing
+candidates' direction-consistent target fractions run 0.19-0.29 against
+nulls of 0.07-0.12 - typically a 3-4x enrichment. The CORE6 members, with
+mapped validated-target set sizes in parentheses: miR-1-3p 0.283 vs
+0.068 null, 4.2x (916 cardiac / 886 blood); miR-194-5p 0.290 vs 0.068,
+4.3x (93/88); miR-145-5p 0.265 vs 0.067, 3.9x (238/230); miR-30c-5p
+0.260 vs 0.068, 3.8x (520/506); miR-122-5p 0.231 vs 0.068, 3.4x
+(610/591); miR-192-5p 0.188 vs 0.068, 2.8x (988/958). In blood the same
+six run 1.9-3.9x over a lower null (0.025): miR-192-5p 0.096 (3.9x),
+miR-194-5p 0.068 (2.8x), miR-145-5p 0.057 (2.3x), miR-1-3p 0.054
+(2.2x), miR-122-5p 0.051 (2.1x), miR-30c-5p 0.047 (1.9x) - the same
+directional pattern at half the strength, exactly what a
+cardiac-originating signal diluted into peripheral blood should look
+like, and exactly why the blood arm is reported as partial rather than
+failed. The three blood-null candidates (miR-223-5p, miR-20a-3p,
+miR-769-5p) do not merely miss threshold: their direction-consistent DE
+fraction is exactly 0.000 against nulls near 0.005 - zero of 86-272
+mapped targets move in the predicted direction, the cleanest negative
+the design can return. The two cardiac misses split differently:
+miR-374b-5p is a near-miss (0.158 vs 0.120, uncorrected p=0.047, FDR
+0.072 - lost to multiplicity, not absent), while miR-206's 1.2x
+enrichment (0.148 vs 0.120, FDR 0.283) is weak by any reading - the
+muscle-lineage thread's second member does not carry the module.
+Gate-(a)'s strongest candidate, miR-182-5p (FDR 4.0e-8), passes cardiac
+(0.207 vs 0.120) but is indistinguishable from null in blood (0.0056 vs
+0.0048) - association strength in serum does not predict replication
+breadth, which is why the module rests on the both-tissue AND rule
+rather than on gate-(a) rank.
