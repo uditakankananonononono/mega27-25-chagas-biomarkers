@@ -15,6 +15,32 @@ primary contrast became symptomatic CCC versus asymptomatic seropositive
 - the same contrast the published prognosis arm reports - with the
 published best Cox & Snell R2 of 0.688 as the benchmark value.
 
+## 6.1b The frozen hypotheses, verbatim in structure
+H1's lock named its endpoint (CCC severity ordinal grade,
+control<mild<moderate<severe), its primary metric (macro-averaged ROC-AUC,
+one-vs-rest, with quadratic weighted kappa secondary), its comparator
+anchor (PMID 34479416's panel as the cross-sectional benchmark; the
+longitudinal parasite-DNA + 47-protein model, PMID 38203212, frozen as
+secondary context, explicitly not the cross-sectional benchmark), its
+pipeline (70/30 stratified split, seed 20260926, train-only univariate
+FDR<=0.05 selection, elastic-net ordinal logistic with 5-fold inner CV,
+single frozen-test fit), and its beat criterion (primary metric exceeding
+the comparator by >=0.05 absolute with the bootstrap CI of the difference
+excluding zero; ties are negatives). H2's lock named its three gates: (a)
+differential severity association in GSE299582 (FDR<=0.05 and |effect|>=0.5
+log2 fold-equivalent), (b) direction-consistent replication in the
+orthogonal blood or cardiomyocyte cohorts, (c) absence from the frozen
+literature screen - plus the survival clause that a feature becomes a
+"new discovery" only when all three gates hold AND it survives the
+judge rounds' novelty critiques; anything less is logged as replication
+or negative. The frozen dataset identifiers named GSE299582 as primary
+(the only acquired cohort with graded severity at n>100), GSE244827 as
+orthogonal secondary, the remaining series as context, and the
+prior-tagged exclusion set that the count-correction later enforced. The
+integrity rules completed the lock: no outcome value read into the repo
+before the preregistration and screen were committed; splits, seeds and
+code committed before first run; every run logged with commit hashes.
+
 ## 6.2 Run 1: an honest negative on the primary arm
 The frozen pipeline (70/30 stratified split, seed 20260926, train-only
 univariate feature selection, elastic-net logistic regression) was
@@ -46,6 +72,30 @@ against a published n=60). Run 1 is not edited, re-run silently, or
 removed; it stands as the first entry of the run log. Whatever Amendment
 2 produces will be measured against the same locked benchmark value and
 reported under the same tier rules.
+
+## 6.4b Addendum 2: the source-paper blind spot, locked
+Two minutes after Run 1 was logged, a second amendment closed a hole the
+original screen could not see. The frozen 121-abstract screen never
+covered the GSE299582 SOURCE paper itself (Roma et al. 2026, J Infect Dis
+234(2):277-287, PMID 41574750): its abstract names nine miRNAs by
+contrast direction (miR-143-3p, miR-223-3p up in ChD; miR-486-5p,
+miR-3960 down in ChD; miR-6734-5p, miR-1285-5p, miR-10527-5p, miR-1228-5p
+up severe vs mild; miR-30c-3p down severe vs mild) and reports 40
+differentially expressed miRNAs in total, but the full list is
+paywalled. Addendum 2 (B1) added all abstract-named miRNAs to the
+replication class and froze the residual-risk rule: candidates matching
+the unseen 40-DEM list cannot be excluded, so every H2 candidate is
+additionally checked against the abstract contrast directions, and the
+contamination risk stands as a logged limitation rather than being waved
+away. The same addendum (B2) operationalized gate (a) exactly as later
+executed - per-miRNA Kruskal-Wallis across the four ordinal groups
+(n=146), BH FDR<=0.05, and |median log2(CPM+1) severe - mild| >= 0.5 -
+while explicitly leaving gate-(b) routing PENDING the redirection
+consult, with the anticipation that target mapping, if chosen, would use
+TargetScan or miRDB with logged service evidence. Addendum 3's C2 later
+overrode that anticipation with the stricter miRTarBase-only rule; the
+sequence - anticipate, then tighten by amendment - is preserved because
+each step is its own timestamped commit.
 
 ## 6.5 Addendum 3: the judge-01 redesign, locked before any rerun
 Judge round 01 (judge_rounds/01_*, advisory text; adoption is ours)
