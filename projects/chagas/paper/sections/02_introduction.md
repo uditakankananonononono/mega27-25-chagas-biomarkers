@@ -23,7 +23,7 @@ diagnostic guidance (sources/services/cdc/) confirms the tools that
 exist - serology, PCR, imaging - answer "infected?" and "damaged?" but
 not "progressing?".
 ## 2.2 The gap this project attacks
-A marker that tracks progression would change triage: who needs annual
+A marker that tracks the severity spectrum would change triage: who needs annual
 echocardiography, who needs treatment escalation, who is safe to watch.
 The published record offers fragments - protein panels (galectin-3,
 BNP/NT-proBNP, MMPs; the frozen screen in prereg/), a prognostic ELISA
@@ -32,7 +32,7 @@ panel (PMID 34479416), and the first severity-graded serum miRNA survey
 under registration) - but no validated multivariate severity model, and
 no cross-modal mechanistic bridge from circulating miRNAs to cardiac
 biology. Open Targets associates 890 targets with the disease
-(sources/services/opentargets/), yet translation into a progression
+(sources/services/opentargets/), yet translation into a severity
 marker has not happened.
 ## 2.2b What "already named" means here
 A discovery claim is only as honest as its exclusion list. Before any

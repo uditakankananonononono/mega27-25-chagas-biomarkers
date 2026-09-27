@@ -1,17 +1,24 @@
 # 9b. Discussion
 
 ## 9b.1 What was actually found, restated without the machinery
-A six-miRNA serum module (miR-1-3p, miR-122-5p, miR-192-5p,
-miR-30c-5p, miR-145-5p, miR-194-5p) separates the mild-to-severe
+In the endpoint hierarchy of 6.8, the primary claim is the severity
+model: an ordinal serum-miRNA model separates the control-to-severe
 gradient of chronic Chagas cardiomyopathy at out-of-fold c-index
 0.787, beating age+sex (+0.167, 95% CI excludes zero) and the best
 single miRNA (0.714), on a cohort nobody in this program collected.
-Every member passed a frozen association gate, a frozen novelty
+The secondary claim is the six-miRNA both-tissue core (miR-1-3p,
+miR-122-5p, miR-192-5p, miR-30c-5p, miR-145-5p, miR-194-5p): the
+output of a two-stage sequential filtration (2,632 tested, 20
+frozen-gate candidates, 6 both-tissue members), tracked against the
+severity spectrum with its stability caveats printed (9.5/9.6:
+bootstrap median 0.615, 3 of 6 members stably re-discovered). Every
+member passed a frozen association gate, a frozen novelty
 screen, and a direction-predicted validated-target enrichment test
-in two orthogonal cohorts. The module is the claim-carrier, not any
-single molecule: no leave-one-out subset drops below 0.72, one
+in two orthogonal cohorts. The module is the discovery carrier, not
+any single molecule: no leave-one-out subset drops below 0.72, one
 member is mildly dilutive and one redundant, and both facts are
-printed in the paper (9.6, 9.7).
+printed in the paper (9.6, 9.7). Everything else - enrichment,
+druggability, concordance - is tertiary and exploratory.
 
 ## 9b.2 The biological reading, held at the right strength
 The candidate set carries a muscle-lineage thread (miR-1-3p,

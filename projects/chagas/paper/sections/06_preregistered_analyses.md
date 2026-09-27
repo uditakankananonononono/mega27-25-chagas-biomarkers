@@ -161,3 +161,26 @@ the claim sentence that now anchors section 9. Adopted as C3. The
 round's throughline - let the failed classifier stay failed and rebuild
 the claim on what the data actually support - is the reason this paper
 has a section 8 at all.
+
+## 6.8 Endpoint hierarchy (E8, ADDENDUM_5, locked 2026-09-27)
+To bound researcher degrees of freedom in interpretation, the claims of
+this report are ranked once, here, and every other section follows the
+ranking:
+
+PRIMARY claim (one only): an ordinal serum-miRNA severity model beats
+the internal comparators - a clinical age/sex baseline and the best
+single miRNA - on locked out-of-fold predictions (section 8: c-index
+0.787; +0.167 over age/sex, bootstrap CI [+0.087, +0.242]; +0.074 over
+the best single miRNA, CI [+0.009, +0.136]).
+
+SECONDARY claim: the six-miRNA both-tissue core (the module), carried
+with its stability caveats - D2 decorrelated-selection OOF c-index
+0.704, E1 full-pipeline bootstrap median 0.615 with 3 of 6 members
+stably re-discovered (9.5/9.6). Module membership is the output of the
+two-stage sequential filtration (9.1) and nothing stronger.
+
+TERTIARY / exploratory: everything else - target-program enrichment
+(downgraded to database-bias-consistent, 9.5), the corrected F10
+survivor test, druggability overlay, STRING coherence, concordance
+scores, pathway signatures. None of these supports the primary or
+secondary claim; they are reported for the record with their controls.

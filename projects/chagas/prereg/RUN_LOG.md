@@ -653,3 +653,23 @@ union does hit cardiac-remodeling terms - disease relevance lives in the
 DE intersection, not the target list per se. Cross-checked vs committed
 g:Profiler run (cardiac-18 set, much larger query): construction OK.
 results/e13_disease_specific_enrichment.{json,csv}.
+
+2026-09-27T12:06 IST - E8 + D4 paper edits landed (final ADDENDUM_5 items;
+ADDENDUM_4 D4 presentation adoptions closed). D4c framing audit: (c)
+provenance-first/severity-model framing primary (abstract + 9b.1 already
+ordered so, hierarchy now explicit in new 6.8); (b) module framing held to
+"tracks the severity spectrum" - abstract "track that progression" ->
+"track its severity spectrum", intro "tracks progression" -> "tracks the
+severity spectrum", "translation into a progression marker" -> "severity
+marker"; (a) never used. Frozen prereg QUOTES (9.1, 6.1b) keep the
+original registered wording verbatim as historical record, with the
+operative severity-spectrum reading stated alongside. 2.3b keeps
+"progression marker" only inside an explicitly REFUTED aspiration
+(judgment call: a refutation is not a claim). D4a: two-stage sequential
+filtration (2,632 -> 20 -> 6) now stated in 9.1, 9.3c, 9.7, abstract,
+9b.1. D4b: discordance audit PUBLISHED (9.3c): all 12 cardiac-passing
+non-core candidates fail the blood arm (nearest miR-125a-5p FDR 0.051),
+9/12 at blood frac <= 0.02; artifact results/d4b_discordance_audit.csv
+via scripts/d4b_discordance_audit.py from committed gate CSVs. E8:
+endpoint hierarchy section 6.8 (PRIMARY severity model / SECONDARY
+module with caveats / TERTIARY exploratory); 9b.1 restructured to match.
