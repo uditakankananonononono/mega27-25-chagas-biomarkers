@@ -684,3 +684,69 @@ more than biology, and it is the direct motivation for the F10
 bias-corrected test that this paper treats as the validation claim
 (results/f4b_mirwalk_sensitivity.csv).
 
+## 9.9 Master evidence table: every candidate, every layer
+One row per candidate, one column per evidence layer, every value traced
+to a committed artifact (results/master_evidence_table.csv, generated from
+the gate, E1/E2, F10, F7 and F6 artifacts). F10 columns: Y = survives
+the bias-corrected test, n = does not survive. E1 frequency below the
+top-20 cutoff is reported as <0.115. Novelty is post-F6.
+
+| miRNA | core | gate-(a) FDR | Cliff's d | cardiac frac (FDR) | blood frac (FDR) | E1 freq | E2 DS | F10 card. | F10 blood | F7 rank | novelty |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| miR-182-5p |  | 4e-08 | -0.67 | 0.207 (6.7e-04) | 0.006 (6.8e-01) | <0.115 | 0.5 | n | n | 12 | novel |
+| miR-1-3p | Y | 2.2e-05 | 0.57 | 0.283 (2.5e-04) | 0.054 (2.5e-04) | 0.539 | 1.0 | Y | n | 2 | novel |
+| miR-206 |  | 2.9e-05 | -1.35 | 0.148 (2.8e-01) | 0.009 (5.2e-01) | <0.115 | 0.25 | n | n | 20 | novel |
+| miR-30c-5p | Y | 8.5e-05 | 1.76 | 0.260 (2.5e-04) | 0.047 (4.7e-03) | <0.115 | 0.75 | Y | n | 3 | novel |
+| miR-1294 |  | 0.00017 | 0.65 | 0.283 (2.5e-04) | 0.018 (8.2e-01) | <0.115 | 0.25 | n | n | 17 | novel |
+| miR-125b-5p |  | 0.00022 | 0.61 | 0.223 (2.5e-04) | 0.034 (2.0e-01) | <0.115 | 0.5 | n | n | 13 | novel |
+| miR-125a-5p |  | 0.00026 | -0.6 | 0.190 (1.9e-03) | 0.016 (5.1e-02) | <0.115 | 0.75 | n | n | 8 | novel |
+| miR-374b-5p |  | 0.00027 | -1.16 | 0.158 (7.2e-02) | 0.004 (7.6e-01) | <0.115 | 0.25 | n | n | 18 | novel |
+| miR-199b-5p |  | 0.0011 | -1.63 | 0.218 (4.7e-03) | 0.018 (1.4e-01) | <0.115 | 0.5 | n | n | 11 | REPORTED |
+| miR-145-5p | Y | 0.0053 | 1.68 | 0.265 (2.5e-04) | 0.057 (9.7e-03) | <0.115 | 0.75 | n | n | 5 | REPORTED |
+| miR-20a-3p |  | 0.007 | -0.59 | 0.239 (3.6e-03) | 0.000 (1.0e+00) | <0.115 | 0.5 | n | n | 9 | novel |
+| miR-769-5p |  | 0.0088 | -1.5 | 0.246 (2.5e-04) | 0.000 (1.0e+00) | <0.115 | 0.5 | Y | n | 6 | novel |
+| miR-1285-3p |  | 0.0091 | 3.82 | 0.210 (2.5e-04) | 0.040 (1.4e-01) | <0.115 | 0.25 | n | n | 16 | novel |
+| miR-192-5p | Y | 0.011 | 0.87 | 0.188 (2.5e-04) | 0.096 (2.5e-04) | 0.682 | 1.0 | n | Y | 1 | novel |
+| miR-122-5p | Y | 0.016 | 0.61 | 0.231 (2.5e-04) | 0.051 (2.5e-04) | 0.465 | 0.75 | n | n | 7 | novel |
+| miR-223-5p |  | 0.018 | -0.62 | 0.219 (2.5e-04) | 0.000 (1.0e+00) | <0.115 | 0.5 | n | n | 10 | REPORTED |
+| miR-651-5p |  | 0.021 | 0.6 | 0.262 (2.5e-04) | 0.018 (8.2e-01) | <0.115 | 0.25 | n | n | 19 | novel |
+| miR-194-5p | Y | 0.033 | 0.99 | 0.290 (2.5e-04) | 0.068 (3.7e-02) | 0.515 | 0.75 | Y | n | 4 | novel |
+| miR-375-3p |  | 0.046 | -0.64 | 0.210 (2.5e-04) | 0.006 (4.6e-01) | <0.115 | 0.5 | n | n | 14 | novel |
+| miR-1301-3p |  | 0.046 | -1.49 | 0.203 (4.7e-04) | 0.011 (3.0e-01) | <0.115 | 0.5 | n | n | 15 | novel |
+)
+Read down the F10 columns: five survivors total (cardiac: miR-1-3p,
+miR-30c-5p, miR-769-5p, miR-194-5p; blood: miR-192-5p) - the corrected
+test's positive findings, against 122/145 raw passes surviving nowhere
+(9.5). Read down novelty: the F6 expanded screen's three reclassifications
+are visible in place.
+
+## 9.10 Analyses index: every locked item, its status and its artifact
+| item | addendum | kind | result, one line | artifacts |
+|---|---|---|---|---|
+| D1 | 4 | retrieval+analysis | blood abundance no predictor; cardiac-specific expression predicts LESS blood replication | results/d1_* |
+| D2 | 4 | compute | decorrelated-selection OOF c-index 0.704, perm p 0.000999 | results/d2_* |
+| D3 | 4 | sensitivity | TargetScan arm 12/12 computable pass; gate stands on miRTarBase | results/d3_* |
+| D4 | 4 | paper edits | two-stage filtration, discordance audit (9.3c), framing audit | paper 6.8/9.x |
+| E1 | 5 | centerpiece | OOB median 0.615 [0.337-0.738]; stable core 192/1/194 | results/e1_* |
+| E2 | 5 | validation | CORE6 DS 0.833, 95.72th pct vs matched null | results/e2_* |
+| E3 | 5 | controls | cardiac claim database-bias-consistent (nulls 17/20 median) | results/e3_* |
+| E4 | 5 | descriptive | blood-DE union hits cardiac-remodeling pathways (FDR 0.0012) | results/e4_* |
+| E5 | 6 | diagnostics | gradient holds; Cook's screen non-informative, disclosed | results/e5_* |
+| E6 | 6 | post-hoc | recalibration FAILS to fix calibration; not decision-grade stands | results/e6_* |
+| E7 | 6 | descriptive | decision curves: 68%/30% threshold wins | results/e7_* |
+| E8 | 5 | paper edit | endpoint hierarchy 6.8 | paper |
+| E9 | 5 | baselines | (superseded by F5-family comparisons where overlapping) | results/e9_* |
+| E10 | 5 | feasibility | no batch covariate in metadata; documented infeasible | RUN_LOG |
+| E11 | 5 | adjustment | age/sex +0.002 - no confounding; BMI absent | results/e11_* |
+| E12 | 5 | simulation | top-6 qPCR panel 0.730 (97% of full module) | results/e12_* |
+| E13 | 5 | enrichment | null: 0/1,366 terms FDR<=0.05 for static targets | results/e13_* |
+| F1 | 6 | benchmark | 15 incidents, all 4 categories evidence-backed (3.13) | results/f1_* |
+| F2 | 6 | nulls | label/randfeat nulls p 0.000999; identity null degenerate, amended | results/f2_* |
+| F3 | 6 | importance | let-7i-5p/miR-122-5p top; 67/170 noise features | results/f3_* |
+| F4 | 6 | retrieval | miRDB 19/6, miRWalk 20/17 - permissiveness washes out | results/f4*_* |
+| F5 | 6 | comparison | plain DE recovers 21/21 but passes 102; RF 4/21 | results/f5_* |
+| F6 | 6 | screen | 3 reclassified novel->reported; 17/20 novel | results/f6_* |
+| F7 | 6 | ranking | CORE6 ranks 1-5+7 of 20; miR-769-5p rank 6 | results/f7_* |
+| F8 | 6 | repro | clean-clone rerun, fraction byte-identical reported | results/f8_* |
+| F10 | 7 | corrected test | 5 candidate-cohort validations survive bias correction | results/f10_* |
+
