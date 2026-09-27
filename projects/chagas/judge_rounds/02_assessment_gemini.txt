@@ -62,3 +62,11 @@ hedged until D1/D2 complete, (a) never.
   judge_rounds/02_response_gemini.txt (verbatim, thread-tagged). Judge
   rounds now 2/10. ChatGPT-route rounds remain cap-blocked; Gemini route
   is open on token pass; DeepSeek route still credential-blocked.
+
+## ERRATUM (2026-09-27T08:56 IST)
+The line above reading "Judge rounds now 2/10" is corrected per the
+owner's standing rule ("min 10 ChatGPT judge rounds" - ChatGPT only,
+verified verbatim by parent): this Gemini consult is SUPPLEMENTARY
+and does not count. The counted tally stays 1/10 (round 01, ChatGPT).
+Canonical tally: X-JUDGE-ROUNDS.md. The verdicts, D1-D4 queue and
+lock-before-run discipline are unaffected.

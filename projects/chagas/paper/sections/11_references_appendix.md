@@ -64,13 +64,17 @@ module/druggability execution (2026-09-26/27, RUN_LOG). Every amendment
 predates the outcomes it governs; the chain is re-readable in git.
 
 ## Appendix D: judge rounds
-Round 01 verbatim: judge_rounds/01_prompt.txt, 01_response.txt,
-01_assessment.txt, 01_novelty_change.txt (ChatGPT thread 6ab7e9ef,
-model-tagged). Round 02 is staged in three model variants
-(02_prompt.txt ChatGPT thread-continuation; 02_prompt_deepseek.txt and
-02_prompt_gemini.txt self-contained fresh consults, reviewer persona)
-and fires when a consult slot opens; records will be committed verbatim
-with model tags.
+The owner's standing rule counts ChatGPT-fired rounds only ("min 10
+ChatGPT judge rounds"); the canonical tally is X-JUDGE-ROUNDS.md.
+Counted: 1/10 - round 01 verbatim: judge_rounds/01_prompt.txt,
+01_response.txt, 01_assessment.txt, 01_novelty_change.txt (ChatGPT
+thread 6ab7e9ef, model-tagged). Supplementary (not counted): round 02,
+a Gemini Flash fresh consult fired 2026-09-27 (verbatim
+02_response_gemini.txt, thread-tagged; assessment
+02_assessment_gemini.txt with erratum). Counted ChatGPT rounds 02-10
+are staged (02_prompt.txt thread-continuation; a DeepSeek variant
+stays credential-blocked) and fire as the provider free-tier cap
+allows; records will be committed verbatim with model tags.
 
 ## Appendix E: the 750->716 count correction
 The second acquisition pass counted 750 records; the uniqueness

@@ -381,3 +381,13 @@ Adoptions queued as ADDENDUM_4 candidates D1/D2/D3 (gated - lock
 before running) + D4a/b/c (presentation/descriptive). Judge rounds
 now 2/10. Browser guidance recorded (success, no antibot); lease
 released.
+
+## TALLY CORRECTION - 2026-09-27T08:56 IST (revival agent, on parent correction)
+Parent relayed the verified standing rule: "min 10 ChatGPT judge
+rounds" / "GOES THROUGH CHATGPT AS JUDGE" - ChatGPT-fired rounds
+only. My round-02 entry above ("judge rounds now 2/10") is WRONG:
+round 02 (Gemini) is supplementary. COUNTED tally: 1/10 (round 01,
+ChatGPT). Canonical tally file created: X-JUDGE-ROUNDS.md. ChatGPT
+rounds 02-10 stay cap-blocked until the provider resets; Gemini
+route is supplementary-only; DeepSeek credential-blocked. Append-only
+correction, same convention as 750->716.
