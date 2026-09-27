@@ -644,3 +644,19 @@ applies to predicted sets equally: this is consistency evidence for the
 existence of the compartment split, not new member-level validation
 (results/f4_mirdb_sensitivity.csv).
 
+F4b - miRWalk arm, and what permissive target sets do to the test
+(ADDENDUM_6, non-gate). The miRWalk 3.0 3'UTR prediction file was
+retrieved in full (6.83 GB, sha256 recorded; the 20-candidate subset of
+233,914 rows is committed) and run through the same machinery without a
+threshold. The result inverts the other arms: cardiac 20/20 and blood
+17/20 pass, with 11 non-core miRNAs passing both cohorts. Read against
+the validated (18/6), TargetScan (12 of 12 computable) and miRDB (19/6)
+arms, this is the E3 lesson made visible: as target-set permissiveness
+grows, the direction-enrichment test loses specificity until nearly
+everything passes. The four-source pattern - stringent sources reproduce
+the compartment asymmetry, the permissive source washes it out - is
+itself the evidence that raw enrichment counts track database structure
+more than biology, and it is the direct motivation for the F10
+bias-corrected test that this paper treats as the validation claim
+(results/f4b_mirwalk_sensitivity.csv).
+

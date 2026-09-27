@@ -250,3 +250,10 @@ not a new tool: DISTINCT count stays 40.
     through the committed gate-(b) machinery (results/f4_mirdb_sensitivity.*).
 42. mygene.info - querymany API (free tier), RefSeq->symbol mapping of
     6,393/6,399 miRDB transcripts (species=human). Feeds the F4 arm only.
+
+## Addendum 9 (2026-09-27T12:18): service 43 - miRWalk (F4)
+43. miRWalk 3.0 - hsa_miRWalk_3UTR.zip retrieved in full (6,830,082,988
+    bytes, sha256 4755d2c48f30724bc075f791922894250712ebdc49b09478af522c254cb17312;
+    too large to commit, documented). Candidate-filtered subset committed
+    (233,914 rows, 20 candidates, sha256 11045382608c84a0047599874aa293b3f86e3a66b42eac8da5c06715030f518e,
+    sources/services/mirwalk/). Unthresholded arm in results/f4b_mirwalk_sensitivity.*.

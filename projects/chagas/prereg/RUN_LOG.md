@@ -709,3 +709,15 @@ predicted sets equally - this is consistency evidence for the SPLIT, not
 new validation. miRWalk arm: hsa_miRWalk_3UTR.zip (6.83GB) downloading;
 candidate-filtered subset + full-file sha256 to follow; full file NOT
 committable (>100MB) - documented.
+
+2026-09-27T12:19 IST - F4 miRWalk arm RUN (ADDENDUM_6, NON-GATE): miRWalk
+3.0 3UTR unthresholded sets (5k-24k genes/candidate). Result: cardiac
+20/20, blood 17/20, 37/40 pass - near-total wash-out, INCLUDING 11
+non-core both-cohort passers. Read against the F4 miRDB (19/6) and
+miRTarBase (18/6) arms this is the E3 lesson made visible: test
+specificity collapses as target-set permissiveness grows. The
+three-database table (validated 18/6, TargetScan 12/12-computable, miRDB
+19/6, miRWalk 20/17) is now a methodological finding in itself: the
+compartment asymmetry holds under stringent sources and disappears under
+permissive ones - consistent with database bias, and the direct
+motivation for the F10 corrected test. miRWalk = ledger service 43.

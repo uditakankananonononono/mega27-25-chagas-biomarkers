@@ -1,0 +1,38 @@
+{
+  "n_tests": 40,
+  "n_pass_fdr05": 37,
+  "blood_pass": 17,
+  "hipsc_pass": 20,
+  "both_cohort_pass": [
+    "miR-1-3p",
+    "miR-122-5p",
+    "miR-125a-5p",
+    "miR-125b-5p",
+    "miR-1285-3p",
+    "miR-1294",
+    "miR-1301-3p",
+    "miR-145-5p",
+    "miR-182-5p",
+    "miR-192-5p",
+    "miR-194-5p",
+    "miR-199b-5p",
+    "miR-30c-5p",
+    "miR-374b-5p",
+    "miR-375-3p",
+    "miR-651-5p",
+    "miR-769-5p"
+  ],
+  "core6_both_under_mirwalk": [
+    "miR-1-3p",
+    "miR-122-5p",
+    "miR-192-5p",
+    "miR-30c-5p",
+    "miR-145-5p",
+    "miR-194-5p"
+  ],
+  "sha256": {
+    "hsa_miRWalk_3UTR.zip_full": "4755d2c48f30724bc075f791922894250712ebdc49b09478af522c254cb17312",
+    "subset_committed_gz": "11045382608c84a0047599874aa293b3f86e3a66b42eac8da5c06715030f518e"
+  },
+  "reading": "NON-GATE sensitivity (ADDENDUM_6 F4); gate-b stands on miRTarBase validated targets"
+}
