@@ -510,3 +510,10 @@ LOCKED READING: H1' LOSES to elastic net (+0.024) and is at parity with XGBoost
 comparators" claim is henceforth scoped to the age/sex and best-single-miRNA
 comparators (which stand); among trained ML models the ordinal logistic is NOT
 the best performer - stated wherever the model ranking is claimed.
+
+2026-09-27T10:05 IST - Europe PMC pubcount retrieval COMPLETE (E2/E3 input):
+sources/services/europepmc/mirna_pubcounts.json, 2,632 miRNAs, 0 nulls,
+sha256 98e954d1b87e0ba23be908b5ad26a41e870dc5ccdb217c4242fd087cd45a779c.
+Retrieval pinned free-tier Europe PMC REST; substitution for NCBI esearch
+(backend down 500/SOLR ~09:39) disclosed per lock intent. E2 relaunched
+10:03 after cohort-unpack bugfix (495925d).
