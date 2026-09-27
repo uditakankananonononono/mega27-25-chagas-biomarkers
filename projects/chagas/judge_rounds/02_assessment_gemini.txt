@@ -1,0 +1,64 @@
+# Judge round 02 ASSESSMENT (Gemini Flash, fresh consult, 2026-09-27T08:53-08:55 IST)
+# Re-read in full before writing. Advisory input, not authority. Any adopted
+# change must be locked in an ADDENDUM before any run uses it (lane rule since
+# Addendum 3). Nothing below is executed yet.
+
+## Q1 verdict: "compartment specificity" is currently a POST-HOC PATCH.
+Decisive analysis proposed: cell-type baseline-abundance stratification -
+baseline expression of the target genes in cardiac tissue vs blood cell
+subsets (HPA/Tabula Sapiens cardiac; LM22/Monaco blood), then a logistic
+regression of blood-cohort replication status on baseline blood abundance +
+cardiac specificity index. Pre-registered both ways: if non-replicating
+targets are systematically absent in blood at baseline, compartment
+specificity is supported; if they are abundant but not DE, the blood
+failure is biological or dataset noise and the paper's 9.3b tissue
+reading must be DOWNGRADED. -> ACCEPT as ADDENDUM_4 candidate D1.
+Feasibility: HPA is already a ledgered service (sources/services/hpa);
+no new cohort needed. New services, if any, get ledgered honestly.
+
+## Q2 verdict: the in-sample circularity is real (the lane already says so).
+Proposed decorrelation: OOF module reconstruction INSIDE the nested 5x3
+CV - re-run the full member-selection pipeline (KW FDR, |d|>=0.5, both-
+tissue filter) on each outer training fold only, re-derive sign weights
+on the training fold, score the held-out fold; plus a 1,000-iteration
+label-permutation null for the OOF c-index. -> ACCEPT as D2. Pure
+compute on committed artifacts; the external-cohort filter inputs
+(GSE203525/GSE244827) stay fixed, the in-cohort parts re-fit per fold.
+This is stronger than the LOO member stability already reported (9.6).
+
+## Q3 verdict: v8.0 pin acceptable WITH a robustness sensitivity check;
+the 18-member washout severely undermines a UNIFIED-cardiac framing (not
+the 6-core claim). Three mandates: (a) target-database robustness -
+re-run gate-(b) enrichment with a second independent database
+(TargetScan v8.0 conserved, already ledgered service 29) as SENSITIVITY
+ONLY - gate-(b) stays miRTarBase-validated per judge-01's demotion of
+bare predicted-target databases; the sensitivity tests annotation-artifact
+risk, it does not replace the gate. -> ACCEPT as D3 with that scoping.
+(b) Bipartite-filter framing: present the CORE6 as the output of a
+two-stage sequential filtration (2,632 -> 20 serum candidates -> 6
+both-tissue core) rather than a post-hoc subset. This is descriptive of
+the already-locked pipeline, not a design change -> ADOPT as paper
+framing (D4a, no amendment needed). (c) Discordance audit: explicitly
+report directional discordance between cardiac intracellular DE and
+serum abundance for the 12 cardiac-passing candidates excluded from the
+core -> ACCEPT as D4b (descriptive table, honest content).
+
+## Q4 verdict: framing ranking (c) > (b) > (a).
+(c) "reproducible provenance-first reanalysis framework with one
+validated severity model" survives harsh scrutiny; (b) "conserved
+regulatory module" is MODERATE RISK until D1+D2 land; (a) "new severity
+biomarkers" WILL BE REJECTED (single cohort, calibration not
+decision-grade - the judge independently used the calibration slopes
+0.198/0.150 added in the 08:52 paste refresh). -> ADOPT as paper-framing
+guidance (D4c): abstract/intro framing audit against (c) primary, (b)
+hedged until D1/D2 complete, (a) never.
+
+## Standing notes
+- The reviewer is advisory; its "mandates" become work only through
+  ADDENDUM_4 locking. D1/D2/D3 are new gated analyses and MUST be locked
+  in ADDENDUM_4 with exact frozen specs BEFORE any run. D4a/D4b/D4c are
+  presentation/descriptive and need no gate.
+- Round 02 record: prompt judge_rounds/02_prompt_gemini.txt, response
+  judge_rounds/02_response_gemini.txt (verbatim, thread-tagged). Judge
+  rounds now 2/10. ChatGPT-route rounds remain cap-blocked; Gemini route
+  is open on token pass; DeepSeek route still credential-blocked.

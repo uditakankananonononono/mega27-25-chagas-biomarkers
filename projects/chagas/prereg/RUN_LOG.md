@@ -363,3 +363,21 @@ reviewer sees the calibration weakness material to Q4(c); Q4 "for a
 judge"->"for an expert reviewer" (persona-scrub consistency).
 Comparator numbers verified correct per h1prime_ci.json (clinical
 0.620, single 0.713, +0.167/+0.074 CIs).
+
+## JUDGE ROUND 02 FIRED (GEMINI ROUTE) - 2026-09-27T08:53-08:55 IST (revival agent)
+Parent token pass 08:51 (Google OAuth restored). Fresh Gemini consult
+(model Flash, thread app/2613ca9536a087c2) on the 08:52-refreshed
+paste (commit 69a7a96). Response captured complete and verbatim
+(6,075 chars; judge_rounds/02_response_gemini.txt) and re-read in
+full; assessment in judge_rounds/02_assessment_gemini.txt. Verdicts:
+Q1 compartment-specificity currently a post-hoc patch (decisive
+baseline-abundance test proposed); Q2 in-sample circularity real
+(OOF module reconstruction inside nested CV + 1,000-label permutation
+null proposed); Q3 v8.0 pin acceptable WITH second-database
+sensitivity (TargetScan, scoped as sensitivity NOT gate replacement);
+18-member washout undermines unified-cardiac framing only; Q4 framing
+(c) > (b) > (a) - (c) survives, (b) hedged until D1/D2, (a) rejected.
+Adoptions queued as ADDENDUM_4 candidates D1/D2/D3 (gated - lock
+before running) + D4a/b/c (presentation/descriptive). Judge rounds
+now 2/10. Browser guidance recorded (success, no antibot); lease
+released.
