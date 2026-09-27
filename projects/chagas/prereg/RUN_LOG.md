@@ -391,3 +391,13 @@ ChatGPT). Canonical tally file created: X-JUDGE-ROUNDS.md. ChatGPT
 rounds 02-10 stay cap-blocked until the provider resets; Gemini
 route is supplementary-only; DeepSeek credential-blocked. Append-only
 correction, same convention as 750->716.
+
+## ADDENDUM_4 LOCKED - 2026-09-27T08:58 IST (revival agent)
+prereg/ADDENDUM_4.md locks the judge-02 adoptions BEFORE any run:
+D1 compartment-specificity decisive test (HPA baselines, gene-level
+logistic, reading locked both ways incl. the 9.3b downgrade path);
+D2 OOF module reconstruction (same outer folds/seed as H1', re-select
+members+weights per training fold, 1,000-permutation null, claim
+stands only if p<0.05, failure documented); D3 TargetScan sensitivity
+(explicitly non-gate; gate stays miRTarBase per C2); D4a/b/c
+presentation adoptions. Execution order D2->D1->D3->D4 frozen.
