@@ -143,3 +143,80 @@ AND rule, not tuned. Every five-member subset stays above 0.72: the
 module has no single point of failure. These numbers describe the
 stability of an in-sample description; membership and weights still
 come from the same cohort, and nothing here is a validation claim.
+
+## 9.7 Per-candidate evidence cards
+Each CORE6 member's full evidence trail, every number traced to a
+committed artifact: gate (a) from results/h2_gate_a_passing.csv (KW
+p, BH FDR, Cliff's d severe-vs-mild on GSE299582), gate (b) from
+results/h2_gate_b_enrichment.csv (fraction of mapped validated targets
+differentially expressed in the predicted direction vs the
+size-preserving permutation null, BH FDR across all 40 tests), module
+contribution from results/module_score_stability.json (leave-one-out
+c-index: the 5-member score without this member; full-score c-index
+0.7557), and the target-program profile from
+sources/services/mirtarbase/validated_targets.tsv (strong-support
+"Functional MTI" unique targets) crossed with
+results/druggability_overlay.json (tractability-positive /
+Approved-Drug buckets).
+
+**miR-1-3p.** Gate (a): p = 2.0e-7, FDR 2.2e-5, d = 0.57 - the
+second-strongest association after miR-182-5p. Gate (b): passes both
+cohorts at FDR 2.5e-4 (blood 5.4% vs 2.5% null; hiPSC-CM 28.3% vs
+6.8% null). LOO 0.737 - removal costs 0.019 c-index, the
+second-largest contribution. Target program: 76 strong targets, 72
+tractability-positive, 13 Approved-Drug. A muscle-lineage member
+(myomiR), consistent with the cardiomyocyte-injury reading of the
+module.
+
+**miR-122-5p.** Gate (a): p = 5.1e-4, FDR 0.016, d = 0.61. Gate (b):
+passes both cohorts at FDR 2.5e-4 (blood 5.1% vs 2.5%; hiPSC-CM
+23.1% vs 6.8%). LOO 0.728 - removal costs 0.028 c-index, the largest
+single contribution to the module. Target program: 67 strong
+targets, 65 tractability-positive, 9 Approved-Drug. Liver-enriched
+in the literature; here it acts as the module's heaviest load-bearer
+despite a mid-pack univariate rank - a genuinely combinatorial
+finding, not a repackaged univariate one.
+
+**miR-145-5p.** Gate (a): p = 1.4e-4, FDR 5.3e-3, d = 1.68 - the
+second-largest effect size in the set. Gate (b): passes both cohorts
+(blood FDR 9.7e-3, 5.7% vs 2.5%; hiPSC-CM FDR 2.5e-4, 26.5% vs
+6.7%). LOO 0.754 - removal barely moves the module (0.002 c-index),
+so its weight is redundant with the other members; it stays under
+the AND rule, and the redundancy is stated rather than hidden.
+Target program: 135 strong targets (the largest program in the set),
+124 tractability-positive, 19 Approved-Drug.
+
+**miR-192-5p.** Gate (a): p = 3.4e-4, FDR 0.011, d = 0.87. Gate (b):
+passes both cohorts at FDR 2.5e-4 (blood 9.6% vs 2.5%; hiPSC-CM
+18.8% vs 6.8%) with the largest mapped target sets in the test
+(958/988). LOO 0.767 - removal IMPROVES the module by 0.011 c-index:
+this member is mildly dilutive. It stays in CORE6 because the AND
+rule froze membership before any module fitting (section 9.1); the
+dilution is reported, not optimized away. Target program: 41 strong
+targets, 39 tractability-positive, 8 Approved-Drug.
+
+**miR-30c-5p.** Gate (a): p = 1.1e-6, FDR 8.5e-5, d = 1.76 - the
+largest effect size among all 21 gate-(a) passers. Gate (b): passes
+both cohorts (blood FDR 4.7e-3, 4.7% vs 2.5%; hiPSC-CM FDR 2.5e-4,
+26.0% vs 6.8%). LOO 0.743 - removal costs 0.013 c-index. Target
+program: 39 strong targets, 37 tractability-positive, 6
+Approved-Drug.
+
+**miR-194-5p.** Gate (a): p = 1.2e-3, FDR 0.033, d = 0.99 - the
+weakest univariate passer in the set. Gate (b): passes both cohorts,
+but the blood cohort is its weakest link (FDR 0.037, 6.8% vs 2.5%,
+the only CORE6 blood test above FDR 0.01; hiPSC-CM FDR 2.5e-4, 29.0%
+vs 6.8%). LOO 0.748 - removal costs 0.008 c-index. Target program:
+23 strong targets (the smallest program), 23 tractability-positive,
+4 Approved-Drug.
+
+**What the cards add up to.** No single member carries the module:
+the strongest removal (miR-122-5p) still leaves 0.728, and every
+5-member subset stays above 0.72
+(results/module_score_stability.json). One member is mildly dilutive
+(miR-192-5p) and one is redundant (miR-145-5p); both facts are
+products of the frozen AND rule and are reported as properties of
+the preregistered design, not tuned away. The druggability profile
+is distributed across members (4-19 Approved-Drug targets each), so
+the target-program tractability of the module does not rest on any
+single candidate either.

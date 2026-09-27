@@ -249,3 +249,15 @@ unpinned; RUN_LOG 05:33 note). Also removed a stray duplicate
 sources/SERVICE_LEDGER.md accidentally written during the 06:08
 commit (never tracked; content already in SERVICE_LEDGER.md
 Addendum 11).
+
+## SECTION 9.7 PER-CANDIDATE EVIDENCE CARDS - 2026-09-27T06:37 IST (revival agent)
+Added 9.7 to the discovery report: one evidence card per CORE6 member
+(gate-(a) p/FDR/d from h2_gate_a_passing.csv; gate-(b) both-cohort
+fractions + FDR from h2_gate_b_enrichment.csv; LOO c-index from
+module_score_stability.json; strong-target/tractability/Approved-Drug
+counts from validated_targets.tsv x druggability_overlay.json), plus a
+synthesis paragraph. Honest findings written in, not around:
+miR-192-5p is mildly dilutive (LOO 0.767 > full 0.756 - kept frozen by
+the AND rule), miR-145-5p is redundant (LOO 0.754), miR-194-5p's blood
+cohort is the weakest CORE6 gate-(b) test (FDR 0.037). Working build:
+32 A4 pp (was 31).
