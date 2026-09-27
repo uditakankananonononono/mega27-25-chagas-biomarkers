@@ -311,7 +311,7 @@ signaling pathways. The lane claims the convergence as consistent
 context, not as mechanistic evidence; the generic-cancer-term
 background is named in the same breath.
 
-## 9.5 Preregistered robustness battery: D1-D3 (ADDENDUM_4), E1-E2 (ADDENDUM_5) E3/E4/E5/E6/E7/E11/E12 (ADDENDUM_5) and F2/F3/F5/F10 (ADDENDUM_6/7), all locked 2026-09-27 before any run
+## 9.5 Preregistered robustness battery: D1-D3 (ADDENDUM_4), E1-E2 (ADDENDUM_5) E3/E4/E5/E6/E7/E10/E11/E12/E13 (ADDENDUM_5) and F2/F3/F5/F10 (ADDENDUM_6/7), all locked 2026-09-27 before any run
 
 A supplementary review consult (round 02, Gemini; logged supplementary under
 the ChatGPT-only round rule) challenged three load-bearing points. Each was
@@ -555,3 +555,20 @@ cardiac-remodeling pathways the cardiac arm implicates do appear among
 the blood DE targets, which is what a blood signature of a cardiac
 disease should show if the compartments share biology
 (results/e4_blood_pathway.json).
+
+E10 - batch robustness (ADDENDUM_5, metadata check). The series
+characteristics carry age, disease status, disease form, severity, gender
+and tissue - no batch, plate or lane covariate exists, so no
+batch-stratified sensitivity can be run. Documented infeasible per the
+lock; no synthetic batch arm was invented.
+
+E13 - disease-specific enrichment of the module's targets, tested and
+null (ADDENDUM_5, non-gate). The CORE6 352 strong-support validated
+targets show NO significant enrichment against any of 1,366 pinned
+library terms (FDR <= 0.05), including the Chagas and cardiac sets. The
+static target list is therefore not disease-specific, and the paper keeps
+its generic-only pathway language for the target set itself. The contrast
+is informative and is stated: E4's blood-DE-INTERSECTED union (220 genes)
+does hit cardiac-remodeling terms - the disease relevance lives in the
+intersection with disease-state expression, not in the target list per
+se (results/e13_disease_specific_enrichment.csv).

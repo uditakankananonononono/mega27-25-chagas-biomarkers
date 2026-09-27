@@ -641,3 +641,15 @@ WP1544 (2 genes each, FDR<0.01). Small overlaps - descriptive only. This
 answers round-03 weakness 8 at pathway level: the same cardiac-remodeling
 pathways DO appear in blood DE targets. results/e4_blood_pathway.json +
 e4_blood_pathway_enrichment.csv.
+
+2026-09-27T11:50 IST - E10 (metadata check): GSE299582 characteristics
+keys = age, chagas disease?, disease_form, severity, gender, tissue - NO
+batch/plate/lane covariate. DOCUMENTED INFEASIBLE per lock (no fake batch
+arm). E13 RUN (non-gate): CORE6 352 strong-support targets vs pinned
+libraries (1,366 terms, library-union background): ZERO pass FDR<=0.05.
+The static target set is NOT disease-set-enriched; generic-only pathway
+language stays. Contrast recorded: E4's 220-gene blood-DE-INTERSECTED
+union does hit cardiac-remodeling terms - disease relevance lives in the
+DE intersection, not the target list per se. Cross-checked vs committed
+g:Profiler run (cardiac-18 set, much larger query): construction OK.
+results/e13_disease_specific_enrichment.{json,csv}.

@@ -1,0 +1,79 @@
+{
+  "spec": "ADDENDUM_5 E13; non-gate; pinned-library re-use",
+  "module_targets": 352,
+  "terms_tested": 1366,
+  "n_fdr_pass": 0,
+  "disease_relevant": [],
+  "top10": [
+    {
+      "library": "GO_Biological_Process_2025",
+      "term": "Regulation of Organelle Organization (GO:0033043)",
+      "overlap": 3,
+      "set_size": 5,
+      "fdr": 0.9998667435710931
+    },
+    {
+      "library": "GO_Biological_Process_2025",
+      "term": "Protein Metabolic Process (GO:0019538)",
+      "overlap": 14,
+      "set_size": 22,
+      "fdr": 0.9998667435710931
+    },
+    {
+      "library": "GO_Biological_Process_2025",
+      "term": "Potassium Ion Transport (GO:0006813)",
+      "overlap": 5,
+      "set_size": 6,
+      "fdr": 0.9998667435710931
+    },
+    {
+      "library": "GO_Biological_Process_2025",
+      "term": "Negative Regulation of Translation (GO:0017148)",
+      "overlap": 2,
+      "set_size": 5,
+      "fdr": 0.9998667435710931
+    },
+    {
+      "library": "GO_Biological_Process_2025",
+      "term": "Phospholipase C-activating G Protein-Coupled Receptor Signaling Pathway (GO:0007200)",
+      "overlap": 2,
+      "set_size": 5,
+      "fdr": 0.9998667435710931
+    },
+    {
+      "library": "GO_Biological_Process_2025",
+      "term": "Protein Localization (GO:0008104)",
+      "overlap": 13,
+      "set_size": 14,
+      "fdr": 0.9998667435710931
+    },
+    {
+      "library": "GO_Biological_Process_2025",
+      "term": "Gene Expression (GO:0010467)",
+      "overlap": 11,
+      "set_size": 14,
+      "fdr": 0.9998667435710931
+    },
+    {
+      "library": "GO_Biological_Process_2025",
+      "term": "Nitrogen Compound Transport (GO:0071705)",
+      "overlap": 6,
+      "set_size": 7,
+      "fdr": 0.9998667435710931
+    },
+    {
+      "library": "GO_Biological_Process_2025",
+      "term": "Protein Complex Oligomerization (GO:0051259)",
+      "overlap": 2,
+      "set_size": 6,
+      "fdr": 0.9998667435710931
+    },
+    {
+      "library": "GO_Biological_Process_2025",
+      "term": "Establishment of Protein Localization to Organelle (GO:0072594)",
+      "overlap": 3,
+      "set_size": 5,
+      "fdr": 0.9998667435710931
+    }
+  ]
+}
