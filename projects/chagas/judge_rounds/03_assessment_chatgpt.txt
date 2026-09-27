@@ -1,0 +1,55 @@
+ASSESSMENT - counted judge round 03 (ChatGPT, user-couriered 2026-09-27 10:00:17,
+wamid...M0VCMDA2RDlDQUQ4N0ZBQTUxODIxMAA=; manuscript self-review via her own ChatGPT).
+Same-message rule change (10:00:07, wamid...M0VCMDJCMTZGRTVEMkQwMTFBQzc4MQA=):
+"NOT 10 ROUNDS OOF CHATGPT CHECK JUST ONE WHICH I PROVIDE OK?" -> counted
+requirement is now ONE user-provided ChatGPT round per project; lane has 3 counted.
+Verdict = 20 weaknesses + 5 highest-ROI adds. Every NEW analysis locks in
+prereg/ADDENDUM_6.md BEFORE execution. Overlaps with executed/locked work mapped:
+
+ROUND-03 WEAKNESS MAP:
+ 1 computational novelty / Provenance-Aware Omics Discovery Framework benchmark
+   -> NEW, adopt as F1 (ADDENDUM_6): measurable framework benchmark (metadata
+   errors detected, sample mismatches found, missing annotations recovered,
+   reproducibility failures prevented vs traditional GEO workflow).
+ 2 CORE6 circular -> ALREADY EXECUTED as E1 (nested bootstrap, selection
+   frequency, held-out c-index, interval). Result reported in 9.6.
+ 3 no external severity validation -> E2 (direction agreement + target-network
+   preservation in flight); pathway preservation arm = E4/E13 (locked).
+ 4 ML benchmarking limited -> ALREADY EXECUTED as E9 (elastic net, RF, XGBoost,
+   SVM, ordinal regression; same folds/seeds/preprocessing). Gradient boosting
+   covered by XGBoost/HistGB family.
+ 5 no strong null model -> PARTIAL: D2 ran 1,000 label-shuffle permutations.
+   NEW F2 (ADDENDUM_6): extend null framework with shuffled miRNA identities
+   and random feature sets on the H1' pipeline.
+ 6 feature stability -> REPORTED via E1 selection frequencies + D2 fold member
+   counts; NEW F3 (ADDENDUM_6): permutation importance on the H1' model.
+ 7 compartment specificity post-hoc -> E2 cross-compartment score (in flight).
+ 8 blood phenotype mismatch -> E4 pathway-level comparison (locked ADDENDUM_5).
+ 9 miRTarBase popularity bias -> E3 Control A (locked ADDENDUM_5).
+10 single-database target validation -> D3 TargetScan DONE; NEW F4 (ADDENDUM_6):
+    miRDB + miRWalk arms; validated evidence kept separate.
+11 druggability generic -> round-02 item 18 + E13 (locked): Chagas/cardiac-
+    remodeling specificity analysis; de-emphasis edit pending in D4 batch.
+12 calibration -> E6 (locked); extend with Brier score + reliability curve
+    (folds into E6 spec).
+13 decision utility -> E7 (locked); extend to compare age/sex, miRNA, combined.
+14 batch effects -> E10 (locked; metadata-conditional).
+15 severe group small -> E5 (locked; add jackknife to the E5 battery).
+16 no standard-pipeline comparison -> NEW F5 (ADDENDUM_6): DE-only, PCA
+    clustering, RF feature selection, limma-style workflow comparison.
+17 novelty filter residual overlap -> NEW F6 (ADDENDUM_6): expanded novelty
+    screen (full-text where available, citation-network search via Europe PMC,
+    similarity search); boundaries locked first.
+18 mechanism associative -> NEW F7 (ADDENDUM_6): causal-prioritization RANKING
+    (direction consistency, network centrality, tissue agreement, pathway
+    proximity); no causal wording - ranking only.
+19 reproducibility not externally demonstrated -> NEW F8 (ADDENDUM_6):
+    blind machine-level reproduction (clean-clone rerun, hash/figure/output
+    comparison). "Another person" arm infeasible solo - documented.
+20 diluted claims -> NEW F9 (ADDENDUM_6): central-claim restructure -
+    "provenance-first computational framework improves reliability and
+    reproducibility of public omics biomarker discovery" becomes the central
+    claim; biomarker results become its validation. Paper-level edit, D4 batch.
+HIGHEST-ROI 5: #1 nested bootstrap = DONE (E1); #2 null framework = D2 done +
+F2 extension; #3 ML benchmark = DONE (E9); #4 provenance framework benchmark =
+F1; #5 cross-compartment conservation = E2 in flight.
