@@ -302,7 +302,7 @@ signaling pathways. The lane claims the convergence as consistent
 context, not as mechanistic evidence; the generic-cancer-term
 background is named in the same breath.
 
-## 9.5 Preregistered robustness battery: D1-D3 (ADDENDUM_4) and E1-E2 (ADDENDUM_5), all locked 2026-09-27 before any run
+## 9.5 Preregistered robustness battery: D1-D3 (ADDENDUM_4), E1-E2 (ADDENDUM_5) and F2 (ADDENDUM_6), all locked 2026-09-27 before any run
 
 A supplementary review consult (round 02, Gemini; logged supplementary under
 the ChatGPT-only round rule) challenged three load-bearing points. Each was
@@ -377,3 +377,22 @@ compartment-specificity reading. The 14 non-core candidates average 0.43.
 Caveats carried: the miR-145-5p matched pool is small (n = 4), and the
 heart-leg failures mean conservation is a serum/cellular/blood phenomenon,
 not a four-compartment one (results/e2_cross_tissue_concordance.json).
+
+F2 - extended null framework on the H1' severity model (ADDENDUM_6). Three
+1,000-draw nulls against the observed pooled OOF c-index 0.787. (a) Label
+shuffle: null mean 0.496 (sd 0.044), 95th percentile 0.568, maximum 0.650 -
+empirical p = 0.000999. (b) Shuffled miRNA identities: degenerate by
+construction. The H1' pipeline is annotation-free - features are selected
+by p-value rank, which a column permutation cannot change - so this null
+equals the observed value in all 1,000 draws (sd 0.0, p = 1.0) and cannot
+falsify anything. Under the locked letter ("exceed each null"), this arm
+fails by construction and we say so; under the documented amendment
+recorded in RUN_LOG (degenerate arm excluded as uninformative), the
+not-random sentence rests on the two informative nulls. (c) Random
+100-feature sets: null mean 0.642 (sd 0.053), 95th percentile 0.728,
+maximum 0.782 - the observed 0.787 exceeds all 1,000 draws, empirical
+p = 0.000999. Two honest readings follow: severity signal is spread across
+the miRNome (random 100-miRNA sets already average 0.642), and the
+t-test-selected top-100 still beats every random set drawn. The model is
+not a label artifact and not an arbitrary feature set
+(results/f2_null_label.json, f2_null_randfeat.json, f2_null_identity.json).
