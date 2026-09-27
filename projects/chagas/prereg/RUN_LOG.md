@@ -497,3 +497,16 @@ before E1 and is not revised post-hoc);
 (3) the honest full-pipeline generalization figure is OOB median 0.615 [0.337-0.738],
 below D2's OOF 0.704 (selection-only decorrelation) and far below in-sample 0.756 -
 the paper states all three with their exact meanings.
+
+
+## 2026-09-27 E9 run (ADDENDUM_5, locked 09:23 before run) - baseline parity/loss, reported as-is
+Script scripts/e9_ml_baselines.py; results/e9_ml_baselines.json. Identical outer
+folds + per-fold top-100 features as h1prime_ordinal.py; only the model swaps.
+Per-fold mean OOF ordinal c-index: ordinal logistic (H1') 0.787 (reproduces the
+committed 0.787 - pipeline fidelity confirmed), elastic net 0.811, XGBoost 0.789,
+random forest 0.787, RBF-SVM 0.718. XGBoost installed 3.2.0 (no substitution).
+LOCKED READING: H1' LOSES to elastic net (+0.024) and is at parity with XGBoost
+(+0.002) and random forest (-0.001); it beats only RBF-SVM. The "beats internal
+comparators" claim is henceforth scoped to the age/sex and best-single-miRNA
+comparators (which stand); among trained ML models the ordinal logistic is NOT
+the best performer - stated wherever the model ranking is claimed.

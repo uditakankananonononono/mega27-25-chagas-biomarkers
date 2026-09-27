@@ -1,0 +1,55 @@
+{
+  "ordinal_logistic(H1-prime)": {
+    "per_fold_mean_cindex": 0.7871825119736171,
+    "per_fold": [
+      0.806,
+      0.8019,
+      0.8439,
+      0.7102,
+      0.7739
+    ]
+  },
+  "elastic_net": {
+    "per_fold_mean_cindex": 0.8108001313308917,
+    "per_fold": [
+      0.7582,
+      0.8786,
+      0.8885,
+      0.7006,
+      0.828
+    ]
+  },
+  "random_forest": {
+    "per_fold_mean_cindex": 0.7865834620876205,
+    "per_fold": [
+      0.803,
+      0.7987,
+      0.7389,
+      0.7834,
+      0.8089
+    ]
+  },
+  "xgboost": {
+    "per_fold_mean_cindex": 0.7893770378080498,
+    "per_fold": [
+      0.8328,
+      0.8115,
+      0.7866,
+      0.7898,
+      0.7261
+    ]
+  },
+  "svm_rbf": {
+    "per_fold_mean_cindex": 0.7183237513010841,
+    "per_fold": [
+      0.6179,
+      0.7444,
+      0.6752,
+      0.7197,
+      0.8344
+    ]
+  },
+  "spec": "ADDENDUM_5 E9; identical folds+features to h1prime_ordinal.py; reading locked",
+  "h1prime_committed_reference": 0.787,
+  "runtime_s": 9.4
+}
