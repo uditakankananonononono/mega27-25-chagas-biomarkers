@@ -741,3 +741,6 @@ abstract/2.3/9b.5 restructured framework-first (compendium, severity
 model, module, druggability = the validation case). Merged with the
 ADDENDUM_7 spine ("bias-aware ... what survives it") - the bias
 correction is part of the framework. No new science claim.
+
+## 2026-09-27 F8 blind machine reproduction - COMPLETE
+Fresh clones (/tmp/f8clone, /tmp/f8clone2) + pinned venv (numpy 2.2.6/pandas 2.3.3/scipy 1.15.3/statsmodels 0.15.0/sklearn 1.7.2), 2-core sandbox, no user environment. 21 runs across 19 scripts (f2 run as its 3 locked modes x 1000 draws). Result: 20/21 runs byte-identical to committed artifacts; 21/21 scientifically identical. The three non-byte-identical outputs: d2 and e2 differ only in the wall-clock `runtime_s` field; f3 differs only in float64 print precision (same values to committed precision, rankings unchanged). Zero substantive mismatches. f2's earlier FAIL was an invocation error (missing CLI args), not a result mismatch; rerun with locked args reproduced byte-identical. e1 excluded (runtime). Full record: results/f8_blind_repro.json. Locked findings (d2 perm_p, f2 nulls, CORE6, severity model) all reproduce in the blind environment.

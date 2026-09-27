@@ -1,0 +1,26 @@
+{
+  "spec": "ADDENDUM_7 F8: blind machine reproduction - fresh clone, pinned venv, no user environment; grade by fraction of runs byte-identical to committed artifacts; mismatches listed, never silently fixed",
+  "date_utc": "2026-09-27",
+  "environment": {
+    "clone1": "/tmp/f8clone (driver1: d4b, h2, h1prime, d2)",
+    "clone2": "/tmp/f8clone2 (driver2: all remaining scripts; f2 rerun with locked args)",
+    "venv": "/tmp/f8venv pinned: numpy 2.2.6, pandas 2.3.3, scipy 1.15.3, statsmodels 0.15.0, scikit-learn 1.7.2",
+    "cores": 2
+  },
+  "runs": 21,
+  "scripts": 19,
+  "byte_identical": 20,
+  "scientifically_identical": 21,
+  "substantive_mismatches": 0,
+  "mismatches": [
+    {"script": "d2_oof_module_reconstruction", "file": "results/d2_oof_module_reconstruction.json", "difference": "runtime_s only (1307.9 committed vs 3783.2 blind; wall-clock on shared 2-core sandbox)", "scientific_values": "identical: perm_p=0.000999, null_median=0, null_q975=0, cindex_reference=0.7557, per-fold members identical"},
+    {"script": "e2_cross_tissue_concordance", "file": "results/e2_cross_tissue_concordance.json", "difference": "runtime_s only (738.9 vs 247.0)", "scientific_values": "identical including all per-miRNA concordance values"},
+    {"script": "f3_permutation_importance", "file": "results/f3_permutation_importance.csv", "difference": "float64 print precision only (15 significant digits committed vs full repr blind; same binary values to shown precision, rankings unchanged)", "scientific_values": "identical to committed precision"}
+  ],
+  "notes": [
+    "f2_extended_nulls requires locked CLI args (mode, ndraws=1000); rerun as identity/label/randfeat x 1000 draws - all three byte-identical",
+    "e1_distribution excluded from blind repro (runtime); its committed artifact stands from the original run",
+    "f4_mirdb blind run used the /tmp intermediates committed in 42aed89; OK and byte-identical",
+    "locked findings reproduce in blind environment: d2 perm_p<0.05 claim stands; f2 label/randfeat nulls empirical_p=0.000999, observed cindex exceeds p95; CORE6/severity results unchanged"
+  ]
+}
