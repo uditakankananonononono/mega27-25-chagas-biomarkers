@@ -159,3 +159,30 @@ tests, the CORE6 core) is unaffected. The 2114/28 prose figures were a
 narrative transcription error; corrected here append-only per standing
 convention (same rule as the 750->716 record correction). Paper section 7
 now quotes the artifact numbers.
+
+## H1' LOCKED-METRIC COMPLETION - 2026-09-27T05:35 IST - scripts/h1prime_metrics_completion.py
+Gap found in paper-audit sweep: ADDENDUM_3 C1 locked four metrics (ordinal
+c-index primary, macro-AUC one-vs-rest, calibration slope, bootstrap CIs)
+but the H1' run reported only c-index + CIs; macro-AUC and calibration
+slope were never computed. This run completes the locked report with NO
+design change: same matrix (sha256-pinned), same 5-fold split, seed
+20260926, same top-100 rule, same immediate-threshold family. Sanity
+anchors reproduce EXACTLY: mean-of-fold c-index 0.7871825119736171 =
+h1prime_ordinal.json; pooled OOF 0.7871056931004148 = h1prime_ci.json.
+NEW (results/h1prime_locked_metrics_completion.json + OOF predictions in
+results/h1prime_oof_predictions.csv): macro-AUC one-vs-rest from OOF class
+probabilities = 0.715 (control 0.969, mild 0.655, moderate 0.576, severe
+0.661). Calibration slope per threshold: y>=1: 0.735 (intercept -0.05);
+y>=2: 0.198 (0.03); y>=3: 0.150 (-0.92). HONEST READING: rank
+discrimination is strong but probability calibration is badly shrunk at
+the moderate/severe thresholds - predicted probabilities are too
+conservative at the top of the scale, so any future use of this model's
+PROBABILITIES (not its ranking) requires recalibration. The beat claim is
+rank-based and unaffected. First draft of this script computed one-vs-rest
+AUC on the raw monotone score (macro 0.517, control-class degenerate
+0.031) - a metric-basis error caught and fixed before commit; the raw
+score is not a valid OvR statistic, class probabilities are. Environment
+note: sklearn was unpinned in the lane record; this run used sklearn
+1.7.2 with Python 3.10.12 / NumPy 2.2.6 / SciPy 1.15.3 / pandas 2.3.3
+(rest of env matches the 5.y record exactly; exact reproduction of both
+sanity anchors indicates the pipeline is env-stable).

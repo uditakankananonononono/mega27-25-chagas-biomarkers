@@ -101,3 +101,24 @@ flag (judge round 01 addendum record), and nothing in this section claims
 it. Third, the severe grade runs on 30 samples: pairwise
 severe-vs-control power is limited, and the ordinal framing is what
 makes the full 146-sample gradient informative at this cohort size.
+
+## 8.5 Locked-metric completion: macro-AUC and calibration
+Addendum 3 locked four metrics; the H1' run reported two. On 2026-09-27
+the remaining two were computed under the identical locked pipeline -
+same matrix, split, seed, feature rule and model family, with both
+c-index anchors reproducing to full printed precision
+(scripts/h1prime_metrics_completion.py,
+results/h1prime_locked_metrics_completion.json; OOF predictions persisted
+in results/h1prime_oof_predictions.csv). Macro-AUC one-vs-rest from OOF
+class probabilities is 0.715: excellent for control-vs-disease (0.969),
+modest within the CCC grades (mild 0.655, moderate 0.576, severe 0.661) -
+the model finds the disease, and grades it more coarsely than the
+headline c-index suggests. Calibration slopes are the harder news:
+0.735 at the any-CCC threshold but 0.198 and 0.150 at the moderate-plus
+and severe thresholds - predicted probabilities at the top of the scale
+are badly shrunk toward the null, as small-n penalized fits tend to be.
+The locked beat criterion is rank-based and is unaffected; what changes
+is the honest scope of the model: its RANKING is informative, its raw
+PROBABILITIES at the upper grades are not decision-grade without
+recalibration. A reviewer who ran this check before accepting the paper
+would have found exactly this; it is recorded here first.

@@ -1,0 +1,26 @@
+{
+  "sanity_mean_of_fold_cindex": 0.7871825119736171,
+  "pooled_oof_cindex": 0.7871056931004148,
+  "macro_auc_ovr": 0.7153630501344832,
+  "per_class_auc": {
+    "0": 0.9688644688644689,
+    "1": 0.6545995536821225,
+    "2": 0.5764939251177783,
+    "3": 0.6614942528735632
+  },
+  "calibration_slope_per_threshold": {
+    "y>=1": {
+      "slope": 0.735420055072485,
+      "intercept": -0.053592394423914155
+    },
+    "y>=2": {
+      "slope": 0.19814799587658713,
+      "intercept": 0.027812106649769935
+    },
+    "y>=3": {
+      "slope": 0.1496319502272839,
+      "intercept": -0.9158657126042217
+    }
+  },
+  "note": "locked metrics macro-AUC + calibration slope completed 2026-09-27; design unchanged (ADDENDUM_3 C1); sklearn version unpinned in lane record (env note: sklearn 1.7.2, rest of env matches 5.y)"
+}
