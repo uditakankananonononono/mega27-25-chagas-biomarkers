@@ -1,0 +1,35 @@
+{
+  "spec": "ADDENDUM_5 E12; frozen membership, train-estimated signs; simulation-level only",
+  "panels": {
+    "top3": {
+      "members": [
+        "hsa-miR-192-5p",
+        "hsa-miR-1-3p",
+        "hsa-miR-194-5p"
+      ],
+      "oof_cindex": 0.711951740605756
+    },
+    "top6": {
+      "members": [
+        "hsa-miR-192-5p",
+        "hsa-miR-1-3p",
+        "hsa-miR-194-5p",
+        "hsa-miR-122-5p",
+        "hsa-miR-363-3p",
+        "hsa-miR-484"
+      ],
+      "oof_cindex": 0.7300490134472791
+    },
+    "core6_full": {
+      "members": [
+        "hsa-miR-1-3p",
+        "hsa-miR-122-5p",
+        "hsa-miR-192-5p",
+        "hsa-miR-30c-5p",
+        "hsa-miR-145-5p",
+        "hsa-miR-194-5p"
+      ],
+      "oof_cindex": 0.7535503330400904
+    }
+  }
+}

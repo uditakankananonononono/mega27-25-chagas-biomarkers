@@ -624,3 +624,10 @@ thresholds (0.01-0.5) for severe-vs-rest, only 30% for moderate-plus.
 Descriptive; no clinical-use claim.
 results/e11_confounder_adjustment.json, e6_recalibration.json,
 e7_decision_curve.json.
+
+2026-09-27T11:34 IST - E12 RUN (ADDENDUM_5): qPCR-style panel simulation
+(frozen membership, train-estimated signs, locked folds). Top-3 by E1
+frequency (192/1/194): OOF 0.712. Top-6 (+122/363/484): OOF 0.730. Full
+CORE6 under identical protocol: 0.754. A 6-assay panel retains ~97% of
+the module's ranking signal; 3-assay retains 94%. Simulation-level only,
+no wet-lab claim. results/e12_qpcr_panel_sim.json.

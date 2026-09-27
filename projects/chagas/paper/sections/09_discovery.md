@@ -311,7 +311,7 @@ signaling pathways. The lane claims the convergence as consistent
 context, not as mechanistic evidence; the generic-cancer-term
 background is named in the same breath.
 
-## 9.5 Preregistered robustness battery: D1-D3 (ADDENDUM_4), E1-E2 (ADDENDUM_5) E3/E5/E6/E7/E11 (ADDENDUM_5) and F2/F3/F5/F10 (ADDENDUM_6/7), all locked 2026-09-27 before any run
+## 9.5 Preregistered robustness battery: D1-D3 (ADDENDUM_4), E1-E2 (ADDENDUM_5) E3/E5/E6/E7/E11/E12 (ADDENDUM_5) and F2/F3/F5/F10 (ADDENDUM_6/7), all locked 2026-09-27 before any run
 
 A supplementary review consult (round 02, Gemini; logged supplementary under
 the ChatGPT-only round rule) challenged three load-bearing points. Each was
@@ -531,3 +531,13 @@ across threshold probabilities 0.01-0.5: for the severe-vs-rest contrast
 the full model wins at 68% of thresholds; for moderate-plus only 30%.
 Useful as ranking support at high-severity thresholds, not as utility
 evidence; no clinical-use claim (results/e7_decision_curve.json).
+
+E12 - qPCR-style reduced panel simulation (ADDENDUM_5, simulation-level
+only). Panels frozen by E1 discovery frequency, sign estimated on
+training folds only, evaluated on the locked folds: the top-3 panel
+(miR-192-5p, miR-1-3p, miR-194-5p) reaches OOF c-index 0.712; the top-6
+panel (+ miR-122-5p, miR-363-3p, miR-484) reaches 0.730, against 0.754
+for the full CORE6 module under the identical frozen-membership protocol.
+A six-assay panel therefore retains about 97% of the module's ranking
+signal in simulation - assay-transfer evidence at the simulation level
+only, with no wet-lab claim (results/e12_qpcr_panel_sim.json).
