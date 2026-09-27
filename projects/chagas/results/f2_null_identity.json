@@ -1,0 +1,14 @@
+{
+  "mode": "identity",
+  "draws": 1000,
+  "observed_oof_cindex": 0.7871056931004148,
+  "null_mean": 0.7871056931004148,
+  "null_sd": 0.0,
+  "null_p95": 0.7871056931004148,
+  "null_max": 0.7871056931004148,
+  "empirical_p": 1.0,
+  "exceeds_p95": false,
+  "pipeline": "h1prime_ordinal.py identical folds/seed/selection",
+  "seed": 20260926,
+  "near_degenerate_note": "pipeline is annotation-free: selection is by p-value rank, so column permutation changes the selected top-100 only via floating-point tie order; null expected to concentrate at the observed value"
+}

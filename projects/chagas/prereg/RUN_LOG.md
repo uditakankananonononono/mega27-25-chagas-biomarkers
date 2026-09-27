@@ -529,3 +529,18 @@ miR-145-5p pool n=4; conservation is serum/cellular/blood, not
 four-compartment. results/e2_cross_tissue_concordance.json, runtime 739s.
 E1 PAPER FIX: 1da8d2d's message overclaimed a "9.6" section - only the
 abstract line landed. E1/E2 battery paragraphs now added to 9.5.
+
+2026-09-27T10:32 IST - F2 RUN (ADDENDUM_6): extended null framework on H1'.
+Observed pooled OOF c-index 0.7871 (recomputed, matches committed h1prime).
+(a) label shuffle, 1000 draws: null mean 0.496 sd 0.044, p95 0.568, max
+0.650 - empirical p 0.000999, CLEARS. (c) random 100-feature sets, 1000
+draws: null mean 0.642 sd 0.053, p95 0.728, max 0.782 - observed exceeds
+all 1000, empirical p 0.000999, CLEARS (severity signal is miRNome-wide at
+0.64 mean, but t-test selection beats every random set). (b) identity
+shuffle, 1000 draws: DEGENERATE BY CONSTRUCTION (null sd 0.0, equals
+observed; pipeline is annotation-free, selection by p-value rank is
+permutation-invariant up to float ties). Lock criterion amendment,
+documented: identity null is uninformative for an annotation-free pipeline
+and is excluded from the keep/cut reading; the 'not random' sentence rests
+on the two informative nulls, both cleared. results/f2_null_{label,
+randfeat,identity}.json + draws CSVs.

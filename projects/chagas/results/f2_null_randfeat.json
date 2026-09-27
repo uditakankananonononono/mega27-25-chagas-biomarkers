@@ -1,0 +1,13 @@
+{
+  "mode": "randfeat",
+  "draws": 1000,
+  "observed_oof_cindex": 0.7871056931004148,
+  "null_mean": 0.6421215282141511,
+  "null_sd": 0.05320539187118552,
+  "null_p95": 0.7276925977127058,
+  "null_max": 0.7815759708432827,
+  "empirical_p": 0.000999000999000999,
+  "exceeds_p95": true,
+  "pipeline": "h1prime_ordinal.py identical folds/seed/selection",
+  "seed": 20260926
+}
