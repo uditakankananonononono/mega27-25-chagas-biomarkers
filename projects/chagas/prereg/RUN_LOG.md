@@ -261,3 +261,13 @@ miR-192-5p is mildly dilutive (LOO 0.767 > full 0.756 - kept frozen by
 the AND rule), miR-145-5p is redundant (LOO 0.754), miR-194-5p's blood
 cohort is the weakest CORE6 gate-(b) test (FDR 0.037). Working build:
 32 A4 pp (was 31).
+
+## APPENDIX G DATA-SOURCE BIBLIOGRAPHY - 2026-09-27T06:53 IST (revival agent)
+Added Appendix G: one citable record per atlas series. EuropePMC
+re-use (service 6): 9/11 ledger PMIDs resolved to core records;
+41648170 (GSE311812) and 42523576 (GSE333874) return zero hits
+(indexing lag - recorded as unverified, responses stored);
+GSE84796's originating publication not identifiable via accession
+search - recorded unresolved, GEO record only. GSE348071/GSE154421
+unpublished per GEO. Artifact europepmc_series_citations.json
+sha256-hashed; SERVICE_LEDGER Addendum 12.

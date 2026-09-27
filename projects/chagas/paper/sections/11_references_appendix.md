@@ -143,3 +143,82 @@ Raw service responses are stored under sources/services/ with sha256
 hashes in sources/services/EVIDENCE_SHA256.txt (the manifest covers
 the revalidation responses added 2026-09-27); retrieval timestamps
 and re-use annotations are in SERVICE_LEDGER.md.
+
+## Appendix G: data-source bibliography
+One citable record per series in the fifteen-series atlas. Citations
+are from EuropePMC core records fetched 2026-09-27
+(sources/services/europepmc_series_citations.json, sha256-hashed; a
+re-use of ledger service 6). Design facts are from
+sources/new_series_ledger.csv and the frozen per-series crosswalks.
+Honest gaps are stated per row.
+
+- **GSE299582** (192 serum miRNA-seq, GPL30173; susceptibility + CCC
+  severity, the primary analysis cohort): Roma EH, Marques-Santos F,
+  Renzetti ARDS, et al. "Transcriptome Analysis of Circulating
+  microRNAs Associated With Chagas Disease Susceptibility and Chronic
+  Chagas Cardiomyopathy Severity." J Infect Dis, 2026.
+  doi:10.1093/infdis/jiag021. PMID 41574750.
+- **GSE244827** (33 whole-blood RNA-seq, GPL24676; asymptomatic/early
+  CCC vs seronegative): Duque C, So J, Castro-Sesquen YE, et al.
+  "Immunologic changes in the peripheral blood transcriptome of
+  clinically asymptomatic Chagas cardiomyopathy patients." Lancet Reg
+  Health Am, 2025. doi:10.1016/j.lana.2025.101090. PMID 40290486.
+- **GSE203525** (20 patient hiPSC-CM RNA-seq; CCC vs indeterminate
+  +/- reinfection; gate-(b) cohort): Oliveira TGM, Venturini G,
+  Alvim JM, et al. "Different Transcriptomic Response to T. cruzi
+  Infection in hiPSC-Derived Cardiomyocytes." Front Cell Infect
+  Microbiol, 2022. doi:10.3389/fcimb.2022.904747. PMID 35873155.
+- **GSE129676** (16 hiPSC-CM RNA-seq infection timecourse): Bozzi A,
+  Sayed N, Matsa E, et al. "Using Human Induced Pluripotent Stem
+  Cell-Derived Cardiomyocytes as a Model to Study Trypanosoma cruzi
+  Infection." Stem Cell Reports, 2019.
+  doi:10.1016/j.stemcr.2019.04.017. PMID 31105048.
+- **GSE158986** (12 monocyte-derived dendritic-cell RNA-seq, first
+  contact): Gil-Jaramillo N, Rocha AP, Raiol T, et al. "The First
+  Contact of Human Dendritic Cells With Trypanosoma cruzi." Front
+  Immunol, 2021. doi:10.3389/fimmu.2021.638020. PMID 33897690.
+- **GSE295194** (16 scRNA-seq PBMC sample tags; CCC vs indeterminate
+  CD4 T-cell peptide response): Souza-Silva TG, Neves EGA,
+  Teixeira-Carvalho A, et al. "Self and parasite-derived peptides
+  selected upon DERAA-bearing HLA-DRB1 molecules." Front Immunol,
+  2025. doi:10.3389/fimmu.2025.1527115. PMID 40391216.
+- **GSE107376** (9 placental expression array; seropositive vs
+  seronegative mothers): Juiz NA, Torrejon I, Burgos M, et al.
+  "Alterations in Placental Gene Expression of Pregnant Women With
+  Chagas Disease." Am J Pathol, 2018.
+  doi:10.1016/j.ajpath.2018.02.011. PMID 29545200.
+- **GSE328447** (4 THP1-macrophage small RNA-seq; isomiR response):
+  Lyu MA, Maimaiti M, Hu J, Hu H. "Comparative 5' IsomiRome Analysis
+  Uncovers Dysregulated 5' IsomiRs in Trypanosoma cruzi Infection."
+  Comput Struct Biotechnol J, 2026. doi:10.34133/csbj.0146.
+  PMID 42614816.
+- **GSE191081** (22 LV-wall RNA-seq; CCC vs dilated cardiomyopathy)
+  and **GSE191082** (158 methylation tiling array, blood + LV wall):
+  the lane ledger records both members of this family against one
+  publication - Brochet P, Ianni BM, Laugier L, et al. "Epigenetic
+  regulation of transcription factor binding motifs in chronic
+  Chagas cardiomyopathy." Front Immunol, 2022.
+  doi:10.3389/fimmu.2022.958200. PMID 36072583. (GSE191083, the
+  super-series, was acquired then removed by the uniqueness
+  verifier; Appendix E.)
+- **GSE311812** (46 RNA-seq + Visium spatial; congenital
+  transmission): GEO records PMID 41648170, but that PMID is not yet
+  indexed in EuropePMC as of 2026-09-27 (zero-hit response stored in
+  the citation artifact). Cited here by accession; the lane claims no
+  bibliographic record beyond the GEO page.
+- **GSE333874** (31 placental small RNA-seq; congenital transmission
+  miRNAs): GEO records PMID 42523576; same not-yet-indexed status
+  (zero-hit stored). Cited by accession.
+- **GSE348071** (32 AC16 + patient iPSC-CM RNA-seq; DHODH R135C):
+  unpublished per the GEO record at acquisition time.
+- **GSE154421** (92 benznidazole adverse-reaction SNP pharmacogenomic
+  array): unpublished per the GEO record at acquisition time.
+- **GSE84796** (17 records used; prior-tagged series): the GEO record
+  is the only provenance artifact in this lane for this series; the
+  originating publication was not separately fetched and is not
+  claimed.
+
+EuropePMC returned 9 of the 11 queried PMIDs; the two misses are the
+two most recent records (both 2026 congenital-transmission series),
+consistent with indexing lag rather than absence - but the lane
+records them as unverified citations, not as resolved ones.

@@ -215,3 +215,12 @@ bucket-level exact (332/49), mapped 343/344 (mapping-path note in
 RUN_LOG); STRING drifted upward with the live DB (1296 edges vs 1051,
 p<1e-16 both) - drift recorded honestly, committed values unchanged.
 Re-uses, not new tools: DISTINCT count stays 40.
+
+## Addendum 12 (2026-09-27T06:53): EuropePMC re-use for the data-source bibliography
+EuropePMC (service 6) re-queried: 11 PMIDs from new_series_ledger.csv
+in one OR query (9 resolved), 2 not-yet-indexed PMIDs retried
+individually (zero hits, responses stored), plus one GSE84796
+accession search (returned citing papers only; original publication
+not identifiable this way - recorded as unresolved). Artifact:
+sources/services/europepmc_series_citations.json, sha256-appended.
+Re-use, not a new tool: DISTINCT count stays 40.
