@@ -68,9 +68,14 @@ amendment, not to post-hoc editing (9.7). Each step is a named
 piece of future work, not a caveat waved at the reader.
 
 ## 9b.5 What this project demonstrates even where the biology is young
-Independent of whether the module survives external validation, the
-lane demonstrates a working discipline for public-data biomarker
-claims: 716 byte-verified records with per-series crosswalks, a
+This is the central claim, restated at full strength: a provenance-first,
+bias-aware computational framework improves the reliability and
+reproducibility of public omics biomarker discovery, and the Chagas
+program is its validation - the compendium, the severity model, the
+module and the druggability overlay are evidence FOR the framework, not
+claims above it. Independent of whether the module survives external
+validation, the lane demonstrates a working discipline for public-data
+biomarker claims: 716 byte-verified records with per-series crosswalks, a
 preregistration chain where every amendment predates the outcomes
 it governs, a novelty screen that removes the strongest passing
 result rather than let it anchor the paper, an honest-negative

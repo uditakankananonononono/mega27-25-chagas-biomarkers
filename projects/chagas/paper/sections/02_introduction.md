@@ -57,7 +57,12 @@ missed were reclassified from novel to reported. The screen bounds "already name
 novelty, and we say so in its own header.
 
 ## 2.3 The approach
-Three commitments distinguish this work. Provenance first: every one of
+The central claim of this paper is a method, not a molecule: a
+provenance-first, bias-aware computational framework improves the
+reliability and reproducibility of public omics biomarker discovery.
+The compendium, the severity model, the module and the druggability
+overlay are its validation case. Three commitments distinguish this
+work. Provenance first: every one of
 the 716 records is individually retrievable and byte-hashed, because
 secondary analyses fail silently when their inputs are assumed rather
 than verified (section 3). Registration before outcomes: hypotheses,

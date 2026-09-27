@@ -1,12 +1,16 @@
 # 1. Abstract
 Chagas disease kills through a slow, silent progression from asymptomatic
 infection to chronic cardiomyopathy (CCC), and the field still lacks
-validated markers that track its severity spectrum. This project builds a
-provenance-first compendium of 716 individually byte-verified public
-records across 15 human Chagas series - serum miRNA, blood and tissue
-RNA-seq, single-cell, spatial, methylation and pharmacogenomics - and runs
-two preregistered analyses on the only severity-graded serum miRNA cohort
-(GSE299582, n=192). First, a locked ordinal severity model
+validated markers that track its severity spectrum. This project presents a
+provenance-first, bias-aware computational framework for public omics
+biomarker discovery - every input individually byte-verified, every
+claim preregistered before its outcomes were computed, every enrichment
+priced against database popularity bias - and validates it on the
+chronic Chagas disease problem, assembling a compendium of 716
+byte-verified public records across 15 human series (serum miRNA, blood
+and tissue RNA-seq, single-cell, spatial, methylation and
+pharmacogenomics) and running two preregistered analyses on the only
+severity-graded serum miRNA cohort (GSE299582, n=192). First, a locked ordinal severity model
 (immediate-threshold logistic, nested cross-validation) tracks the
 control-to-severe gradient at out-of-fold concordance 0.787, beating both
 a clinical age/sex baseline (+0.167, bootstrap CI [+0.087, +0.242]) and the

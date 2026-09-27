@@ -733,3 +733,11 @@ paper; novel class 17/20. miR-145-5p is CORE6: module/severity claims
 unaffected (novelty is not load-bearing for the module), its "novel"
 label dies. miR-223-5p's severity link was ALREADY reported - its
 novel-severity claim dies specifically. results/f6_expanded_novelty.json.
+
+2026-09-27T12:32 IST - F9 central-claim restructure LANDED (ADDENDUM_6):
+title now "A provenance-first, bias-aware framework for public omics
+biomarker discovery, validated on chronic Chagas disease severity";
+abstract/2.3/9b.5 restructured framework-first (compendium, severity
+model, module, druggability = the validation case). Merged with the
+ADDENDUM_7 spine ("bias-aware ... what survives it") - the bias
+correction is part of the framework. No new science claim.

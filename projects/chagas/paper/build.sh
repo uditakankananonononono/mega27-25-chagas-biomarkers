@@ -9,6 +9,6 @@ ORDER="01_abstract 02_introduction 03_data_acquisition 04_cohort_atlas 05_method
 for s in $ORDER; do cat "sections/$s.md"; printf '\n\\clearpage\n\n'; done > /tmp/chagas_paper_all.md
 pandoc /tmp/chagas_paper_all.md -o manuscript_working.pdf --pdf-engine=pdflatex \
   --template=template_min.tex --toc \
-  -M title="A provenance-first public-data compendium and preregistered comparator analysis for chronic Chagas disease biomarkers" \
+  -M title="A provenance-first, bias-aware framework for public omics biomarker discovery, validated on chronic Chagas disease severity" \
   -M date="$(date +%Y-%m-%d) - not yet complete"
 pdfinfo manuscript_working.pdf | grep -E 'Pages|Page size'
