@@ -1,0 +1,18 @@
+{
+  "bootstrap_B": 1000,
+  "kw_p_median": 8.520119661643714e-12,
+  "kw_p_q025": 1.573792431399576e-15,
+  "kw_p_q975": 2.1676795668698512e-08,
+  "cindex_median": 0.75584419379161,
+  "cindex_q025": 0.7045419681656784,
+  "cindex_q975": 0.8086085169325159,
+  "leave_one_out_cindex": {
+    "miR-1-3p": 0.7373381927862259,
+    "miR-122-5p": 0.7280382053537765,
+    "miR-145-5p": 0.7541787105693101,
+    "miR-192-5p": 0.766871936659545,
+    "miR-194-5p": 0.7483976373004901,
+    "miR-30c-5p": 0.7426165640316702
+  },
+  "note": "descriptive in-sample stability of the CORE6 module score; members/weights from same cohort, no generalization claim"
+}

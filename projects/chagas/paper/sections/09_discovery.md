@@ -122,3 +122,24 @@ bootstrap membership analysis would quantify how often each of the six
 re-enters the core, and is a named next analysis rather than a completed
 one. None of these gaps is hidden from the claim; each defines a
 checkable follow-up.
+
+## 9.6 Module score stability (descriptive)
+The module score now has a committed generator
+(scripts/module_score.py): results/module_score.json previously had no
+script and violated the lane's regenerate-every-number contract; the
+committed script reproduces both CORE6 and CARDIAC18 values to full
+printed precision before any stability number is reported. Bootstrap
+stability over 1,000 resamples of the 146 graded samples
+(results/module_score_stability.json): the CORE6 score's KW p-value has
+median 8.5e-12 with a 95% bootstrap interval of [1.6e-15, 2.2e-8] - the
+separation never approaches the threshold under resampling - and the
+ordinal c-index has median 0.756 with interval [0.705, 0.809]. Leave-one-
+out analysis names the members' contributions: miR-122-5p carries the
+most weight (its removal drops the c-index to 0.728), then miR-1-3p
+(0.737), miR-30c-5p (0.743), miR-194-5p (0.748), miR-145-5p (0.754);
+removing miR-192-5p IMPROVES the score to 0.767 - it is a mildly
+dilutive member, kept because membership was frozen by the both-tissue
+AND rule, not tuned. Every five-member subset stays above 0.72: the
+module has no single point of failure. These numbers describe the
+stability of an in-sample description; membership and weights still
+come from the same cohort, and nothing here is a validation claim.

@@ -186,3 +186,23 @@ note: sklearn was unpinned in the lane record; this run used sklearn
 1.7.2 with Python 3.10.12 / NumPy 2.2.6 / SciPy 1.15.3 / pandas 2.3.3
 (rest of env matches the 5.y record exactly; exact reproduction of both
 sanity anchors indicates the pipeline is env-stable).
+
+## MODULE SCORE GENERATOR COMMITTED + STABILITY - 2026-09-27T05:50 IST - scripts/module_score.py
+Gap found in paper-audit sweep: results/module_score.json (commit 26843e0)
+had NO committed generating script - the number did not regenerate from
+repo state, violating the lane's own contract. scripts/module_score.py now
+reproduces it EXACTLY from frozen artifacts (CORE6 kw_p
+1.7012028706833222e-11, c-index 0.7556868166394369; CARDIAC18 kw_p
+2.0160115355993655e-06, c-index 0.5092371496795275 - full-precision match
+asserted in-script). Gate-(b) CSV names are hsa-less (miR-1-3p) vs
+gate-(a)/matrix (hsa-miR-1-3p); the script normalizes explicitly.
+STABILITY (descriptive, in-sample; results/module_score_stability.json):
+bootstrap over 1,000 resamples of the 146 graded samples - KW p median
+8.5e-12, 95% interval [1.6e-15, 2.2e-8] (never near threshold); c-index
+median 0.756, 95% interval [0.705, 0.809]. Leave-one-out member
+contributions (added beyond the 9.5-named bootstrap): miR-122-5p removal
+hurts most (c-index 0.728); miR-1-3p 0.737, miR-30c-5p 0.743, miR-194-5p
+0.748, miR-145-5p 0.754; miR-192-5p removal IMPROVES to 0.767 (mildly
+dilutive member). No single point of failure: every five-member subset
+stays above 0.72. Membership/weights still come from the same cohort -
+stability of the DESCRIPTION, not validation.
