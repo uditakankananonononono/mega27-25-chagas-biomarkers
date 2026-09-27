@@ -474,3 +474,26 @@ READING (locked): gate-(b) verdicts stand on miRTarBase validated targets
 annotation artifact: cardiac reproduction exact, blood reproduction
 directional with CORE6 concentrated. Divergences reported as-is.
 SERVICE_LEDGER: TargetScan (service 29) RE-USE, files pinned + sha256.
+
+
+## 2026-09-27 E1 run (ADDENDUM_5 centerpiece, locked 09:23 before run) - MIXED, reported as-is
+Script scripts/e1_nested_bootstrap_discovery.py; results/e1_nested_bootstrap_discovery.json
++ results/e1_bootstrap_detail.csv. B=1000 bootstraps of the 146 graded samples, FULL
+discovery pipeline inside each (KW screen -> frozen exclusions -> both-cohort gate,
+inner null 1,000 perms, disclosed reduction; inner null draws with replacement at
+k<<G, implementation note) -> AND intersection -> module -> out-of-bootstrap eval
+(999 valid bootstraps).
+- CORE6 full-pipeline recurrence: miR-192-5p 68.2%, miR-1-3p 53.9%, miR-194-5p 51.5%
+  (>=50%); miR-122-5p 46.5%, miR-30c-5p 1.0%, miR-145-5p 0.0% (<50%).
+- OOB c-index: median 0.615, 95% percentile interval [0.337, 0.738] - does NOT
+  exclude 0.5. Median members 7; screen passers median 27.5. Frequently discovered
+  non-CORE6: miR-363-3p 43%, miR-484 38%, miR-1287-5p 33%.
+LOCKED READING (both ways): the strengthen condition FAILS - not all 6 members
+recur >=50% and the OOB interval includes 0.5. Reported consequences:
+(1) stable discovery core = miR-192-5p, miR-1-3p, miR-194-5p (miR-122-5p borderline);
+(2) miR-30c-5p and miR-145-5p are INSTABLE members - instability reported against
+them wherever CORE6 is stated (they stay in the frozen module; membership was locked
+before E1 and is not revised post-hoc);
+(3) the honest full-pipeline generalization figure is OOB median 0.615 [0.337-0.738],
+below D2's OOF 0.704 (selection-only decorrelation) and far below in-sample 0.756 -
+the paper states all three with their exact meanings.

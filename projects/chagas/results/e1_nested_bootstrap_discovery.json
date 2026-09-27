@@ -1,0 +1,42 @@
+{
+  "B": 1000,
+  "inner_perm": 1000,
+  "oob_cindex_median": 0.6146496815286624,
+  "oob_cindex_q025": 0.33737382909626284,
+  "oob_cindex_q975": 0.737829481200567,
+  "n_valid_bootstraps": 999,
+  "core6_discovery_frequency": {
+    "miR-1-3p": 0.539,
+    "miR-122-5p": 0.465,
+    "miR-192-5p": 0.682,
+    "miR-30c-5p": 0.01,
+    "miR-145-5p": 0.0,
+    "miR-194-5p": 0.515
+  },
+  "top20_discovery_frequency": {
+    "miR-192-5p": 0.682,
+    "miR-1-3p": 0.539,
+    "miR-194-5p": 0.515,
+    "miR-122-5p": 0.465,
+    "miR-363-3p": 0.43,
+    "miR-484": 0.384,
+    "miR-1287-5p": 0.326,
+    "miR-25-5p": 0.281,
+    "miR-10b-5p": 0.271,
+    "miR-141-3p": 0.258,
+    "miR-34a-5p": 0.241,
+    "miR-100-5p": 0.241,
+    "miR-744-5p": 0.234,
+    "let-7e-5p": 0.218,
+    "miR-28-5p": 0.194,
+    "miR-374a-5p": 0.179,
+    "miR-99a-5p": 0.163,
+    "miR-106b-5p": 0.155,
+    "miR-27b-3p": 0.141,
+    "miR-18a-5p": 0.115
+  },
+  "member_count_median": 7.0,
+  "screen_pass_median": 27.5,
+  "spec": "ADDENDUM_5 E1 locked 2026-09-27T09:23; readings fixed both ways",
+  "runtime_s": 1722.2
+}
