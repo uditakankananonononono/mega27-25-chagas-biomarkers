@@ -453,3 +453,24 @@ silently removed). Disclosed choices (fixed before results): HPA v23 pin
 rna_immune_cell.tsv.zip; sha256s in the results JSON); any-consistent response
 rule for multi-candidate genes. SERVICE_LEDGER: HPA re-use (new file
 retrievals, sha256-hashed), statsmodels added as environment package.
+
+
+## 2026-09-27 D3 run (ADDENDUM_4, locked 08:58 before run) - NON-GATE sensitivity
+Script scripts/d3_targetscan_sensitivity.py; results/d3_targetscan_sensitivity.json/.csv.
+Committed gate-(b) pipeline unchanged, TargetScan 8.0 predicted targets
+(family mapping, species 9606) substituted for miRTarBase; same 10k
+without-replacement null, BH family.
+- 12/20 candidates mapped to TargetScan families (8 unmapped: poorly conserved
+  miRNAs absent from families - named in the JSON, not dropped silently).
+- Cardiac arm fully reproduced: 12/12 pass in hiPSC-CM (vs 18/20 under
+  miRTarBase over all 20; over the same 12 mapped, miRTarBase passed 11/12
+  cardiac - miR-374b-5p flips to pass under TargetScan).
+- Blood arm reproduced in direction: 7/12 pass; both-cohort intersection =
+  miR-1-3p, 125a-5p, 125b-5p, 145-5p, 192-5p, 194-5p, 30c-5p.
+- CORE6 under TargetScan: 5/6 (miR-122-5p loses blood); miR-125a-5p (the
+  miRTarBase FDR-0.051 near-miss) and miR-125b-5p newly pass blood.
+READING (locked): gate-(b) verdicts stand on miRTarBase validated targets
+(ADDENDUM_3 C2, judge-01). The enrichment pattern is NOT a miRTarBase-v8.0
+annotation artifact: cardiac reproduction exact, blood reproduction
+directional with CORE6 concentrated. Divergences reported as-is.
+SERVICE_LEDGER: TargetScan (service 29) RE-USE, files pinned + sha256.

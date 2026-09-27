@@ -1,0 +1,61 @@
+{
+  "unmapped_candidates": [
+    "miR-1294",
+    "miR-20a-3p",
+    "miR-769-5p",
+    "miR-1285-3p",
+    "miR-223-5p",
+    "miR-651-5p",
+    "miR-375-3p",
+    "miR-1301-3p"
+  ],
+  "n_tests": 24,
+  "n_pass_fdr05": 19,
+  "pass_by_cohort": {
+    "miR-1-3p|blood_GSE244827": 1,
+    "miR-1-3p|hipsc_GSE203525": 1,
+    "miR-122-5p|blood_GSE244827": 0,
+    "miR-122-5p|hipsc_GSE203525": 1,
+    "miR-125a-5p|blood_GSE244827": 1,
+    "miR-125a-5p|hipsc_GSE203525": 1,
+    "miR-125b-5p|blood_GSE244827": 1,
+    "miR-125b-5p|hipsc_GSE203525": 1,
+    "miR-145-5p|blood_GSE244827": 1,
+    "miR-145-5p|hipsc_GSE203525": 1,
+    "miR-182-5p|blood_GSE244827": 0,
+    "miR-182-5p|hipsc_GSE203525": 1,
+    "miR-192-5p|blood_GSE244827": 1,
+    "miR-192-5p|hipsc_GSE203525": 1,
+    "miR-194-5p|blood_GSE244827": 1,
+    "miR-194-5p|hipsc_GSE203525": 1,
+    "miR-199b-5p|blood_GSE244827": 0,
+    "miR-199b-5p|hipsc_GSE203525": 1,
+    "miR-206|blood_GSE244827": 0,
+    "miR-206|hipsc_GSE203525": 1,
+    "miR-30c-5p|blood_GSE244827": 1,
+    "miR-30c-5p|hipsc_GSE203525": 1,
+    "miR-374b-5p|blood_GSE244827": 0,
+    "miR-374b-5p|hipsc_GSE203525": 1
+  },
+  "both_cohort_pass": [
+    "miR-1-3p",
+    "miR-125a-5p",
+    "miR-125b-5p",
+    "miR-145-5p",
+    "miR-192-5p",
+    "miR-194-5p",
+    "miR-30c-5p"
+  ],
+  "core6_both_under_targetscan": [
+    "miR-1-3p",
+    "miR-192-5p",
+    "miR-30c-5p",
+    "miR-145-5p",
+    "miR-194-5p"
+  ],
+  "sha256": {
+    "Predicted_Targets_Info.default_predictions.txt.zip": "5f981abfc56671fab281b1b1852244472893497424edde50afbe2ac7716aa52c",
+    "miR_Family_Info.txt.zip": "d91827b9c9524f2b970d85f61050ecfa9b8cb7ca395c5f7952b9c21cb3dc3b7a"
+  },
+  "reading": "NON-GATE sensitivity (ADDENDUM_4 D3); gate-b stands on miRTarBase validated targets"
+}

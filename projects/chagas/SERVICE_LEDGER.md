@@ -237,3 +237,7 @@ not a new tool: DISTINCT count stays 40.
 - 2026-09-27 HPA (Human Protein Atlas): RE-USE for D1 (ADDENDUM_4). New file
   retrievals: v23 pin rna_immune_cell.tsv.zip sha256 ac4a219a92fac1d27c7610f35d0053b0502b1aedefd3b95c4b37a42021028ba2,
   rna_tissue_consensus.tsv.zip sha256 b9ac6bbdf8152524ff845767638f4c92389b2933c5ef02060dee68b873176095. Not a new service.
+
+- 2026-09-27 TargetScan (service 29): RE-USE for D3 (ADDENDUM_4). Pinned 8.0
+  files: Predicted_Targets_Info.default_predictions.txt.zip sha256
+  5f981abf...aa52c, miR_Family_Info.txt.zip sha256 d91827b9...c3b7a. Not a new service.
