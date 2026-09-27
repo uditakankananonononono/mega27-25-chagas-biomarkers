@@ -1,0 +1,108 @@
+{
+  "spec": "ADDENDUM_5 E4; non-gate descriptive; pinned-library re-use",
+  "union_targets_de_blood": 220,
+  "terms_tested": 188,
+  "n_fdr_pass": 187,
+  "disease_relevant_fdr_pass": [
+    {
+      "library": "KEGG_2021_Human",
+      "term": "Diabetic cardiomyopathy",
+      "overlap": 3,
+      "set_size": 24,
+      "fdr": 0.0011794326761559698
+    },
+    {
+      "library": "WikiPathways_2024_Human",
+      "term": "Physiological And Pathological Hypertrophy Of The Heart WP1528",
+      "overlap": 2,
+      "set_size": 11,
+      "fdr": 0.0026401159271722515
+    },
+    {
+      "library": "WikiPathways_2024_Human",
+      "term": "Cardiac Hypertrophic Response WP2795",
+      "overlap": 2,
+      "set_size": 17,
+      "fdr": 0.00508445340612265
+    },
+    {
+      "library": "WikiPathways_2024_Human",
+      "term": "MicroRNAs In Cardiomyocyte Hypertrophy WP1544",
+      "overlap": 2,
+      "set_size": 28,
+      "fdr": 0.009878453831120947
+    }
+  ],
+  "top10": [
+    {
+      "library": "GO_Biological_Process_2025",
+      "term": "Regulation of Transcription by RNA Polymerase II (GO:0006357)",
+      "overlap": 11,
+      "set_size": 158,
+      "fdr": 6.614010825597075e-08
+    },
+    {
+      "library": "KEGG_2021_Human",
+      "term": "Oxytocin signaling pathway",
+      "overlap": 5,
+      "set_size": 19,
+      "fdr": 2.520060807409318e-06
+    },
+    {
+      "library": "KEGG_2021_Human",
+      "term": "Proteoglycans in cancer",
+      "overlap": 6,
+      "set_size": 64,
+      "fdr": 4.2562432615708316e-05
+    },
+    {
+      "library": "WikiPathways_2024_Human",
+      "term": "Wnt Signaling WP428",
+      "overlap": 4,
+      "set_size": 20,
+      "fdr": 0.00011076642125983657
+    },
+    {
+      "library": "GO_Biological_Process_2025",
+      "term": "Negative Regulation of DNA-templated Transcription (GO:0045892)",
+      "overlap": 6,
+      "set_size": 84,
+      "fdr": 0.0001278277681231339
+    },
+    {
+      "library": "KEGG_2021_Human",
+      "term": "Wnt signaling pathway",
+      "overlap": 4,
+      "set_size": 23,
+      "fdr": 0.00013344467983230116
+    },
+    {
+      "library": "WikiPathways_2024_Human",
+      "term": "Pleural Mesothelioma WP5087",
+      "overlap": 6,
+      "set_size": 92,
+      "fdr": 0.00014190315934612551
+    },
+    {
+      "library": "KEGG_2021_Human",
+      "term": "Cushing syndrome",
+      "overlap": 4,
+      "set_size": 25,
+      "fdr": 0.00014190315934612551
+    },
+    {
+      "library": "GO_Biological_Process_2025",
+      "term": "Positive Regulation of Transcription by RNA Polymerase II (GO:0045944)",
+      "overlap": 6,
+      "set_size": 109,
+      "fdr": 0.0002216968342005657
+    },
+    {
+      "library": "WikiPathways_2024_Human",
+      "term": "ErbB Signaling WP673",
+      "overlap": 4,
+      "set_size": 30,
+      "fdr": 0.0002216968342005657
+    }
+  ]
+}

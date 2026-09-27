@@ -311,7 +311,7 @@ signaling pathways. The lane claims the convergence as consistent
 context, not as mechanistic evidence; the generic-cancer-term
 background is named in the same breath.
 
-## 9.5 Preregistered robustness battery: D1-D3 (ADDENDUM_4), E1-E2 (ADDENDUM_5) E3/E5/E6/E7/E11/E12 (ADDENDUM_5) and F2/F3/F5/F10 (ADDENDUM_6/7), all locked 2026-09-27 before any run
+## 9.5 Preregistered robustness battery: D1-D3 (ADDENDUM_4), E1-E2 (ADDENDUM_5) E3/E4/E5/E6/E7/E11/E12 (ADDENDUM_5) and F2/F3/F5/F10 (ADDENDUM_6/7), all locked 2026-09-27 before any run
 
 A supplementary review consult (round 02, Gemini; logged supplementary under
 the ChatGPT-only round rule) challenged three load-bearing points. Each was
@@ -541,3 +541,17 @@ for the full CORE6 module under the identical frozen-membership protocol.
 A six-assay panel therefore retains about 97% of the module's ranking
 signal in simulation - assay-transfer evidence at the simulation level
 only, with no wet-lab claim (results/e12_qpcr_panel_sim.json).
+
+E4 - blood-signature pathway correlation (ADDENDUM_5, non-gate
+descriptive). The union of direction-consistent blood-DE validated
+targets across candidates (220 genes) is tested against the pinned
+pathway libraries (re-use, no new service). Enrichment is broad (187 of
+188 terms pass FDR <= 0.05); the disease-relevant signal: KEGG Diabetic
+cardiomyopathy (3 genes, FDR 0.0012) and WikiPathways cardiac hypertrophy
+terms WP1528/WP2795 plus MicroRNAs in cardiomyocyte hypertrophy WP1544
+(2 genes each, FDR < 0.01). Overlaps are small, so this is descriptive -
+but it answers the phenotype-mismatch question at pathway level: the
+cardiac-remodeling pathways the cardiac arm implicates do appear among
+the blood DE targets, which is what a blood signature of a cardiac
+disease should show if the compartments share biology
+(results/e4_blood_pathway.json).

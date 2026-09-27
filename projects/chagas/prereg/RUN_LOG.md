@@ -631,3 +631,13 @@ frequency (192/1/194): OOF 0.712. Top-6 (+122/363/484): OOF 0.730. Full
 CORE6 under identical protocol: 0.754. A 6-assay panel retains ~97% of
 the module's ranking signal; 3-assay retains 94%. Simulation-level only,
 no wet-lab claim. results/e12_qpcr_panel_sim.json.
+
+2026-09-27T11:35 IST - E4 RUN (ADDENDUM_5, non-gate descriptive): blood
+direction-consistent DE target union = 220 genes; 188 pinned-library terms
+tested (Enrichr re-use), 187 pass FDR<=0.05 (broad enrichment); disease-
+relevant: KEGG Diabetic cardiomyopathy (3 genes, FDR 0.0012), WikiPathways
+cardiac hypertrophy WP1528/WP2795 + MicroRNAs in cardiomyocyte hypertrophy
+WP1544 (2 genes each, FDR<0.01). Small overlaps - descriptive only. This
+answers round-03 weakness 8 at pathway level: the same cardiac-remodeling
+pathways DO appear in blood DE targets. results/e4_blood_pathway.json +
+e4_blood_pathway_enrichment.csv.
