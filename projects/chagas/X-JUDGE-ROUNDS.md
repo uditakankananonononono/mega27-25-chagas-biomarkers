@@ -3,10 +3,18 @@
 Her standing rule (verbatim, verified by parent 2026-09-27T08:56):
 "min 10 ChatGPT judge rounds" / "GOES THROUGH CHATGPT AS JUDGE".
 
-COUNTED tally (ChatGPT-fired rounds only): 1/10
+COUNTED tally (ChatGPT rounds incl. user-couriered route): 2/10
 - Round 01: ChatGPT Free thread 6ab7e9ef, 2026-09-26T21:21 IST.
   Verbatim: judge_rounds/01_prompt.txt, 01_response.txt,
   01_assessment.txt, 01_novelty_change.txt.
+- Round 02: ChatGPT verdict user-couriered 2026-09-27T09:17:56 IST
+  (her WhatsApp wamid...M0VCMEMwMzdDRUQwQjE1RkRBOEJFNwA=; route
+  authorized by her 09:00:38 WhatsApp). Verbatim:
+  judge_rounds/02_response_chatgpt.txt (full message incl. her
+  directive prefix "ADD ALL THIS TO IT AND WHEN COMPLETE I WILL
+  CHECK AGAIN"). Prompt text = 02_prompt_gemini.txt (same paste).
+  Her directive: adopt into the project; assessment + ADDENDUM_5
+  lock-before-run in progress.
 
 SUPPLEMENTARY consults (do NOT count toward the 10):
 - Round 02: Gemini Flash fresh consult, thread
@@ -18,9 +26,11 @@ SUPPLEMENTARY consults (do NOT count toward the 10):
   about the lock-before-run discipline.
 
 Route status:
-- ChatGPT (counted rounds): BLOCKED on the provider free-tier cap
-  until it resets. Rounds 02-10 (counted) fire via ChatGPT threads
-  as cap allows, on parent token pass.
+- ChatGPT (counted rounds): USER-COURIERED route active since
+  09:00 2026-09-27 (she pastes into her own ChatGPT; verdicts
+  return via WhatsApp with message-ID provenance). Provider-cap
+  block moot for this route. One round at a time; round 03 paste
+  prepared only after round-02 adoptions are locked.
 - Gemini: open (Google OAuth restored 08:52); supplementary only.
 - DeepSeek: still credential-blocked.
 
