@@ -557,3 +557,28 @@ PC1 is 19.9% variance; no feature candidates. Locked READING outcome:
 framework superiority claimed where alternatives do not recover the
 frozen set (RF 17/21 missed, linear-trend 21/21 missed); plain-DE
 recovery reported verbatim. results/f5_pipeline_comparison.json.
+
+2026-09-27T11:03 IST - F3 RUN (ADDENDUM_6): permutation importance, H1'
+top-100 per fold, 1,000 perms/feature, OOF c-index drop. 170 unique
+features across folds; 67 have NEGATIVE mean importance (noise features,
+disclosed). Top: let-7i-5p (5/5 folds, +0.0173), miR-122-5p (5/5, +0.0101).
+CORE6: miR-122-5p +0.0101, miR-30c-5p +0.0044, miR-1-3p +0.0012,
+miR-145-5p NEGATIVE -0.0017 (E1-instability-consistent); miR-192-5p and
+miR-194-5p are NOT in any fold's H1' top-100 - the E1-stable module pair
+and the H1' model's feature set are different objects, stated plainly.
+Join bug fixed post-run (hsa- prefix): 10 F3 features join E1 top-20
+discovery frequencies. results/f3_permutation_importance.{json,csv}.
+
+2026-09-27T11:04 IST - E3 RUN (ADDENDUM_5): miRTarBase-bias controls -
+LOCKED CRITERION FAILS, claim downgraded to "database-bias-consistent".
+Control A (matched random miRNAs, 200 draws, exact-hypergeometric null
+disclosed): random equally-studied miRNAs pass cardiac gate-(b) at median
+17/20, p95 19/20; 7% of draws >= observed 19/20 (exact recompute;
+MC original 18/20). Observed does NOT exceed control. Control B
+(same-family target nulls): computable for 6 candidates; family targets
+reach p <= candidate's own in 63-100% of draws (family-level, not
+member-specific). Control C = D3 (TargetScan 12/12 reproduction -
+not an annotation artifact). VERDICT: 18/20 and 6/20 counts stand as
+facts; interpretation downgraded in paper 9.3/9.4/battery + abstract.
+STRING interconnectivity unaffected (different test).
+results/e3_mirtarbase_bias_controls.json.

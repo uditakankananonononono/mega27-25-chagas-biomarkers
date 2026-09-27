@@ -1,0 +1,124 @@
+{
+  "spec": "ADDENDUM_5 E3; exact-hypergeometric substitution disclosed",
+  "observed_cardiac_pass_exact": 19,
+  "observed_n": 20,
+  "control_A": {
+    "draws": 200,
+    "median_pass": 17.0,
+    "p95_pass": 19.0,
+    "max_pass": 19,
+    "frac_draws_ge_observed": 0.07
+  },
+  "control_B": {
+    "MIR-182-5P": {
+      "status": "insufficient family targets",
+      "family": "miR-182-5p",
+      "n_family_targets": 0
+    },
+    "MIR-1-3P": {
+      "status": "insufficient family targets",
+      "family": "miR-1-3p/206",
+      "n_family_targets": 124
+    },
+    "MIR-206": {
+      "family": "miR-1-3p/206",
+      "n_family_targets": 923,
+      "median_p_family_null": 0.05778222663941513,
+      "frac_draws_p_le_obs": 0.72
+    },
+    "MIR-30C-5P": {
+      "family": "miR-30-5p",
+      "n_family_targets": 919,
+      "median_p_family_null": 6.811563163057192e-45,
+      "frac_draws_p_le_obs": 0.63
+    },
+    "MIR-1294": {
+      "status": "insufficient family targets",
+      "family": "miR-1294",
+      "n_family_targets": 0
+    },
+    "MIR-125B-5P": {
+      "status": "insufficient family targets",
+      "family": "miR-125-5p",
+      "n_family_targets": 271
+    },
+    "MIR-125A-5P": {
+      "family": "miR-125-5p",
+      "n_family_targets": 433,
+      "median_p_family_null": 1.44787923596437e-05,
+      "frac_draws_p_le_obs": 0.91
+    },
+    "MIR-374B-5P": {
+      "family": "miR-374-5p",
+      "n_family_targets": 282,
+      "median_p_family_null": 0.0009968723358528022,
+      "frac_draws_p_le_obs": 1.0
+    },
+    "MIR-199B-5P": {
+      "family": "miR-199-5p",
+      "n_family_targets": 166,
+      "median_p_family_null": 0.001201181121999272,
+      "frac_draws_p_le_obs": 0.725
+    },
+    "MIR-145-5P": {
+      "status": "insufficient family targets",
+      "family": "miR-145-5p",
+      "n_family_targets": 83
+    },
+    "MIR-20A-3P": {
+      "status": "insufficient family targets",
+      "family": "miR-20a-3p",
+      "n_family_targets": 0
+    },
+    "MIR-769-5P": {
+      "status": "insufficient family targets",
+      "family": "miR-769-5p",
+      "n_family_targets": 0
+    },
+    "MIR-1285-3P": {
+      "family": "miR-612/1285-3p/3187-5p/5189-5p/6860",
+      "n_family_targets": 263,
+      "median_p_family_null": 2.261282659279816e-14,
+      "frac_draws_p_le_obs": 0.97
+    },
+    "MIR-192-5P": {
+      "status": "insufficient family targets",
+      "family": "miR-192-5p/215-5p",
+      "n_family_targets": 755
+    },
+    "MIR-122-5P": {
+      "status": "insufficient family targets",
+      "family": "miR-122-5p",
+      "n_family_targets": 0
+    },
+    "MIR-223-5P": {
+      "status": "insufficient family targets",
+      "family": "miR-223-5p",
+      "n_family_targets": 0
+    },
+    "MIR-651-5P": {
+      "status": "insufficient family targets",
+      "family": "miR-651-5p",
+      "n_family_targets": 0
+    },
+    "MIR-194-5P": {
+      "status": "insufficient family targets",
+      "family": "miR-194-5p",
+      "n_family_targets": 0
+    },
+    "MIR-375-3P": {
+      "status": "insufficient family targets",
+      "family": null,
+      "n_family_targets": 0
+    },
+    "MIR-1301-3P": {
+      "status": "insufficient family targets",
+      "family": "miR-1301-3p",
+      "n_family_targets": 89
+    }
+  },
+  "control_C": "D3 TargetScan arm done (results/d3_targetscan_sensitivity.json): cardiac 12/12 exact reproduction",
+  "K_up": 6998,
+  "K_dn": 3945,
+  "N_genes": 58142
+}

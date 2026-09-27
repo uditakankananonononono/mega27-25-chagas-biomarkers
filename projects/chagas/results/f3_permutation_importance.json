@@ -1,0 +1,79 @@
+{
+  "spec": "ADDENDUM_6 F3; descriptive, no claim change",
+  "nperm_per_feature": 1000,
+  "n_features": 170,
+  "seed": 20260926,
+  "top10_by_mean_drop": [
+    {
+      "gene": "hsa-miR-151a-3p",
+      "folds_selected": 1,
+      "mean_oof_cindex_drop": 0.021270700636942672,
+      "max_fold_drop": 0.021270700636942672,
+      "e1_discovery_frequency": null
+    },
+    {
+      "gene": "hsa-miR-98-3p",
+      "folds_selected": 1,
+      "mean_oof_cindex_drop": 0.01863375796178344,
+      "max_fold_drop": 0.01863375796178344,
+      "e1_discovery_frequency": null
+    },
+    {
+      "gene": "hsa-miR-6514-5p",
+      "folds_selected": 1,
+      "mean_oof_cindex_drop": 0.017654952076677295,
+      "max_fold_drop": 0.017654952076677295,
+      "e1_discovery_frequency": null
+    },
+    {
+      "gene": "hsa-let-7i-5p",
+      "folds_selected": 5,
+      "mean_oof_cindex_drop": 0.017323427007329195,
+      "max_fold_drop": 0.02638338658146963,
+      "e1_discovery_frequency": null
+    },
+    {
+      "gene": "hsa-miR-3605-5p",
+      "folds_selected": 1,
+      "mean_oof_cindex_drop": 0.016937313432835815,
+      "max_fold_drop": 0.016937313432835815,
+      "e1_discovery_frequency": null
+    },
+    {
+      "gene": "hsa-miR-3135b",
+      "folds_selected": 1,
+      "mean_oof_cindex_drop": 0.014659235668789804,
+      "max_fold_drop": 0.014659235668789804,
+      "e1_discovery_frequency": null
+    },
+    {
+      "gene": "hsa-miR-6513-3p",
+      "folds_selected": 1,
+      "mean_oof_cindex_drop": 0.013805732484076466,
+      "max_fold_drop": 0.013805732484076466,
+      "e1_discovery_frequency": null
+    },
+    {
+      "gene": "hsa-miR-223-5p",
+      "folds_selected": 1,
+      "mean_oof_cindex_drop": 0.01353821656050955,
+      "max_fold_drop": 0.01353821656050955,
+      "e1_discovery_frequency": null
+    },
+    {
+      "gene": "hsa-miR-204-5p",
+      "folds_selected": 1,
+      "mean_oof_cindex_drop": 0.0110511182108626,
+      "max_fold_drop": 0.0110511182108626,
+      "e1_discovery_frequency": null
+    },
+    {
+      "gene": "hsa-miR-30a-3p",
+      "folds_selected": 1,
+      "mean_oof_cindex_drop": 0.010552715654952057,
+      "max_fold_drop": 0.010552715654952057,
+      "e1_discovery_frequency": null
+    }
+  ],
+  "negative_importance_count": 67
+}

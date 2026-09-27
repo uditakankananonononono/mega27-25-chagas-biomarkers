@@ -16,9 +16,11 @@ absent from the screened Chagas biomarker literature, with a
 muscle-lineage thread (miR-1, miR-206, miR-145, miR-199b) consistent with
 progressive cardiomyocyte injury. The registered orthogonal replication
 has now run: direction-predicted enrichment of miRTarBase-validated
-target programs confirms 18/20 candidates in patient-derived
+target programs passes for 18/20 candidates in patient-derived
 cardiomyocytes but only 6/20 in peripheral blood - an honest
-compartment split. Six miRNAs (miR-1-3p, miR-122-5p, miR-192-5p,
+compartment split, and one that matched-popularity controls show is
+consistent with database bias rather than candidate-specific validation
+(interpretation downgraded accordingly, 9.5). Six miRNAs (miR-1-3p, miR-122-5p, miR-192-5p,
 miR-30c-5p, miR-145-5p, miR-194-5p) replicate in both tissues and form
 a signed severity module that tracks the gradient monotonically
 (in-sample c-index 0.756; full-pipeline bootstrap median 0.615, 3 of 6 members stably re-discovered - 9.6); their 352 strong-support validated targets

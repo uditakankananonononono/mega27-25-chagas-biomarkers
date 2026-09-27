@@ -29,7 +29,11 @@ tests (results/h2_gate_b_enrichment.csv).
 hiPSC-cardiomyocyte cohort GSE203525 (CCC vs indeterminate, 0hpi):
 18/20 candidates pass FDR <= 0.05 (observed fraction of direction-
 consistent DE targets 0.19-0.29 vs null 0.07-0.12). Only miR-374b-5p
-(FDR 0.072) and miR-206 (FDR 0.283) miss.
+(FDR 0.072) and miR-206 (FDR 0.283) miss. INTERPRETATION DOWNGRADED by
+the E3 bias controls (9.5, ADDENDUM_5): matched random miRNAs pass the
+same test at a median of 17/20, so the enrichment pattern is consistent
+with database popularity bias and is no longer read as candidate-specific
+validation; the counts stand as fact, the reading changes.
 
 Whole-blood cohort GSE244827 (seropositive vs seronegative): 6/20 pass -
 miR-1-3p, miR-122-5p, miR-192-5p, miR-30c-5p, miR-145-5p, miR-194-5p.
@@ -134,7 +138,9 @@ CORE6 - and the AND rule was locked before these numbers existed
 ## 9.4 Honest status box (updated 2026-09-27)
 PASSED: record floor (716), provenance model, benchmark-beat (H1'),
 novelty screen (gate c), judge round 01 with landed redesign, gate (b)
-enrichment in the cardiac-cellular cohort (18/20) with a 6-candidate
+enrichment in the cardiac-cellular cohort (18/20 passing FDR - FACT;
+interpretation downgraded to database-bias-consistent by the E3 matched
+controls, 9.5) with a 6-candidate
 both-tissue core (miR-1-3p, miR-122-5p, miR-192-5p, miR-30c-5p,
 miR-145-5p, miR-194-5p), the 40-distinct-service inventory (after the
 re-use count correction, section 5), the module score (CORE6 monotone,
@@ -143,7 +149,10 @@ druggability overlay (49/344 Approved-Drug targets - target-program
 framing only) and the module-coherence evidence (STRING 1051 vs 418
 expected edges, p < 1e-16, corroborated by IntAct counts).
 PARTIAL: gate (b) in blood (6/20; three candidates null).
-REPORTED NEGATIVES: the frozen H1 binary benchmark (Run 1), the
+REPORTED NEGATIVES: the E3 popularity-bias controls (the cardiac gate-(b)
+enrichment is matched-null-consistent: random equally-studied miRNAs pass
+at a median of 17/20; family-target nulls reach the observed p for the
+computable members), the frozen H1 binary benchmark (Run 1), the
 18-member superset as a signed module (c-index 0.509), miR-206 and
 miR-374b-5p in the cardiac cohort, three blood-null candidates.
 JUDGE REQUIREMENT MET (settled rule 2026-09-27: one user-provided ChatGPT
@@ -302,7 +311,7 @@ signaling pathways. The lane claims the convergence as consistent
 context, not as mechanistic evidence; the generic-cancer-term
 background is named in the same breath.
 
-## 9.5 Preregistered robustness battery: D1-D3 (ADDENDUM_4), E1-E2 (ADDENDUM_5) and F2/F5 (ADDENDUM_6), all locked 2026-09-27 before any run
+## 9.5 Preregistered robustness battery: D1-D3 (ADDENDUM_4), E1-E2 (ADDENDUM_5) E3 (ADDENDUM_5) and F2/F3/F5 (ADDENDUM_6), all locked 2026-09-27 before any run
 
 A supplementary review consult (round 02, Gemini; logged supplementary under
 the ChatGPT-only round rule) challenged three load-bearing points. Each was
@@ -415,3 +424,46 @@ claimed exactly where the plain alternatives fail to recover the frozen
 candidates - the RF and linear-trend workflows - and the plain-DE
 recovery is reported verbatim rather than spun
 (results/f5_pipeline_comparison.json).
+
+F3 - feature stability and permutation importance (ADDENDUM_6, descriptive).
+Within each H1' outer fold, every top-100 feature was permuted 1,000 times
+and the OOF c-index drop recorded. 170 unique features appear across folds;
+67 carry negative mean importance - permuting them slightly helps, so they
+are noise passengers, and they are disclosed as such. The strongest
+contributors are let-7i-5p (selected in 5/5 folds, mean drop +0.017) and
+miR-122-5p (5/5 folds, +0.010, max fold drop +0.037). Among CORE6 members:
+miR-122-5p (+0.010) and miR-30c-5p (+0.004) contribute, miR-1-3p is near
+zero (+0.001), miR-145-5p is negative (-0.002) - consistent with its E1
+discovery instability - and miR-192-5p and miR-194-5p, the E1-stable module
+pair, never enter the H1' top-100 at all. The severity model and the
+both-tissue module are therefore different objects: the model's ranking
+signal does not rest on the module members, and the module's evidence does
+not rest on the model (results/f3_permutation_importance.csv, joined to E1
+discovery frequencies).
+
+E3 - miRTarBase-bias negative controls (ADDENDUM_5; locked READING: the
+cardiac 18/20 claim holds only if it exceeds all three controls at the
+locked FDR; failure downgrades the claim to "database-bias-consistent").
+Control A, matched random miRNAs (20-nearest pools on validated-target
+count, serum expression, Europe PMC publication count; 200 draws; the
+size-preserving gene-set null computed exactly by hypergeometric test -
+disclosed substitution for the 10,000-draw Monte Carlo): random
+equally-studied miRNAs pass the cardiac test at a MEDIAN of 17/20 (p95
+19/20), and 7% of draws pass at or above the observed 19/20 (exact-test
+recompute; the Monte-Carlo original gave 18/20). The observed count does
+not exceed the control at the locked level - the locked criterion FAILS.
+Control B, same-family validated-target nulls (TargetScan families, human):
+computable for 6 candidates; family-member targets reach p-values at or
+below the candidate's own in 63-100% of draws - support is family-level,
+not member-specific, for those. Control C (= D3): the pattern reproduces
+on TargetScan predicted targets (cardiac 12/12), so it is not a
+miRTarBase-v8.0 annotation artifact. VERDICT per the lock: the cardiac
+gate-(b) enrichment is downgraded to database-bias-consistent. The 18/20
+and 6/20 counts remain facts of record; what changes is the reading -
+the enrichment shows the candidates' target programs behave like those of
+equally studied miRNAs in these cohorts, not that the candidates are
+specifically validated. Sections 9.3 and 9.4 carry this downgrade; the
+TargetScan reproduction (Control C) and the STRING interconnectivity of
+the CORE6 strong-support targets (a separate test of the target set
+itself, p < 1e-16) are unaffected
+(results/e3_mirtarbase_bias_controls.json).
