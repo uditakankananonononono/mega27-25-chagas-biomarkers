@@ -1,0 +1,433 @@
+{
+  "spec": "ADDENDUM_7 F10; B=500 matched draws; exact hypergeometric",
+  "cohorts": {
+    "hipsc_GSE203525": {
+      "MIR-182-5P": {
+        "excess": 0.08072645980679985,
+        "k_targets": 184,
+        "exact_p": 0.00116749865548318,
+        "null_median_excess": 0.09040183512362573,
+        "null_q95_excess": 0.13454146406937442,
+        "adjusted_p": 0.516,
+        "survives": false,
+        "raw_gateb_fdr": 0.000666600006666,
+        "survivor": false
+      },
+      "MIR-1-3P": {
+        "excess": 0.2246017070762992,
+        "k_targets": 954,
+        "exact_p": 3.421523870980069e-101,
+        "null_median_excess": 0.17342353546121633,
+        "null_q95_excess": 0.2026556445971349,
+        "adjusted_p": 0.0,
+        "survives": true,
+        "raw_gateb_fdr": 0.0002499750024997,
+        "survivor": true
+      },
+      "MIR-206": {
+        "excess": 0.0304331540787115,
+        "k_targets": 126,
+        "exact_p": 0.17857549534189426,
+        "null_median_excess": 0.09312264935247644,
+        "null_q95_excess": 0.12525353837278,
+        "adjusted_p": 0.942,
+        "survives": false,
+        "raw_gateb_fdr": 0.2829050428290504,
+        "survivor": false
+      },
+      "MIR-30C-5P": {
+        "excess": 0.19260515065187853,
+        "k_targets": 526,
+        "exact_p": 1.4299144184804993e-43,
+        "null_median_excess": 0.160317890972127,
+        "null_q95_excess": 0.1880730475037337,
+        "adjusted_p": 0.036,
+        "survives": true,
+        "raw_gateb_fdr": 0.0002499750024997,
+        "survivor": true
+      },
+      "MIR-1294": {
+        "excess": 0.21533471759558456,
+        "k_targets": 113,
+        "exact_p": 2.2588982695656167e-12,
+        "null_median_excess": 0.17265520600154402,
+        "null_q95_excess": 0.28929173403047714,
+        "adjusted_p": 0.306,
+        "survives": false,
+        "raw_gateb_fdr": 0.0002499750024997,
+        "survivor": false
+      },
+      "MIR-125B-5P": {
+        "excess": 0.15932036909251973,
+        "k_targets": 449,
+        "exact_p": 1.5398577750030785e-27,
+        "null_median_excess": 0.17342353546121633,
+        "null_q95_excess": 0.246102365259713,
+        "adjusted_p": 0.71,
+        "survives": false,
+        "raw_gateb_fdr": 0.0002499750024997,
+        "survivor": false
+      },
+      "MIR-125A-5P": {
+        "excess": 0.07152142210424892,
+        "k_targets": 271,
+        "exact_p": 0.0004525546499010397,
+        "null_median_excess": 0.09312264935247644,
+        "null_q95_excess": 0.13807543579759737,
+        "adjusted_p": 0.686,
+        "survives": false,
+        "raw_gateb_fdr": 0.0018945473873665,
+        "survivor": false
+      },
+      "MIR-374B-5P": {
+        "excess": 0.041341630944635194,
+        "k_targets": 235,
+        "exact_p": 0.03601018127865439,
+        "null_median_excess": 0.07770713613530225,
+        "null_q95_excess": 0.13441657334875498,
+        "adjusted_p": 0.948,
+        "survives": false,
+        "raw_gateb_fdr": 0.0718389699491589,
+        "survivor": false
+      },
+      "MIR-199B-5P": {
+        "excess": 0.09585571950127694,
+        "k_targets": 111,
+        "exact_p": 0.003007142338616839,
+        "null_median_excess": 0.07963950328506073,
+        "null_q95_excess": 0.13216475581031326,
+        "adjusted_p": 0.344,
+        "survives": false,
+        "raw_gateb_fdr": 0.004726800047268,
+        "survivor": false
+      },
+      "MIR-145-5P": {
+        "excess": 0.22002766476640787,
+        "k_targets": 264,
+        "exact_p": 7.966134747609254e-28,
+        "null_median_excess": 0.17624336507659635,
+        "null_q95_excess": 0.246102365259713,
+        "adjusted_p": 0.108,
+        "survives": false,
+        "raw_gateb_fdr": 0.0002499750024997,
+        "survivor": false
+      },
+      "MIR-20A-3P": {
+        "excess": 0.11876993806766942,
+        "k_targets": 92,
+        "exact_p": 0.0011402540903362247,
+        "null_median_excess": 0.05958260428079329,
+        "null_q95_excess": 0.14193458525227384,
+        "adjusted_p": 0.212,
+        "survives": false,
+        "raw_gateb_fdr": 0.0035996400359964,
+        "survivor": false
+      },
+      "MIR-769-5P": {
+        "excess": 0.12525353837278,
+        "k_targets": 228,
+        "exact_p": 1.2959547369341758e-07,
+        "null_median_excess": 0.07963950328506073,
+        "null_q95_excess": 0.1234205978124239,
+        "adjusted_p": 0.028,
+        "survives": true,
+        "raw_gateb_fdr": 0.0002499750024997,
+        "survivor": true
+      },
+      "MIR-1285-3P": {
+        "excess": 0.1422656084051297,
+        "k_targets": 257,
+        "exact_p": 8.570824709572961e-14,
+        "null_median_excess": 0.15891467614412555,
+        "null_q95_excess": 0.20920515394389702,
+        "adjusted_p": 0.592,
+        "survives": false,
+        "raw_gateb_fdr": 0.0002499750024997,
+        "survivor": false
+      },
+      "MIR-192-5P": {
+        "excess": 0.11952362638661795,
+        "k_targets": 998,
+        "exact_p": 4.4575289794439265e-37,
+        "null_median_excess": 0.16722350375329162,
+        "null_q95_excess": 0.21037468333923284,
+        "adjusted_p": 1.0,
+        "survives": false,
+        "raw_gateb_fdr": 0.0002499750024997,
+        "survivor": false
+      },
+      "MIR-122-5P": {
+        "excess": 0.16537571394832284,
+        "k_targets": 626,
+        "exact_p": 2.999122458408153e-40,
+        "null_median_excess": 0.1747718277072921,
+        "null_q95_excess": 0.23956937158726663,
+        "adjusted_p": 0.688,
+        "survives": false,
+        "raw_gateb_fdr": 0.0002499750024997,
+        "survivor": false
+      },
+      "MIR-223-5P": {
+        "excess": 0.09794936243999028,
+        "k_targets": 284,
+        "exact_p": 2.2830499664380666e-06,
+        "null_median_excess": 0.06238062003632974,
+        "null_q95_excess": 0.15383305167215747,
+        "adjusted_p": 0.104,
+        "survives": false,
+        "raw_gateb_fdr": 0.0002499750024997,
+        "survivor": false
+      },
+      "MIR-651-5P": {
+        "excess": 0.19368733842608152,
+        "k_targets": 65,
+        "exact_p": 1.0623853134557695e-06,
+        "null_median_excess": 0.15979115331038418,
+        "null_q95_excess": 0.31676426150300463,
+        "adjusted_p": 0.3,
+        "survives": false,
+        "raw_gateb_fdr": 0.0002499750024997,
+        "survivor": false
+      },
+      "MIR-194-5P": {
+        "excess": 0.21938291944081148,
+        "k_targets": 94,
+        "exact_p": 7.996637270418975e-11,
+        "null_median_excess": 0.15009759483633792,
+        "null_q95_excess": 0.2146600876499518,
+        "adjusted_p": 0.048,
+        "survives": true,
+        "raw_gateb_fdr": 0.0002499750024997,
+        "survivor": true
+      },
+      "MIR-375-3P": {
+        "status": "no targets or pool"
+      },
+      "MIR-1301-3P": {
+        "excess": 0.08268518856424853,
+        "k_targets": 197,
+        "exact_p": 0.0006225546809190209,
+        "null_median_excess": 0.07045222413311725,
+        "null_q95_excess": 0.12963950328506071,
+        "adjusted_p": 0.406,
+        "survives": false,
+        "raw_gateb_fdr": 0.000470541181176,
+        "survivor": false
+      }
+    },
+    "blood_GSE244827": {
+      "MIR-182-5P": {
+        "excess": 0.0007178801326605741,
+        "k_targets": 183,
+        "exact_p": 0.5818886986138126,
+        "null_median_excess": 0.0021978437027880783,
+        "null_q95_excess": 0.009959281611284811,
+        "adjusted_p": 0.552,
+        "survives": false,
+        "raw_gateb_fdr": 0.6764029479405,
+        "survivor": false
+      },
+      "MIR-1-3P": {
+        "excess": 0.031538696161687516,
+        "k_targets": 924,
+        "exact_p": 5.562378979553873e-08,
+        "null_median_excess": 0.0372274518504432,
+        "null_q95_excess": 0.05126163988463123,
+        "adjusted_p": 0.658,
+        "survives": false,
+        "raw_gateb_fdr": 0.0002499750024997,
+        "survivor": false
+      },
+      "MIR-206": {
+        "excess": 0.00351786206826099,
+        "k_targets": 121,
+        "exact_p": 0.4380135350699563,
+        "null_median_excess": 0.0026063404348142223,
+        "null_q95_excess": 0.013435217440161816,
+        "adjusted_p": 0.452,
+        "survives": false,
+        "raw_gateb_fdr": 0.522856805228568,
+        "survivor": false
+      },
+      "MIR-30C-5P": {
+        "excess": 0.022136639884631232,
+        "k_targets": 512,
+        "exact_p": 0.002443328819937838,
+        "null_median_excess": 0.03351406706909725,
+        "null_q95_excess": 0.04908714324033593,
+        "adjusted_p": 0.8,
+        "survives": false,
+        "raw_gateb_fdr": 0.004726800047268,
+        "survivor": false
+      },
+      "MIR-1294": {
+        "excess": -0.006556541933550587,
+        "k_targets": 110,
+        "exact_p": 0.7592907157726334,
+        "null_median_excess": 0.02680803163720855,
+        "null_q95_excess": 0.0919283065512979,
+        "adjusted_p": 0.952,
+        "survives": false,
+        "raw_gateb_fdr": 0.823485219045663,
+        "survivor": false
+      },
+      "MIR-125B-5P": {
+        "excess": 0.007744238492519862,
+        "k_targets": 431,
+        "exact_p": 0.1851560127296584,
+        "null_median_excess": 0.033741172048373916,
+        "null_q95_excess": 0.05404951867251001,
+        "adjusted_p": 0.94,
+        "survives": false,
+        "raw_gateb_fdr": 0.2002558364853169,
+        "survivor": false
+      },
+      "MIR-125A-5P": {
+        "excess": 0.010757275227335883,
+        "k_targets": 258,
+        "exact_p": 0.035225884587523806,
+        "null_median_excess": 0.0026063404348142223,
+        "null_q95_excess": 0.01208841609336047,
+        "adjusted_p": 0.092,
+        "survives": false,
+        "raw_gateb_fdr": 0.0510348965103489,
+        "survivor": false
+      },
+      "MIR-374B-5P": {
+        "excess": -0.0003606358293756643,
+        "k_targets": 228,
+        "exact_p": 0.6627196416957004,
+        "null_median_excess": 0.0021027143268367845,
+        "null_q95_excess": 0.015455419460363839,
+        "adjusted_p": 0.682,
+        "survives": false,
+        "raw_gateb_fdr": 0.755467310411816,
+        "survivor": false
+      },
+      "MIR-199B-5P": {
+        "excess": 0.013435217440161816,
+        "k_targets": 110,
+        "exact_p": 0.09649733259314054,
+        "null_median_excess": 0.005457480890996695,
+        "null_q95_excess": 0.020046787688095702,
+        "adjusted_p": 0.142,
+        "survives": false,
+        "raw_gateb_fdr": 0.1367006156527204,
+        "survivor": false
+      },
+      "MIR-145-5P": {
+        "excess": 0.026042889884631232,
+        "k_targets": 256,
+        "exact_p": 0.01200524257827572,
+        "null_median_excess": 0.03314876000040547,
+        "null_q95_excess": 0.05446956067671044,
+        "adjusted_p": 0.596,
+        "survives": false,
+        "raw_gateb_fdr": 0.0097381566191206,
+        "survivor": false
+      },
+      "MIR-20A-3P": {
+        "excess": -0.004746600741656366,
+        "k_targets": 86,
+        "exact_p": 1.0,
+        "null_median_excess": -0.004746600741656366,
+        "null_q95_excess": 0.020569854954546166,
+        "adjusted_p": 1.0,
+        "survives": false,
+        "raw_gateb_fdr": 1.0,
+        "survivor": false
+      },
+      "MIR-769-5P": {
+        "excess": -0.004746600741656366,
+        "k_targets": 219,
+        "exact_p": 1.0,
+        "null_median_excess": 0.002509474417111282,
+        "null_q95_excess": 0.013380617385561663,
+        "adjusted_p": 1.0,
+        "survives": false,
+        "raw_gateb_fdr": 1.0,
+        "survivor": false
+      },
+      "MIR-1285-3P": {
+        "excess": 0.015422282454912357,
+        "k_targets": 249,
+        "exact_p": 0.09228684119510311,
+        "null_median_excess": 0.04095507054156554,
+        "null_q95_excess": 0.06264028066133026,
+        "adjusted_p": 0.752,
+        "survives": false,
+        "raw_gateb_fdr": 0.135986401359864,
+        "survivor": false
+      },
+      "MIR-192-5P": {
+        "excess": 0.07030296219868082,
+        "k_targets": 968,
+        "exact_p": 5.523251120101201e-28,
+        "null_median_excess": 0.03868346879318581,
+        "null_q95_excess": 0.04872135552444165,
+        "adjusted_p": 0.0,
+        "survives": true,
+        "raw_gateb_fdr": 0.0002499750024997,
+        "survivor": true
+      },
+      "MIR-122-5P": {
+        "excess": 0.024685033624334694,
+        "k_targets": 607,
+        "exact_p": 0.0003265660472510793,
+        "null_median_excess": 0.030206694829686177,
+        "null_q95_excess": 0.04872135552444165,
+        "adjusted_p": 0.608,
+        "survives": false,
+        "raw_gateb_fdr": 0.0002499750024997,
+        "survivor": false
+      },
+      "MIR-223-5P": {
+        "excess": -0.004746600741656366,
+        "k_targets": 273,
+        "exact_p": 1.0,
+        "null_median_excess": 0.005457480890996695,
+        "null_q95_excess": 0.025404153027187855,
+        "adjusted_p": 1.0,
+        "survives": false,
+        "raw_gateb_fdr": 1.0,
+        "survivor": false
+      },
+      "MIR-651-5P": {
+        "excess": -0.0071945004662459615,
+        "k_targets": 57,
+        "exact_p": 0.7603291804869584,
+        "null_median_excess": 0.026543691166682513,
+        "null_q95_excess": 0.09806865742849087,
+        "adjusted_p": 0.948,
+        "survives": false,
+        "raw_gateb_fdr": 0.823485219045663,
+        "survivor": false
+      },
+      "MIR-194-5P": {
+        "excess": 0.04267737022170988,
+        "k_targets": 89,
+        "exact_p": 0.023243045995208527,
+        "null_median_excess": 0.0304763638110116,
+        "null_q95_excess": 0.046690211313202654,
+        "adjusted_p": 0.172,
+        "survives": false,
+        "raw_gateb_fdr": 0.0374962503749625,
+        "survivor": false
+      },
+      "MIR-375-3P": {
+        "status": "no targets or pool"
+      },
+      "MIR-1301-3P": {
+        "excess": 0.005779715047817318,
+        "k_targets": 190,
+        "exact_p": 0.22805029285370018,
+        "null_median_excess": 0.00010776819038246874,
+        "null_q95_excess": 0.030341118556589247,
+        "adjusted_p": 0.35,
+        "survives": false,
+        "raw_gateb_fdr": 0.2967445190964775,
+        "survivor": false
+      }
+    }
+  }
+}

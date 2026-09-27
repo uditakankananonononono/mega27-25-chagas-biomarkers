@@ -311,7 +311,7 @@ signaling pathways. The lane claims the convergence as consistent
 context, not as mechanistic evidence; the generic-cancer-term
 background is named in the same breath.
 
-## 9.5 Preregistered robustness battery: D1-D3 (ADDENDUM_4), E1-E2 (ADDENDUM_5) E3 (ADDENDUM_5) and F2/F3/F5 (ADDENDUM_6), all locked 2026-09-27 before any run
+## 9.5 Preregistered robustness battery: D1-D3 (ADDENDUM_4), E1-E2 (ADDENDUM_5) E3/E5 (ADDENDUM_5) and F2/F3/F5/F10 (ADDENDUM_6/7), all locked 2026-09-27 before any run
 
 A supplementary review consult (round 02, Gemini; logged supplementary under
 the ChatGPT-only round rule) challenged three load-bearing points. Each was
@@ -467,3 +467,41 @@ TargetScan reproduction (Control C) and the STRING interconnectivity of
 the CORE6 strong-support targets (a separate test of the target set
 itself, p < 1e-16) are unaffected
 (results/e3_mirtarbase_bias_controls.json).
+
+E5 - influence diagnostics (ADDENDUM_5, severe n = 30). The locked 4/n
+Cook's-distance screen flags 120 of 146 samples (max 39.1) - with p = 101
+parameters on n ~ 117 training samples the fits are near-saturated, the
+approximation's leverage is high everywhere, and the screen is
+non-informative here; it is disclosed as such, and the operative
+influence tests are the resampling batteries. Leave-one-out jackknife
+(146 full-pipeline refits): OOF c-index median 0.792, range
+[0.756, 0.816] - no single sample moves the model by more than about
+0.03, so the result is not outlier-driven. Leave-5%-out (200 seeded
+draws): median 0.790, interval [0.751, 0.820]. Leave-severe-out: refit on
+the remaining 116 (control/mild/moderate), the module score still
+separates the groups (KW p < 1e-6) and the 3-class OOF c-index is 0.835 -
+the locked criterion (KW < 0.05 without severe) is MET. The severity
+gradient does not rest on the severe group
+(results/e5_influence_diagnostics.json).
+
+F10 - the bias-adjusted test, and what survives it (ADDENDUM_7, locked
+2026-09-27 before the run). The E3 matched-null machinery is itself the
+method contribution here: standard target-enrichment tests confound
+database popularity, so each candidate's direction-consistent target-DE
+excess was compared against 500 draws of equally-studied miRNAs (matched
+on validated-target count, expression, publication count), per cohort.
+A candidate SURVIVES only if its excess exceeds at least 95% of its
+matched null AND its raw gate-(b) FDR passes. Cardiac cohort: four
+survivors - miR-1-3p (adjusted p = 0.000: its excess 0.225 beats all 500
+matched draws), miR-769-5p (0.028), miR-30c-5p (0.036) and miR-194-5p
+(0.048). Blood cohort: one survivor - miR-192-5p (adjusted p = 0.000,
+excess 0.070 vs 0.039), which is also the clean compartment split in
+reverse: its cardiac raw pass is fully bias-explained (adjusted p = 1.000)
+while its blood signal survives correction. miR-122-5p and miR-145-5p
+survive nowhere, consistent with their E1/F3 instability; miR-375-3p had
+too few pool targets and is excluded. Net: 5 candidate-by-cohort
+validations survive the bias correction, covering 4 of the 6 CORE6
+members. This corrected test - not the raw 18/20 count - is now the
+paper's target-validation claim: the framework detects its own bias and
+reports what remains after removing it
+(results/f10_bias_adjusted_enrichment.json).

@@ -582,3 +582,29 @@ not an annotation artifact). VERDICT: 18/20 and 6/20 counts stand as
 facts; interpretation downgraded in paper 9.3/9.4/battery + abstract.
 STRING interconnectivity unaffected (different test).
 results/e3_mirtarbase_bias_controls.json.
+
+2026-09-27T11:14 IST - E5 RUN (ADDENDUM_5 + round-03 jackknife): influence
+diagnostics on locked H1'. Cook's D: 120/146 samples exceed the 4/n rule
+(max 39.1, OM162) - the screen is NON-INFORMATIVE in this near-saturated
+regime (p=101 on n~117 train inflates leverage everywhere); disclosed per
+the lock, operative test = LOO jackknife. LOO: median OOF 0.792, range
+[0.756, 0.816] - no single sample moves the model >~0.03: NOT
+outlier-driven. Leave-5%-out (200 draws): median 0.790 [0.751, 0.820],
+min 0.716. LEAVE-SEVERE-OUT: 3-class OOF 0.835, module KW without severe
+p < 1e-6 - locked criterion (KW<0.05) MET: gradient survives without the
+severe group. VERDICT: gradient claim HOLDS, with the Cook's-screen
+caveat disclosed. results/e5_influence_diagnostics.json.
+
+2026-09-27T11:16 IST - F10 RUN (ADDENDUM_7, her 11:08 "never settle for
+negatives" pivot): popularity-bias-adjusted target enrichment, 500 matched
+draws/candidate, exact hypergeometric. CARDIAC survivors (adjusted p<0.05
+AND raw FDR<=0.05): miR-1-3p (adj_p=0.000 - exceeds all 500 matched draws,
+excess 0.225 vs null median 0.173), miR-769-5p (0.028), miR-30c-5p (0.036),
+miR-194-5p (0.048). BLOOD survivor: miR-192-5p (adj_p=0.000, excess 0.070
+vs 0.039) - note its CARDIAC adj_p=1.000 (raw pass fully bias-explained);
+the compartments cleanly split. miR-122-5p/miR-145-5p survive nowhere
+(consistent with E1/F3 instability). miR-375-3p excluded (no pool targets).
+NET: 5 candidate x cohort validations survive the bias correction,
+covering 4 of 6 CORE6 members. The corrected test - not the raw count -
+is the paper's target-validation claim now.
+results/f10_bias_adjusted_enrichment.json.
