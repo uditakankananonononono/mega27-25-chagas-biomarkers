@@ -351,3 +351,15 @@ rescued). Both readings (coordinated program vs validation-literature
 bias) presented; claimed as consistent context only. Claim-check before
 writing: the 9.x pooled-enrichment numbers (1.2e-35, 1.2e-33, 1.7e-32,
 5.8e-22, 1.5e-18) all verify against committed artifacts exactly.
+
+## JUDGE ROUND 02 GEMINI PASTE REFRESH - 2026-09-27T08:53 IST (revival agent)
+Parent token pass received 08:51 (Google OAuth restored fleet-wide;
+Gemini consults unblocked; ChatGPT cap separate). Pre-fire refresh of
+02_prompt_gemini.txt: series count 16->15 (this session's correction);
+gate-(a) "28 pass"->21 pass of 2,632 (append-only correction); added
+the locked-metric completion negatives (macro-AUC 0.715, calibration
+slopes 0.735/0.198/0.150, probabilities not decision-grade) so the
+reviewer sees the calibration weakness material to Q4(c); Q4 "for a
+judge"->"for an expert reviewer" (persona-scrub consistency).
+Comparator numbers verified correct per h1prime_ci.json (clinical
+0.620, single 0.713, +0.167/+0.074 CIs).
