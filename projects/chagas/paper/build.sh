@@ -5,7 +5,7 @@
 # Working measurement build, not the final typeset.
 set -e
 cd "$(dirname "$0")"
-ORDER="01_abstract 02_introduction 03_data_acquisition 04_cohort_atlas 05_methods_services 06_preregistered_analyses 06b_formulas 07_results_severity 08_benchmark 09_discovery 10_limitations 11_references_appendix"
+ORDER="01_abstract 02_introduction 03_data_acquisition 04_cohort_atlas 05_methods_services 06_preregistered_analyses 06b_formulas 07_results_severity 08_benchmark 09_discovery 09b_discussion 10_limitations 11_references_appendix"
 for s in $ORDER; do cat "sections/$s.md"; printf '\n\\clearpage\n\n'; done > /tmp/chagas_paper_all.md
 pandoc /tmp/chagas_paper_all.md -o manuscript_working.pdf --pdf-engine=pdflatex \
   --template=template_min.tex --toc \

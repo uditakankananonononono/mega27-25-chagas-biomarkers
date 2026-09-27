@@ -326,3 +326,16 @@ candidates" (precision qualifier). 6b.2 adds one worked numeric
 example per formula, every number traced to an artifact (incl. the
 BH rank-1 check 2.508e-15*2632=6.60e-12 exact match; permutation
 p=1/10001 never p=0; Run-1 R2=-55.72 as recorded).
+
+## DISCUSSION SECTION 9b ADDED - 2026-09-27T08:26 IST (revival agent)
+The paper had no Discussion - a structural gap. Added 9b (five
+subsections, all artifact-grounded, cross-referenced to 7.8/8.5/9.3b/
+9.6/9.7/3.11/4.9): findings restated; biological reading held at
+descriptive strength (muscle-lineage thread, miR-122-5p liver reading
+with the confounding named, non-monotonicity warning); the
+miR-223-3p replication cross-check as the strongest available
+internal sanity check; the five-step gap to a usable marker
+(external validation, longitudinal, recalibration, assay transfer,
+the miR-192-5p panel decision deferred to a future amendment); and
+what the lane demonstrates independent of the discovery claim.
+build.sh ORDER updated. Working build: 39 A4 pp.
