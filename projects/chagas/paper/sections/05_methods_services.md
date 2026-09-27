@@ -1,7 +1,7 @@
 # 5. Methods: the service-verified analysis layer
 
 ## 5.1 Design
-The compendium's analyses rest on 40 distinct external services, each used
+The compendium's analyses rest on 42 distinct external services, each used
 live during this build with retrieved bytes preserved and sha256-hashed
 (sources/services/, manifest EVIDENCE_SHA256.txt). The count is distinct
 tools, not uses: four services (Enrichr, Open Targets, STRING, g:Profiler)
@@ -105,10 +105,10 @@ every stochastic step (CV splits, bootstrap, permutation nulls).
 Permutation tests use (1+b)/(n+1) p-value convention; multiple-testing
 control is Benjamini-Hochberg within each locked family. External
 service responses are stored with sha256 in sources/services/ and
-logged with retrieval timestamps in SERVICE_LEDGER.md (40 distinct
+logged with retrieval timestamps in SERVICE_LEDGER.md (42 distinct
 tools; blocked attempts logged, not counted).
 
-## 5.7 The full 40-service enumeration
+## 5.7 The full 42-service enumeration
 Grouped by function, with the ledger entry numbers (SERVICE_LEDGER.md) so
 every row is auditable: acquisition and identity - NCBI GEO full-text
 retrieval (1), eutils (2), GEO FTP (3), SRA run selector (4), PubMed (5),
@@ -138,12 +138,57 @@ queries), Expression Atlas (JSON path 404) and RNAcentral (accession path
 serves HTML). Each entry names the exact failure and, where one exists,
 the planned fix (free API key, alternate endpoint, or a browser visit on
 the token queue). The register is part of the methods, not an apology:
-a 40-service claim that hides its failures cannot be audited, and the
+a 42-service claim that hides its failures cannot be audited, and the
 blocked list is where a reviewer should look first for wishful counting.
 
 ## 5.9 The service inventory, with evidence pointers
 Every external service actually used in this lane, with its evidence
 summary as logged in SERVICE_LEDGER.md (append-only; evidence bytes and
 sha256 under sources/services/<name>/). The count is of DISTINCT
-services; re-uses are logged as re-uses and never re-counted. | # | service | evidence summary | |---|---|---| | 1 | NCBI GEO (acc.cgi full-text SOFT) | 700 per-GSM canonical fetches, sha256 | | 2 | NCBI eutils (esearch/esummary) | disease-series discovery sweeps | | 3 | NCBI GEO FTP (series supplementary matrices) | matrix hashes | | 4 | NCBI SRA (run selector relations) | SRA uid + SRP resolution per RNA-seq | | 5 | PubMed | PMID verification for every acquired series (ACQUISITION_LOG). | | 6 | Europe PMC / PMC fullTextXML | comparator article XML retrieval. | | 7 | PLOS journals site | figure/artifact retrieval with sha256 (leish-audit | | 8 | Open Targets Platform GraphQL | EFO_0008559 (American trypanosomiasis): | | 9 | UniProt REST | T. cruzi (taxon 5693) KMP11 -> Q9U6Z1 KM11_TRYCR | | 10 | STRING | cruzipain putative network in T. cruzi CL Brener (taxon 353153 | | 11 | Reactome ContentService | R-HSA-170834 TGF-beta signaling full record | | 12 | KEGG REST | hsa05142 "Chagas disease - Homo sapiens" flat file; 102 | | 13 | GO/QuickGO (EBI) | cruzipain P25779 GO annotations (GO:0004197 | | 14 | g:Profiler g:GOSt | 102-gene KEGG Chagas set enrichment: 1322 terms | | 15 | Enrichr (Ma'ayan Lab) | same set, KEGG_2021_Human: 206 terms, Chagas | | 16 | ChEMBL API | Chagas Disease drug indications: 9 records, 6 molecules | | 17 | RCSB PDB search | cruzipain full-text: 39 entries (1EWL, 3IUT...) | | 18 | AlphaFold DB API | P25779 predicted model AF-P25779-F1-model_v6 | | 19 | ClinicalTrials.gov API v2 | Chagas disease studies: 10+ (NCT04084379 | | 20 | WHO fact sheet | Chagas disease (American trypanosomiasis) page | | 21 | CDC DPDx | American trypanosomiasis lab-diagnosis page | | 22 | Human Protein Atlas | TGFB1 (ENSG00000105329) page with RNA tissue | | 23 | CrossRef API | Chagas biomarker literature DOIs resolved | | 24 | HGNC genenames REST | TGFB1 symbol validated HGNC:11766 | | 25 | Ensembl REST | TGFB1 lookup ENSG00000105329, chr19:41288203-41353961 | | 26 | EBI OLS4 | EFO:0008559 American trypanosomiasis + EFO:0600031 response | | 27 | ENA Portal API | SRP649749 read_run records (SRR36229515...) for | | 28 | GitHub API | repo metadata (provenance anchor for artifact) | | 29 | TargetScan (vert_80) | miR_Family_Info.txt downloaded and used for | | 30 | miRTarBase v8.0 (Huang et al. 2022, NAR) | human MTI table | | 31 | Ensembl BioMart (GRCh38 hsapiens_gene_ensembl) | ENSG->symbol map | | 32 | Enrichr API (maayanlab.cloud) | pathway context on pooled strong- | | 33 | Open Targets Platform GraphQL API | tractability overlay on the CORE6 | | 34 | STRING v12 API | CORE6 target-program network: 1051 edges vs 418 | | 35 | g:Profiler g:GOSt API | second-opinion enrichment on the 557-gene | | 36 | mygene.info v3 | cross-validation of the 352 CORE6 strong-support | | 37 | miRBase (live mirbase.org) | mature-entry verification used for the | | 38 | NCBI Datasets API v2 | gene reports for the six CORE6 miRNA host | | 39 | IntAct (EBI PSICQUIC) | second independent interaction source: | | 40 | WikiData SPARQL | entity resolution: EGFR UniProt P00533 -> Q424401 | | 41 | miRDB | v6.0 prediction file downloaded in full from mirdb.org | | 42 | mygene.info | querymany API (free tier), RefSeq->symbol mapping of | | 43 | miRWalk 3.0 | hsa_miRWalk_3UTR.zip retrieved in full (6,830,082,988 |
+services (42); re-uses are logged as re-uses and never re-counted.
 
+| # | service | evidence summary |
+|---|---|---|
+| 1 | NCBI GEO (acc.cgi full-text SOFT) | 700 per-GSM canonical fetches, sha256 |
+| 2 | NCBI eutils (esearch/esummary) | disease-series discovery sweeps |
+| 3 | NCBI GEO FTP (series supplementary matrices) | matrix hashes |
+| 4 | NCBI SRA (run selector relations) | SRA uid + SRP resolution per RNA-seq |
+| 5 | PubMed | PMID verification for every acquired series (ACQUISITION_LOG). |
+| 6 | Europe PMC / PMC fullTextXML | comparator article XML retrieval. |
+| 7 | PLOS journals site | figure/artifact retrieval with sha256 (leish-audit |
+| 8 | Open Targets Platform GraphQL | EFO_0008559 (American trypanosomiasis): |
+| 9 | UniProt REST | T. cruzi (taxon 5693) KMP11 -> Q9U6Z1 KM11_TRYCR |
+| 10 | STRING | cruzipain putative network in T. cruzi CL Brener (taxon 353153 |
+| 11 | Reactome ContentService | R-HSA-170834 TGF-beta signaling full record |
+| 12 | KEGG REST | hsa05142 "Chagas disease - Homo sapiens" flat file; 102 |
+| 13 | GO/QuickGO (EBI) | cruzipain P25779 GO annotations (GO:0004197 |
+| 14 | g:Profiler g:GOSt | 102-gene KEGG Chagas set enrichment: 1322 terms |
+| 15 | Enrichr (Ma'ayan Lab) | same set, KEGG_2021_Human: 206 terms, Chagas |
+| 16 | ChEMBL API | Chagas Disease drug indications: 9 records, 6 molecules |
+| 17 | RCSB PDB search | cruzipain full-text: 39 entries (1EWL, 3IUT...) |
+| 18 | AlphaFold DB API | P25779 predicted model AF-P25779-F1-model_v6 |
+| 19 | ClinicalTrials.gov API v2 | Chagas disease studies: 10+ (NCT04084379 |
+| 20 | WHO fact sheet | Chagas disease (American trypanosomiasis) page |
+| 21 | CDC DPDx | American trypanosomiasis lab-diagnosis page |
+| 22 | Human Protein Atlas | TGFB1 (ENSG00000105329) page with RNA tissue |
+| 23 | CrossRef API | Chagas biomarker literature DOIs resolved |
+| 24 | HGNC genenames REST | TGFB1 symbol validated HGNC:11766 |
+| 25 | Ensembl REST | TGFB1 lookup ENSG00000105329, chr19:41288203-41353961 |
+| 26 | EBI OLS4 | EFO:0008559 American trypanosomiasis + EFO:0600031 response |
+| 27 | ENA Portal API | SRP649749 read_run records (SRR36229515...) for |
+| 28 | GitHub API | repo metadata (provenance anchor for artifact) |
+| 29 | TargetScan (vert_80) | miR_Family_Info.txt downloaded and used for |
+| 30 | miRTarBase v8.0 (Huang et al. 2022, NAR) | human MTI table |
+| 31 | Ensembl BioMart (GRCh38 hsapiens_gene_ensembl) | ENSG->symbol map |
+| 32 | Enrichr API (maayanlab.cloud) | pathway context on pooled strong- |
+| 33 | Open Targets Platform GraphQL API | tractability overlay on the CORE6 |
+| 34 | STRING v12 API | CORE6 target-program network: 1051 edges vs 418 |
+| 35 | g:Profiler g:GOSt API | second-opinion enrichment on the 557-gene |
+| 36 | mygene.info v3 | cross-validation of the 352 CORE6 strong-support |
+| 37 | miRBase (live mirbase.org) | mature-entry verification used for the |
+| 38 | NCBI Datasets API v2 | gene reports for the six CORE6 miRNA host |
+| 39 | IntAct (EBI PSICQUIC) | second independent interaction source: |
+| 40 | WikiData SPARQL | entity resolution: EGFR UniProt P00533 -> Q424401 |
+| 41 | miRDB | v6.0 prediction file downloaded in full from mirdb.org |
+| 42 | miRWalk 3.0 | hsa_miRWalk_3UTR.zip retrieved in full (6,830,082,988 |
+| - | mygene.info (today, F4) | RE-USE of 36: RefSeq->symbol mapping of 6,393/6,399 miRDB transcripts |

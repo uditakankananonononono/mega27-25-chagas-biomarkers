@@ -122,10 +122,10 @@ not the association alone - is what the discovery arm tests.
 This paper is the Chagas project of a ten-disease program (MEGA-PROGRAM-27)
 whose shared core manuscript covers the cross-disease machinery and the
 negative-results register. The program's gates are per-disease: 120
-records, 40 distinct external services, 50 substantive pages, a
+records, 42 distinct external services, 50 substantive pages, a
 benchmark-beat and a discovery result, each met within the disease
 project, not pooled across projects. Where this paper quotes a count -
-716 records, 40 services - it is the Chagas lane's own verified number,
+716 records, 42 services - it is the Chagas lane's own verified number,
 computed from this repository's frozen artifacts (section 3.6); shared-core
 counts do not transfer, and no gate is claimed met until it is verifiably
 met here. The compendium, the preregistered analyses and this manuscript

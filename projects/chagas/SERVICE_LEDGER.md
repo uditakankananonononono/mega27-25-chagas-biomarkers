@@ -257,3 +257,11 @@ not a new tool: DISTINCT count stays 40.
     too large to commit, documented). Candidate-filtered subset committed
     (233,914 rows, 20 candidates, sha256 11045382608c84a0047599874aa293b3f86e3a66b42eac8da5c06715030f518e,
     sources/services/mirwalk/). Unthresholded arm in results/f4b_mirwalk_sensitivity.*.
+
+## COUNT CORRECTION (2026-09-27T12:35): distinct total is 42, not 43
+Addendum 8 wrongly numbered mygene.info as new service 42 - mygene.info
+is service 36 (cross-validation of the CORE6 targets, above); today's
+RefSeq->symbol mapping is a RE-USE of 36, logged here as such, never a
+new number. miRWalk (Addendum 9) therefore takes number 42, not 43.
+DISTINCT external services used: 42. Correction published append-only per
+the standing convention (same rule as 750->716 and the tally correction).

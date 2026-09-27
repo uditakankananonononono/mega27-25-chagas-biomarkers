@@ -184,7 +184,7 @@ enrichment in the cardiac-cellular cohort (18/20 passing FDR - FACT;
 interpretation downgraded to database-bias-consistent by the E3 matched
 controls, 9.5) with a 6-candidate
 both-tissue core (miR-1-3p, miR-122-5p, miR-192-5p, miR-30c-5p,
-miR-145-5p, miR-194-5p), the 40-distinct-service inventory (after the
+miR-145-5p, miR-194-5p), the 42-distinct-service inventory (after the
 re-use count correction, section 5), the module score (CORE6 monotone,
 KW p = 1.7e-11, c-index 0.756 - descriptive, in-sample), the
 druggability overlay (49/344 Approved-Drug targets - target-program
