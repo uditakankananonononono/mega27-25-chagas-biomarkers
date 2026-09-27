@@ -1,0 +1,103 @@
+{
+  "spec": "ADDENDUM_6 F5; overlap verbatim either way",
+  "frozen_n": 21,
+  "plain_de": {
+    "n_fdr_only": 102,
+    "overlap_with_frozen21": 21,
+    "frozen_missed": []
+  },
+  "rf_top21": {
+    "overlap_with_frozen21": 4,
+    "recovered": [
+      "hsa-miR-1294",
+      "hsa-miR-182-5p",
+      "hsa-miR-206",
+      "hsa-miR-223-3p"
+    ],
+    "frozen_missed": [
+      "hsa-miR-1-3p",
+      "hsa-miR-122-5p",
+      "hsa-miR-125a-5p",
+      "hsa-miR-125b-5p",
+      "hsa-miR-1285-3p",
+      "hsa-miR-1301-3p",
+      "hsa-miR-145-5p",
+      "hsa-miR-192-5p",
+      "hsa-miR-194-5p",
+      "hsa-miR-199b-5p",
+      "hsa-miR-20a-3p",
+      "hsa-miR-223-5p",
+      "hsa-miR-30c-5p",
+      "hsa-miR-374b-5p",
+      "hsa-miR-375-3p",
+      "hsa-miR-651-5p",
+      "hsa-miR-769-5p"
+    ]
+  },
+  "limma_style_lm": {
+    "n_fdr": 0,
+    "overlap_with_frozen21": 0,
+    "frozen_missed": [
+      "hsa-miR-1-3p",
+      "hsa-miR-122-5p",
+      "hsa-miR-125a-5p",
+      "hsa-miR-125b-5p",
+      "hsa-miR-1285-3p",
+      "hsa-miR-1294",
+      "hsa-miR-1301-3p",
+      "hsa-miR-145-5p",
+      "hsa-miR-182-5p",
+      "hsa-miR-192-5p",
+      "hsa-miR-194-5p",
+      "hsa-miR-199b-5p",
+      "hsa-miR-206",
+      "hsa-miR-20a-3p",
+      "hsa-miR-223-3p",
+      "hsa-miR-223-5p",
+      "hsa-miR-30c-5p",
+      "hsa-miR-374b-5p",
+      "hsa-miR-375-3p",
+      "hsa-miR-651-5p",
+      "hsa-miR-769-5p"
+    ],
+    "substitution": "limma (R) unavailable; per-feature OLS on ordinal severity + BH FDR"
+  },
+  "pca": {
+    "var_explained_first4": [
+      0.1990548968841231,
+      0.053928377718224924,
+      0.03987941486338245,
+      0.02907072863793453
+    ],
+    "kw_p_per_pc": [
+      5.090563115429132e-07,
+      5.1377592661432645e-05,
+      9.905328204489354e-09,
+      0.0002680298741135872
+    ],
+    "note": "descriptive; PCA yields no feature candidate set"
+  },
+  "frozen21": [
+    "hsa-miR-1-3p",
+    "hsa-miR-122-5p",
+    "hsa-miR-125a-5p",
+    "hsa-miR-125b-5p",
+    "hsa-miR-1285-3p",
+    "hsa-miR-1294",
+    "hsa-miR-1301-3p",
+    "hsa-miR-145-5p",
+    "hsa-miR-182-5p",
+    "hsa-miR-192-5p",
+    "hsa-miR-194-5p",
+    "hsa-miR-199b-5p",
+    "hsa-miR-206",
+    "hsa-miR-20a-3p",
+    "hsa-miR-223-3p",
+    "hsa-miR-223-5p",
+    "hsa-miR-30c-5p",
+    "hsa-miR-374b-5p",
+    "hsa-miR-375-3p",
+    "hsa-miR-651-5p",
+    "hsa-miR-769-5p"
+  ]
+}

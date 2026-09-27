@@ -544,3 +544,16 @@ documented: identity null is uninformative for an annotation-free pipeline
 and is excluded from the keep/cut reading; the 'not random' sentence rests
 on the two informative nulls, both cleared. results/f2_null_{label,
 randfeat,identity}.json + draws CSVs.
+
+2026-09-27T10:48 IST - F5 RUN (ADDENDUM_6): standard-pipeline comparison on
+the frozen gate-(a) screen data. Plain DE (KW FDR<=0.05 only): 102 pass,
+ALL 21 frozen recovered (effect gate adds specificity, not unique
+discovery). RF feature selection top-21: only 4/21 frozen recovered.
+limma-style linear-trend analog (OLS on ordinal severity, BH FDR<=0.05;
+limma/R unavailable, substitution disclosed): ZERO pass - the frozen
+candidates are non-monotone in severity and a linear-trend screen misses
+all 21. PCA: PC1-4 each separate the groups (KW p 5.1e-07..2.7e-04) but
+PC1 is 19.9% variance; no feature candidates. Locked READING outcome:
+framework superiority claimed where alternatives do not recover the
+frozen set (RF 17/21 missed, linear-trend 21/21 missed); plain-DE
+recovery reported verbatim. results/f5_pipeline_comparison.json.

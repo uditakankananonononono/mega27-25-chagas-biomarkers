@@ -302,7 +302,7 @@ signaling pathways. The lane claims the convergence as consistent
 context, not as mechanistic evidence; the generic-cancer-term
 background is named in the same breath.
 
-## 9.5 Preregistered robustness battery: D1-D3 (ADDENDUM_4), E1-E2 (ADDENDUM_5) and F2 (ADDENDUM_6), all locked 2026-09-27 before any run
+## 9.5 Preregistered robustness battery: D1-D3 (ADDENDUM_4), E1-E2 (ADDENDUM_5) and F2/F5 (ADDENDUM_6), all locked 2026-09-27 before any run
 
 A supplementary review consult (round 02, Gemini; logged supplementary under
 the ChatGPT-only round rule) challenged three load-bearing points. Each was
@@ -396,3 +396,22 @@ the miRNome (random 100-miRNA sets already average 0.642), and the
 t-test-selected top-100 still beats every random set drawn. The model is
 not a label artifact and not an arbitrary feature set
 (results/f2_null_label.json, f2_null_randfeat.json, f2_null_identity.json).
+
+F5 - standard-pipeline comparison (ADDENDUM_6). The frozen gate-(a) screen
+was re-run as four standard alternatives on identical data. Plain
+differential expression (Kruskal-Wallis, BH FDR <= 0.05, no effect gate):
+102 miRNAs pass and all 21 frozen candidates are among them - the effect
+gate contributes specificity (21 of 102), not unique discovery, and we
+say so. Random-forest feature selection (500 trees, top 21 by importance):
+only 4 of the frozen 21 are recovered. A limma-style linear-trend screen
+(per-feature regression on ordinal severity, BH FDR <= 0.05; limma itself
+is R-only and unavailable in this environment, substitution disclosed):
+zero miRNAs pass - the frozen candidates are non-monotone across the
+severity groups, so a linear-trend workflow misses all 21. PCA: the first
+four components each separate the groups significantly (KW p down to
+9.9e-09) but carry only 19.9/5.4/4.0/2.9% of variance and yield no
+feature candidates. Under the locked reading, framework superiority is
+claimed exactly where the plain alternatives fail to recover the frozen
+candidates - the RF and linear-trend workflows - and the plain-DE
+recovery is reported verbatim rather than spun
+(results/f5_pipeline_comparison.json).
