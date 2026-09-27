@@ -21,7 +21,7 @@ cardiomyocytes but only 6/20 in peripheral blood - an honest
 compartment split. Six miRNAs (miR-1-3p, miR-122-5p, miR-192-5p,
 miR-30c-5p, miR-145-5p, miR-194-5p) replicate in both tissues and form
 a signed severity module that tracks the gradient monotonically
-(in-sample c-index 0.756); their 352 strong-support validated targets
+(in-sample c-index 0.756; full-pipeline bootstrap median 0.615, 3 of 6 members stably re-discovered - 9.6); their 352 strong-support validated targets
 are significantly interconnected (STRING, p < 1e-16) and 49 are
 approved-drug targets (Open Targets). Every count, hash,
 run and negative - including one failed classifier kept as a documented
