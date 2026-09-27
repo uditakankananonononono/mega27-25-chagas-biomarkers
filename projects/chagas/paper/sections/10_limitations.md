@@ -100,3 +100,24 @@ sense Addendum 3 currently routes around. Each item is a named, checkable
 next step, not a rhetorical hedge: if any becomes available, the lane's
 standing rules require it to be acquired, hashed, and registered before
 outcomes are examined.
+
+## 10.6 Live-service numbers drift; the lane's answer is a revalidation record, not a frozen screenshot
+Three results in this paper depend on live external services, and one
+of them demonstrably moved during a single night: the STRING v12
+network, re-executed six hours after the committed run, returned
+1,296 edges where the committed artifact holds 1,051 (341 mapped
+nodes vs 299; expected edges 523 vs 418; enrichment p < 1e-16 in
+both). The mygene validation and the Open Targets tractability
+buckets reproduced exactly under re-execution (344/352 with the same
+8 legacy notfounds; 332 tractability-positive and 49 Approved-Drug
+with identical gene sets), but "reproduced today" is not "will
+reproduce next quarter" for any live service. The lane's mitigations
+are structural rather than rhetorical: raw responses are stored with
+sha256 (sources/services/, EVIDENCE_SHA256.txt), every committed
+number names its service version or retrieval timestamp where the
+service exposes one, the re-execution script is committed
+(scripts/service_revalidation.py) so any reviewer can re-run the
+comparison, and drift is logged in RUN_LOG rather than silently
+absorbed. Where a live number is load-bearing for a claim (the
+STRING interconnectivity sentence), the claim is worded so that both
+the committed and the re-executed values support it.

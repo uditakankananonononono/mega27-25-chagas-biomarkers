@@ -271,3 +271,15 @@ GSE84796's originating publication not identifiable via accession
 search - recorded unresolved, GEO record only. GSE348071/GSE154421
 unpublished per GEO. Artifact europepmc_series_citations.json
 sha256-hashed; SERVICE_LEDGER Addendum 12.
+
+## SECTIONS 7.8 + 10.6 - 2026-09-27T07:08 IST (revival agent)
+7.8 (descriptive monotone reading of the gate-(a) table, computed
+live from h2_gate_a_passing.csv): 14/21 passers strictly monotone
+(8 down, 6 up); 7 non-monotone incl. 4 of 6 CORE6 members; 4
+passers with control median exactly 0.0 (zero-inflation named);
+17/21 control-below-all-disease-medians. No test added, labeled
+descriptive. 10.6 (live-service drift limitation): the STRING
+00:51->06:08 drift record as the motivating case; mitigations
+(hashed responses, revalidation script, claim wording that both
+values support). Working build still 33pp (content grew, page
+boundary not crossed).

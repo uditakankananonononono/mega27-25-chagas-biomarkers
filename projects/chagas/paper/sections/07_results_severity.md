@@ -137,3 +137,25 @@ Gate-(a)'s strongest candidate, miR-182-5p (FDR 4.0e-8), passes cardiac
 0.0048) - association strength in serum does not predict replication
 breadth, which is why the module rests on the both-tissue AND rule
 rather than on gate-(a) rank.
+
+## 7.8 How monotone is the severity signal? (descriptive reading)
+A severity biomarker invites the expectation of monotone medians across
+mild < moderate < severe. The gate-(a) table answers honestly: 14 of
+21 passers are strictly monotone (8 decreasing, 6 increasing), and 7
+are not - including four of the six CORE6 members (miR-1-3p,
+miR-30c-5p, miR-145-5p, miR-122-5p). The Kruskal-Wallis screen never
+required monotonicity, and the ordinal model does not assume it
+either; but the pattern matters for interpretation. Three of the
+non-monotone seven show a mild-grade dip or plateau before the severe
+grade rises (miR-1-3p 6.93/6.85/7.49; miR-125a-5p 6.47/5.69/5.87;
+miR-122-5p 15.36/15.21/15.97) - a shape consistent with an early
+compensatory phase, and equally consistent with noise at n-per-grade
+(4.5-4.6); the lane claims neither. Four passers have a control
+median of exactly 0.0 (miR-30c-5p, miR-145-5p, miR-20a-3p,
+miR-769-5p; miR-145-5p also has a mild median of 0.0): the
+zero-inflation is real in the matrix and is one reason the module
+score, which pools ranks across members, is the claim-carrier rather
+than any single candidate. 17 of 21 passers have the control median
+below every disease-grade median; the exceptions are named by the
+table itself. Descriptive only: no test was added, no threshold
+moved.
