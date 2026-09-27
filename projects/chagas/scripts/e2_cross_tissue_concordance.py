@@ -91,7 +91,7 @@ cohorts = {'serum_GSE299582': (names, fc_s, p_s, True),
            'heart_GSE191081': (g3, fc3, p3, False)}
 # precomputed per-cohort: gene->idx, and per expected-direction DE index sets
 COH = {}
-for lbl, gg, ff, pp, is_serum in cohorts.items():
+for lbl, (gg, ff, pp, is_serum) in cohorts.items():
     if is_serum: continue
     gene_idx = {g: i for i, g in enumerate(gg)}
     de_up = set(np.where((np.sign(ff) > 0) & (pp <= 0.05))[0])
