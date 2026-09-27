@@ -6,8 +6,8 @@ state (honest, 2026-09-27): 716 byte-verified records (corrected from
 750; commit ef7b29a) across 15 human series; 40 distinct external tools
 (count-corrected, SERVICE_LEDGER.md); 11 numbered formulas
 (paper/sections/06b_formulas.md); paper sections 1-11 with real
-results written in; measured working build 25 A4 text pages at
-11pt mathptmx (paper/build.sh, regenerable - 2026-09-27), far from the
+results written in; measured working build 31 A4 text pages at
+11pt mathptmx (paper/build.sh, regenerable - 2026-09-27T06:21), far from the
 50+ page floor; judge rounds 1/10.
 
 Executed results: ordinal severity model beats both locked internal

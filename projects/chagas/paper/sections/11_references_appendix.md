@@ -9,7 +9,7 @@ et al. / cohort studies per ACQUISITION_LOG PMIDs (40290486, 35873155,
 per-series crosswalk schemas. Appendix C: preregistration chain
 (PREREGISTRATION.md, ADDENDUM_1-3, RUN_LOG.md) with commit hashes.
 Appendix D: judge-round transcripts (judge_rounds/, model-tagged).
-Appendix E: the count-correction record (750->716, commit ef7b29a).
+Appendix E: the count-correction record (750->716, commit ef7b29a). Appendix F: the reproducibility and re-execution register.
 
 Service-source references for the executed discovery arm: miRTarBase
 release 8.0 (Huang et al. 2022, NAR 50:D222-D230) human MTI table,
@@ -78,3 +78,68 @@ verifier flagged super-series and prior-tag overlaps (GSE191083
 container; GSE244827 prior-series overlap), and the frozen count was
 corrected to 716 (commit ef7b29a) - the correction record, not the
 original error, is the citable artifact.
+
+## Appendix F: reproducibility and re-execution register
+### F.1 Script-to-result coverage
+Every figure-free number in this paper regenerates from a committed
+script against committed inputs; the audit that closed the remaining
+gaps is itself in RUN_LOG (2026-09-27T05:50, 06:08). The coverage
+table: scripts/acquire_geo_crosswalk.py - per-series sample crosswalks
+(sources/*_sample_crosswalk.csv); scripts/label_crosswalks.py - the
+frozen label rules; scripts/verify_crosswalks.py - executable
+uniqueness and hash checks on every crosswalk;
+scripts/h2_severity_association.py - gate (a)
+(results/h2_gate_a_summary.json: 2,632 tests, 21 passing, 20 series;
+results/h2_gate_a_passing.csv); scripts/h2_gate_b_enrichment.py -
+gate (b) (results/h2_gate_b_enrichment.csv, 40 tests);
+scripts/h1_frozen_analysis.py - the frozen H1 run
+(results/h1_frozen_run.json); scripts/h1prime_ordinal.py and
+scripts/h1prime_ci.py - the H1' ordinal model and confidence
+intervals (results/h1prime_*.json); scripts/h1prime_metrics_completion.py
+- the locked-metric completion (macro-AUC OvR 0.715; calibration
+slopes 0.735/0.198/0.150; results/h1prime_oof_predictions.csv), with
+sanity anchors reproducing the original h1prime artifacts to full
+precision; scripts/module_score.py - results/module_score.json,
+reproduced EXACTLY (full-precision in-script assertion;
+results/module_score_stability.json for the bootstrap/LOO
+descriptives); scripts/service_revalidation.py - live re-execution
+of the service analyses (results/service_revalidation_2026-09-27.json).
+
+### F.2 Re-execution revalidation record (2026-09-27)
+The three service-backed results files were re-executed live and
+compared headline-for-headline: mygene.info symbol validation
+reproduced EXACTLY (344/352 matched; identical 8-symbol legacy
+notfound set: ALPPL2, COX1, CTGF, FAM45A, H3F3A, ND1, NDUFA4,
+SEPT10). Open Targets tractability reproduced EXACTLY at bucket
+level (332 tractability-positive; 49 Approved-Drug; identical gene
+sets), with mapped count 343 vs the committed 344 - see F.3. STRING
+v12 drifted with the live database between 00:51 and 06:08 the same
+night (1,296 edges vs the committed 1,051; 341 mapped nodes vs 299;
+expected edges 523 vs 418; enrichment p < 1e-16 in both runs). The
+committed 00:51 values remain the lane record; the drift record is
+the honest reproducibility statement for a live service, and the
+enrichment conclusion (significantly interconnected) is unchanged.
+
+### F.3 Known provenance gaps, named
+- results/pharos_tdl_approved_drug_targets.json is the blocked-service
+placeholder (every entry ERR:HTTPError), kept as the blocked-attempt
+record; Pharos is in the blocked register, not the 40.
+- miRTarBase is pinned to v8.0 via a Wayback snapshot because the
+live site returned 404/400 on 2026-09-26; the version pin is
+disclosed wherever miRTarBase counts are cited.
+- The original Open Targets symbol-to-ENSG mapping path was not
+byte-documented; re-execution through the committed BioMart
+ensg_symbol_map resolves 343 of 352 symbols (the 8 legacy aliases
+plus one further symbol unresolved by this path). Bucket-level
+overlay results are unaffected; the one-symbol difference is a
+mapping-path gap, not a results discrepancy.
+- scikit-learn was unpinned in the lane environment record until
+2026-09-27 (now pinned at 1.7.2; Section 5.y). Exact full-precision
+reproduction of the H1' sanity anchors and the module score under
+this pin indicates the pipeline is env-stable.
+
+### F.4 Evidence integrity
+Raw service responses are stored under sources/services/ with sha256
+hashes in sources/services/EVIDENCE_SHA256.txt (the manifest covers
+the revalidation responses added 2026-09-27); retrieval timestamps
+and re-use annotations are in SERVICE_LEDGER.md.

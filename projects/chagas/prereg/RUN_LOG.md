@@ -234,3 +234,18 @@ raw responses under sources/services/revalidation_2026-09-27/):
 
 All three are re-USES of ledgered services (mygene=36, Open Targets=8/33,
 STRING=10/34) - no change to the distinct-tool count.
+
+## PAPER BUILD MEASURE + REPRODUCIBILITY APPENDIX - 2026-09-27T06:21 IST (revival agent)
+Working build re-measured: 31 A4 text pages (was 30 at 517fec7;
+25 at the 00:5x measurement - README page line was stale at 25,
+now corrected to 31). Added Appendix F (reproducibility and
+re-execution register): script-to-result coverage table, the
+2026-09-27 revalidation record (mygene exact; OT bucket-exact with
+343/344 mapping-path note; STRING live-DB drift), named provenance
+gaps (Pharos placeholder, miRTarBase Wayback pin, OT mapping path,
+sklearn pin history), and the sha256 evidence manifest. Also pinned
+scikit-learn 1.7.2 in the Section 5.y environment record (was
+unpinned; RUN_LOG 05:33 note). Also removed a stray duplicate
+sources/SERVICE_LEDGER.md accidentally written during the 06:08
+commit (never tracked; content already in SERVICE_LEDGER.md
+Addendum 11).

@@ -97,7 +97,10 @@ All analyses run as committed scripts (scripts/) against byte-hashed
 inputs; every figure-free number in this paper regenerates from the
 repository state at the cited commit. Environment: Python
 3.10.12, NumPy 2.2.6, SciPy
-1.15.3, pandas 2.3.3. Frozen seed 20260926 for
+1.15.3, pandas 2.3.3, scikit-learn
+1.7.2 (pinned 2026-09-27; the pin was
+added when the H1' completion run found sklearn unpinned in this record
+- RUN_LOG 2026-09-27T05:33). Frozen seed 20260926 for
 every stochastic step (CV splits, bootstrap, permutation nulls).
 Permutation tests use (1+b)/(n+1) p-value convention; multiple-testing
 control is Benjamini-Hochberg within each locked family. External
