@@ -303,3 +303,13 @@ zero-inflation at matrix scale, BH conservative over the full
 removes the best-looking result), 20 candidates. Group sizes
 42/37/37/30=146; 46 indeterminate samples excluded by the severity
 design. Working build: 35 A4 pp.
+
+## SECTION 9.3b GATE-(B) ACCOUNTING - 2026-09-27T07:55 IST (revival agent)
+Added 9.3b: the 40-test gate-(b) funnel recomputed from
+h2_gate_b_enrichment.csv - enrichment ratios 1.6-4.3x (hiPSC) and
+1.9-3.9x (blood); tissue-asymmetry reading labeled descriptive;
+both-cohort fails named (miR-206, miR-374b-5p); blood near-misses
+named (miR-125a-5p FDR 0.051 one step from the frozen 0.05 line -
+"had the line been 0.1 the CORE6 would look different; it was not");
+the three p=1.0 blood-zero candidates pass in cardiomyocytes.
+Working build: 36 A4 pp.

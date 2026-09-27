@@ -84,6 +84,34 @@ set: PI3K-Akt signaling (KEGG p=5.8e-22; WP p=6.8e-19) and focal
 adhesion/PI3K-Akt/mTOR (p=1.5e-18) - the pathway context is
 engine-stable, not an Enrichr artifact (results/gprofiler_cardiac18_strong.json).
 
+## 9.3b Gate-(b) accounting, in the same spirit as 7.9
+The 40-test family, recomputed from results/h2_gate_b_enrichment.csv:
+20 candidates x 2 cohorts, BH across all 40 jointly. hiPSC-CM cohort:
+18/20 pass (FDR <= 0.05); observed direction-consistent fractions
+0.15-0.29 against cohort nulls near 0.07-0.09, enrichment ratios
+1.6-4.3x. Whole-blood cohort: 6/20 pass; observed fractions
+0.047-0.096 against nulls near 0.015-0.025, ratios 1.9-3.9x. The two
+cohorts disagree by tissue, not by sloppiness: the cardiomyocyte
+cohort sits next to the target tissue and shows absolute fraction
+shifts roughly 4-6x the blood cohort's, while blood dilutes the same
+programs into a systemic compartment - stated as a descriptive
+reading, not a tested claim.
+
+The failures are as structured as the passes. Only two candidates
+fail in BOTH cohorts: miR-206 (blood FDR 0.523, hiPSC FDR 0.283) and
+miR-374b-5p (blood 0.755, hiPSC 0.072). Three candidates show zero
+direction-consistent DE targets in blood at p = 1.0 (miR-223-5p,
+miR-20a-3p, miR-769-5p) - their target programs are simply not
+detectably engaged in the blood compartment, though all three pass
+in cardiomyocytes. The blood cohort's near-misses are named, not
+rounded away: miR-125a-5p at FDR 0.051 sits one permutation-step
+from the line, with miR-1285-3p (0.136) and miR-199b-5p (0.137)
+behind it. Had the blood line been drawn at 0.1 the CORE6 would
+look different; it was not, and the frozen 0.05 line is what the
+paper reports. The strict both-tissue intersection is 6/20 - the
+CORE6 - and the AND rule was locked before these numbers existed
+(section 9.1).
+
 ## 9.4 Honest status box (updated 2026-09-27)
 PASSED: record floor (716), provenance model, benchmark-beat (H1'),
 novelty screen (gate c), judge round 01 with landed redesign, gate (b)
