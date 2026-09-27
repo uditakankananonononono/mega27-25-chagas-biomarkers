@@ -1,0 +1,23 @@
+{
+  "n_genes": 4599,
+  "n_replicated": 220,
+  "coef": {
+    "const": -2.781303747329658,
+    "blood_abundance": -0.08738500821521951,
+    "cardiac_spec": -0.11792701272013288
+  },
+  "wald_p": {
+    "const": 5.823908313146355e-92,
+    "blood_abundance": 0.07242858798850772,
+    "cardiac_spec": 0.0036183624413277924
+  },
+  "descriptive_auc": 0.5566718221262639,
+  "hpa_pin": "HPA v23 (v23.proteinatlas.org), files dated 2023-06-17",
+  "hpa_files_sha256": {
+    "rna_immune_cell.tsv.zip": "ac4a219a92fac1d27c7610f35d0053b0502b1aedefd3b95c4b37a42021028ba2",
+    "rna_tissue_consensus.tsv.zip": "b9ac6bbdf8152524ff845767638f4c92389b2933c5ef02060dee68b873176095"
+  },
+  "substitution": "rna_blood_cell.tsv.zip 404 on v22-v25; used HPA blood-cell dataset file rna_immune_cell.tsv.zip (disclosed)",
+  "response_rule": "any-consistent across targeting candidates (disclosed disambiguation, fixed before results)",
+  "reading_locked": "ADDENDUM_4 D1: blood_abundance coef>0 & p<0.05 supports compartment specificity; null/negative downgrades 9.3b"
+}

@@ -418,3 +418,38 @@ frozen exclusions), train sign weights + train z-params, pooled OOF.
   null), membership unstable (2-4 of 6 per fold), and OOF 0.704 < in-sample
   0.756 - the 6-core module is real signal but the in-sample figure overstates
   it by ~0.05.
+
+## 2026-09-27 D1 run (ADDENDUM_4, locked 08:58 before run) - HONEST NEGATIVE
+Script scripts/d1_compartment_specificity.py; results/d1_compartment_specificity.json
++ results/d1_gene_level.csv. Gene-level logistic over the union of the 20
+candidates' mapped validated targets (n=4,599 genes; 220 direction-consistent
+replicated in GSE244827 blood DE).
+- blood_abundance coef -0.0874, Wald p=0.0724 -> NOT positive-and-significant.
+- cardiac_spec coef -0.1179, Wald p=0.0036 (significantly NEGATIVE:
+  cardiac-specific genes replicate less in blood).
+- Descriptive AUC 0.557.
+LOCKED READING TRIGGERED: compartment specificity NOT supported by this test;
+the 9.3b tissue reading is DOWNGRADED (correction recorded in the paper, not
+silently removed). Disclosed choices (fixed before results): HPA v23 pin
+(rna_blood_cell.tsv.zip nonexistent on v22-v25 -> HPA blood-cell dataset file
+rna_immune_cell.tsv.zip; sha256s in the results JSON); any-consistent response
+rule for multi-candidate genes. SERVICE_LEDGER: HPA re-use (new file
+retrievals, sha256-hashed), statsmodels added as environment package.
+
+
+## 2026-09-27 D1 run (ADDENDUM_4, locked 08:58 before run) - HONEST NEGATIVE
+Script scripts/d1_compartment_specificity.py; results/d1_compartment_specificity.json
++ results/d1_gene_level.csv. Gene-level logistic over the union of the 20
+candidates mapped validated targets (n=4,599 genes; 220 direction-consistent
+replicated in GSE244827 blood DE).
+- blood_abundance coef -0.0874, Wald p=0.0724 -> NOT positive-and-significant.
+- cardiac_spec coef -0.1179, Wald p=0.0036 (significantly NEGATIVE:
+  cardiac-specific genes replicate less in blood).
+- Descriptive AUC 0.557.
+LOCKED READING TRIGGERED: compartment specificity NOT supported by this test;
+the 9.3b tissue reading is DOWNGRADED (correction recorded in the paper, not
+silently removed). Disclosed choices (fixed before results): HPA v23 pin
+(rna_blood_cell.tsv.zip nonexistent on v22-v25 -> HPA blood-cell dataset file
+rna_immune_cell.tsv.zip; sha256s in the results JSON); any-consistent response
+rule for multi-candidate genes. SERVICE_LEDGER: HPA re-use (new file
+retrievals, sha256-hashed), statsmodels added as environment package.

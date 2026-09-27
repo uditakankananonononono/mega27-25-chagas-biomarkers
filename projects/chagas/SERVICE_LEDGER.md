@@ -231,3 +231,9 @@ target set (23-135 genes), KEGG_2021_Human + WikiPathways_2024_Human;
 sources/services/enrichr/core6_per_member/ with userListIds in meta.json,
 sha256-appended. Post-hoc descriptive context for section 9.8. Re-use,
 not a new tool: DISTINCT count stays 40.
+
+
+## Re-use log (append-only)
+- 2026-09-27 HPA (Human Protein Atlas): RE-USE for D1 (ADDENDUM_4). New file
+  retrievals: v23 pin rna_immune_cell.tsv.zip sha256 ac4a219a92fac1d27c7610f35d0053b0502b1aedefd3b95c4b37a42021028ba2,
+  rna_tissue_consensus.tsv.zip sha256 b9ac6bbdf8152524ff845767638f4c92389b2933c5ef02060dee68b873176095. Not a new service.
