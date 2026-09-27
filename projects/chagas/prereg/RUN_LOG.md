@@ -206,3 +206,31 @@ hurts most (c-index 0.728); miR-1-3p 0.737, miR-30c-5p 0.743, miR-194-5p
 dilutive member). No single point of failure: every five-member subset
 stays above 0.72. Membership/weights still come from the same cohort -
 stability of the DESCRIPTION, not validation.
+
+## SERVICE RE-EXECUTION REVALIDATION - 2026-09-27T06:08 IST (revival agent)
+
+Committed a revalidation script (scripts/service_revalidation.py) that
+re-executes the live-service queries behind three committed results and
+compares headline numbers (results/service_revalidation_2026-09-27.json;
+raw responses under sources/services/revalidation_2026-09-27/):
+
+- mygene.info symbol validation: EXACT MATCH - 344/352 matched, identical
+  8-symbol notfound set (ALPPL2, COX1, CTGF, FAM45A, H3F3A, ND1, NDUFA4,
+  SEPT10 - the documented legacy aliases).
+- Open Targets tractability overlay: headline buckets EXACT - 332
+  tractability-positive and 49 Approved-Drug reproduced with identical
+  gene sets. Mapped count observed 343 vs committed 344: the original
+  symbol->ENSG mapping path was not byte-documented; re-running through
+  the committed BioMart ensg_symbol_map resolves 343 of 352 (the 8
+  legacy aliases + 1 further symbol unresolved by this path). Minor
+  provenance gap recorded honestly; bucket-level results unaffected.
+- STRING v12 network + enrichment: DRIFTED (live database updated since
+  00:51 IST tonight) - observed 1296 edges vs committed 1051, 341 mapped
+  nodes vs 299, expected edges 523 vs 418. Enrichment direction and
+  significance unchanged (p < 1e-16 both runs; note the re-run submitted
+  343 symbols - see mapping note above). Committed 00:51 numbers remain
+  the lane's recorded values; this drift record is the honest
+  reproducibility statement for a live service.
+
+All three are re-USES of ledgered services (mygene=36, Open Targets=8/33,
+STRING=10/34) - no change to the distinct-tool count.

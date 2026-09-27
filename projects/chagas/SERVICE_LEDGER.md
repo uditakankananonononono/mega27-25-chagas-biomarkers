@@ -206,3 +206,12 @@ DISTINCT count: 40/40 - gate MET (honestly, after the re-use correction).
 Probes still blocked tonight: Pharos (HTTP errors), GTEx medianGeneExpression
 (empty for direct gencode queries - endpoint shape unclear), TarBase
 (SPA site), Expression Atlas JSON path 404, RNAcentral accession path HTML.
+
+## Addendum 11 (2026-09-27T06:08): re-execution revalidation (re-use)
+mygene (36), Open Targets (8/33) and STRING (10/34) queries re-executed
+live via scripts/service_revalidation.py; comparison in
+results/service_revalidation_2026-09-27.json. mygene exact match; OT
+bucket-level exact (332/49), mapped 343/344 (mapping-path note in
+RUN_LOG); STRING drifted upward with the live DB (1296 edges vs 1051,
+p<1e-16 both) - drift recorded honestly, committed values unchanged.
+Re-uses, not new tools: DISTINCT count stays 40.

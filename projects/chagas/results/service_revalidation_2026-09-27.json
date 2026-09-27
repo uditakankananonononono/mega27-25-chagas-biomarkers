@@ -1,0 +1,64 @@
+{
+  "date": "2026-09-27",
+  "input_symbols": 352,
+  "services": {
+    "mygene": {
+      "status": "match",
+      "committed": {
+        "matched": 344,
+        "notfound": [
+          "ALPPL2",
+          "COX1",
+          "CTGF",
+          "FAM45A",
+          "H3F3A",
+          "ND1",
+          "NDUFA4",
+          "SEPT10"
+        ]
+      },
+      "observed": {
+        "matched": 344,
+        "notfound": [
+          "ALPPL2",
+          "COX1",
+          "CTGF",
+          "FAM45A",
+          "H3F3A",
+          "ND1",
+          "NDUFA4",
+          "SEPT10"
+        ]
+      }
+    },
+    "opentargets": {
+      "status": "drift",
+      "committed": {
+        "mapped": 344,
+        "tractability_positive": 332,
+        "approved_drug": 49
+      },
+      "observed": {
+        "mapped": 343,
+        "ot_seen": 343,
+        "tractability_positive": 332,
+        "approved_drug": 49
+      }
+    },
+    "string": {
+      "status": "drift",
+      "committed": {
+        "edges": 1051,
+        "nodes": 299,
+        "expected_edges": 418,
+        "p": "<1e-16"
+      },
+      "observed": {
+        "edges": 1296,
+        "nodes": 341,
+        "expected_edges": 523,
+        "p": 0.0
+      }
+    }
+  }
+}
