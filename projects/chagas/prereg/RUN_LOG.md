@@ -401,3 +401,20 @@ members+weights per training fold, 1,000-permutation null, claim
 stands only if p<0.05, failure documented); D3 TargetScan sensitivity
 (explicitly non-gate; gate stays miRTarBase per C2); D4a/b/c
 presentation adoptions. Execution order D2->D1->D3->D4 frozen.
+
+## 2026-09-27 D2 run (ADDENDUM_4, locked 08:58 before run)
+Script scripts/d2_oof_module_reconstruction.py; results/d2_oof_module_reconstruction.json.
+OOF module reconstruction inside the locked H1' outer folds (seed 20260926):
+per-fold CORE6-restricted re-selection on train only (KW FDR<=0.05 & |d|>=0.5,
+frozen exclusions), train sign weights + train z-params, pooled OOF.
+- OOF ordinal c-index 0.7043 (vs in-sample 0.7557 -> in-sample optimism ~0.05);
+  OOF KW p=1.34e-08 across the 4 grades. Members per fold: 4,2,4,3,2 of CORE6.
+- 1,000-permutation label null (labels shuffled before the whole per-fold
+  pipeline): every null OOF c-index 0 (median 0, q97.5 0; permuted labels
+  almost never pass the CORE6-restricted selection, so null scores are
+  constant). Empirical p = (1+0)/1001 = 0.000999 < 0.05.
+- LOCKED READING: the module claim STANDS under D2 (p<0.05). Caveats stated
+  with it: null is degenerate at 0 (test is "any signal vs none", not a tight
+  null), membership unstable (2-4 of 6 per fold), and OOF 0.704 < in-sample
+  0.756 - the 6-core module is real signal but the in-sample figure overstates
+  it by ~0.05.

@@ -1,0 +1,18 @@
+{
+  "oof_cindex": 0.7042855347492774,
+  "oof_kw_p": 1.338738243945027e-08,
+  "per_fold_members": [
+    4,
+    2,
+    4,
+    3,
+    2
+  ],
+  "n_perm": 1000,
+  "perm_p": 0.000999000999000999,
+  "null_median": 0.0,
+  "null_q975": 0.0,
+  "in_sample_cindex_reference": 0.7557,
+  "spec": "ADDENDUM_4 D2 locked 2026-09-27T08:58; claim stands only if perm_p<0.05",
+  "runtime_s": 1307.9
+}
