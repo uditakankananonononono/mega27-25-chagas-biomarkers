@@ -298,3 +298,45 @@ experimentally validated miRNA target sets toward well-studied
 signaling pathways. The lane claims the convergence as consistent
 context, not as mechanistic evidence; the generic-cancer-term
 background is named in the same breath.
+
+## 9.5 Preregistered robustness battery: D1-D3 (ADDENDUM_4, locked 2026-09-27 before any run)
+
+A supplementary review consult (round 02, Gemini; logged supplementary under
+the ChatGPT-only round rule) challenged three load-bearing points. Each was
+locked as a test with both-way readings in ADDENDUM_4 before execution;
+results are reported as-is.
+
+D2 - decorrelated module reconstruction (the circularity test). The 6-core
+module's members, sign weights and z-scoring were re-derived inside the
+locked outer folds of the severity model (seed 20260926), training-side
+only, and scored out-of-fold: pooled OOF ordinal c-index 0.704 against the
+in-sample 0.756 (in-sample optimism about 0.05), OOF Kruskal-Wallis
+p = 1.3e-08, with 2-4 of the 6 members re-selected per fold. A
+1,000-permutation label null (labels shuffled before the whole per-fold
+pipeline) gave empirical p = 0.000999 - every permuted run scored at the
+floor, because the CORE6-restricted selection almost never fires under
+scrambled labels. The module is real signal under the locked reading, with
+three disclosures carried forward: the null is degenerate at zero (a
+signal-versus-none test), fold membership is unstable, and the honest
+generalization figure is 0.704, not 0.756 (results/
+d2_oof_module_reconstruction.json). The full discovery-pipeline bootstrap
+(E1, ADDENDUM_5) extends this test to the external-cohort gate.
+
+D1 - compartment specificity, tested and not supported (see the 9.3b
+correction). Blood-cell abundance of a target gene does not predict its
+blood replication (logistic coef -0.087, Wald p = 0.072), and
+cardiac-specific expression predicts less blood replication (coef -0.118,
+p = 0.0036; n = 4,599 genes; descriptive AUC 0.557). The
+abundance/dilution reading of the 18/20-versus-6/20 asymmetry is
+withdrawn; the asymmetry itself stands, with the phenotype-mismatch
+explanation (seropositive infection state versus graded cardiomyopathy)
+open pending the E2 cross-tissue concordance test.
+
+D3 - TargetScan 8.0 sensitivity (non-gate). Re-running the exact gate-(b)
+pipeline with predicted targets (family-mapped, human): the cardiac arm
+reproduces exactly (12/12 mapped candidates pass; 8 poorly conserved
+candidates have no TargetScan family and are named), the blood arm
+reproduces directionally (7/12), and 5 of the CORE6 keep both-tissue
+support (miR-122-5p loses blood; miR-125a-5p and miR-125b-5p newly pass).
+The enrichment pattern is therefore not a miRTarBase-v8.0 annotation
+artifact; gate-(b) verdicts continue to stand on validated targets only.
