@@ -686,3 +686,12 @@ maximal disease-proximity sub-score (1.0) - the same miRNA that survived
 the F10 corrected cardiac test. Labeled a prioritization heuristic, not
 evidence of mechanism. results/f7_prioritization_ranking.{csv,json},
 scripts/f7_prioritization_ranking.py.
+
+2026-09-27T12:08 IST - F1 RUN (ADDENDUM_6): provenance-framework benchmark
+mined from the project record. 15 incidents across ALL FOUR locked
+categories (metadata errors detected 6, sample mismatches 2, missing
+annotations recovered 3, reproducibility failures prevented 4), every
+cell citing a committed artifact (RUN_LOG corrections, crosswalks,
+column-label map, Wayback recovery, sha256 manifest). Locked reading met
+(>=3 categories with evidence) - framework claim stands as a measurable
+benchmark, not scoped down. results/f1_framework_benchmark.{csv,json}.

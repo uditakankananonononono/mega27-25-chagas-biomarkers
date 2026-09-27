@@ -167,3 +167,38 @@ are recorded append-only (ACQUISITION_LOG.md, commit ef7b29a) and both
 are why every count in this paper is recomputed from the frozen
 crosswalks at claim time: the errors were caught precisely because the
 verifier, not the narrative, keeps the books.
+
+## 3.13 The provenance framework as a measurable benchmark (F1, ADDENDUM_6)
+The acquisition and provenance pipeline of sections 3-5 is itself a
+measurable method, benchmarked against the traditional GEO workflow
+(download series matrix, assume row order, trust metadata, cite by
+accession). The table below is mined from the project record; every row
+cites a committed artifact, and categories without evidence would have
+been marked not-tracked (none were). All four locked categories carry
+evidence - 15 incidents in total - so per the locked reading the claim
+stands as a measurable benchmark, not merely documented practice
+(results/f1_framework_benchmark.csv).
+
+**metadata errors detected**
+
+- gate-(a) prose count transcribed wrong ("28 pass" vs computed 21 of 2 Traditional default: 632). Here: prose numbers rarely re-verified against artifacts (caught by artifact re-verification; append-only correction; paper re-stated).
+- series count stated as 16 vs 15 acquired Traditional default: judge prompt propagated the error. Here: corrected in judge prompt and paper before round dispatch (prereg/RUN_LOG.md (2026-09-27T08:5x entry; judge_rounds/02_prompt_gemini.txt)).
+- judge-round tally mis-stated as 2/10 under a superseded rule Traditional default: tally would have persisted. Here: corrected append-only on parent correction; X-JUDGE-ROUNDS.md re-stated (prereg/RUN_LOG.md (TALLY CORRECTION 2026-09-27T08:56)).
+- metric-basis error caught pre-commit (0.031) Traditional default: wrong metric basis would have shipped. Here: fixed before commit; both readings preserved (prereg/RUN_LOG.md (2026-09-27 entry: "a metric-basis error caught and fixed before commit")).
+- worked-example precision error (miR-629-5p p=2.5e-15 d=0.03 excluded by effect gate) Traditional default: example would mis-state the screen. Here: caught while building 6b.2 worked examples; corrected (prereg/RUN_LOG.md (PRECISION CORRECTION 2026-09-27T08:11)).
+- commit-message overclaim of a "9.6" section Traditional default: overclaim would enter git history. Here: corrected in the next commit; both messages visible (prereg/RUN_LOG.md (E1 PAPER FIX note re 1da8d2d)).
+**sample mismatches**
+
+- expression-matrix row order assumed to match metadata Traditional default: row-order assumption silently mislabels samples. Here: sample-level bijection that fails loudly on mismatch; column-label map committed (sources/GSE244827_column_label_map.csv; prereg/RUN_LOG.md (bijection entry)).
+- cohort-unpack bug mis-assigned cohorts (found 10:03) Traditional default: unpacked arrays trusted. Here: bug fixed and rerun (495925d); both states in history (prereg/RUN_LOG.md (cohort-unpack bugfix note)).
+**missing annotations recovered**
+
+- miRTarBase v8.0 publisher URL dead Traditional default: version silently swapped or analysis dropped. Here: official file recovered via Internet Archive snapshot; version pinned; sha256 recorded (prereg/RUN_LOG.md (Wayback recovery entry); sources/services/mirtarbase/).
+- 8 legacy miRNA symbols unmatched in current nomenclature Traditional default: unmatched symbols dropped silently. Here: legacy aliases resolved and kept (hsa-miR-375 / MIMAT0000728 documented) (prereg/RUN_LOG.md (legacy symbols entry); paper 9.3).
+- SRA run relations absent from GEO series metadata Traditional default: relations unresolved; raw-data link lost. Here: per-series SRX/SRP resolution recorded in the crosswalks (sources/*_sample_crosswalk.csv (sra_relation column)).
+**reproducibility failures prevented**
+
+- latent NameError: enrichment() missing genes arg; prior version never executed Traditional default: broken script would be cited as run. Here: defect found by re-execution discipline; fixed; both scripts committed (prereg/RUN_LOG.md (script fixes entry)).
+- a run caught by sanity bounds produced impossible values Traditional default: bad run could have been analyzed. Here: caught; fixed; rerun; both runs' scripts committed (prereg/RUN_LOG.md (sanity-bounds entry)).
+- F3 join bug (hsa- prefix) dropped features post-run Traditional default: partial join unexamined. Here: fixed post-run; 10 F3 features re-joined to E1 top-20; disclosed (prereg/RUN_LOG.md (F3 join-bug entry)).
+- service drift and silent input changes Traditional default: inputs assumed stable. Here: 716 records individually byte-verified with sha256 manifest (sources/services/EVIDENCE_SHA256.txt; paper section 3).

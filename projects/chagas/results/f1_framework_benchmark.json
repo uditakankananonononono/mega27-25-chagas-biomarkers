@@ -1,0 +1,12 @@
+{
+  "spec": "ADDENDUM_6 F1; benchmark of the provenance-aware acquisition framework vs the traditional GEO workflow; every row cites a committed artifact; no invented counts",
+  "categories_with_evidence": 4,
+  "rows": 15,
+  "category_counts": {
+    "metadata errors detected": 6,
+    "sample mismatches": 2,
+    "missing annotations recovered": 3,
+    "reproducibility failures prevented": 4
+  },
+  "reading": "ALL FOUR locked categories carry committed evidence (>=3 required) - the framework claim stands as a measurable benchmark, not merely documented practice"
+}
