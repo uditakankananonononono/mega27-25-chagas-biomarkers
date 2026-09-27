@@ -695,3 +695,17 @@ cell citing a committed artifact (RUN_LOG corrections, crosswalks,
 column-label map, Wayback recovery, sha256 manifest). Locked reading met
 (>=3 categories with evidence) - framework claim stands as a measurable
 benchmark, not scoped down. results/f1_framework_benchmark.{csv,json}.
+
+2026-09-27T12:13 IST - F4 miRDB arm RUN (ADDENDUM_6, NON-GATE): miRDB v6.0
+pinned (full 59MB file, sha256 446636d2...a7e109d, ledger services 41-42;
+mygene.info RefSeq->symbol 6,393/6,399 mapped). Score>=80 predicted sets
+through the committed gate-(b) machinery: cardiac 19/20 pass, blood 6/20 -
+the compartment asymmetry REPRODUCES under a second, independent
+predicted-target database (miRTarBase 18/6, TargetScan 12/12-computable,
+miRDB 19/6). Both-cohort: 6 miRNAs; CORE6 both-cohort under miRDB = 4/6
+(miR-1-3p, miR-30c-5p, miR-145-5p, miR-194-5p; miR-122-5p and miR-192-5p
+fail the miRDB blood arm). The E3 popularity-bias caveat applies to
+predicted sets equally - this is consistency evidence for the SPLIT, not
+new validation. miRWalk arm: hsa_miRWalk_3UTR.zip (6.83GB) downloading;
+candidate-filtered subset + full-file sha256 to follow; full file NOT
+committable (>100MB) - documented.

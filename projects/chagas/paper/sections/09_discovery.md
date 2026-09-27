@@ -628,3 +628,19 @@ at rank 6, carried by the maximal disease-proximity sub-score (1.000) -
 the same miRNA that survives the F10 corrected cardiac test. The ranking
 is a prioritization heuristic for follow-up design, not evidence of
 mechanism, and is labeled as such (results/f7_prioritization_ranking.csv).
+
+F4 - cross-database target confirmation, miRDB arm (ADDENDUM_6, non-gate).
+The gate-(b) machinery was re-run with miRDB v6.0 predicted targets
+(score >= 80; 59 MB prediction file pinned, sha256 recorded, ledger
+services 41-42; RefSeq-to-symbol mapping 6,393/6,399 via mygene.info).
+The compartment asymmetry reproduces under this second independent
+predicted-target source: cardiac 19/20 and blood 6/20, against 18/6 under
+miRTarBase validated targets and 12/12-computable under TargetScan. Six
+miRNAs pass both cohorts under miRDB; four of the six core members do
+(miR-1-3p, miR-30c-5p, miR-145-5p, miR-194-5p), with miR-122-5p and
+miR-192-5p failing the miRDB blood arm. Predicted evidence is reported
+strictly separately from validated, and the E3 popularity-bias caveat
+applies to predicted sets equally: this is consistency evidence for the
+existence of the compartment split, not new member-level validation
+(results/f4_mirdb_sensitivity.csv).
+

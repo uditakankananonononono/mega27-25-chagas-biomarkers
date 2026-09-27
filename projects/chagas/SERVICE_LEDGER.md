@@ -241,3 +241,12 @@ not a new tool: DISTINCT count stays 40.
 - 2026-09-27 TargetScan (service 29): RE-USE for D3 (ADDENDUM_4). Pinned 8.0
   files: Predicted_Targets_Info.default_predictions.txt.zip sha256
   5f981abf...aa52c, miR_Family_Info.txt.zip sha256 d91827b9...c3b7a. Not a new service.
+
+## Addendum 8 (2026-09-27T12:12): services 41-42 - miRDB + mygene.info (F4)
+41. miRDB - v6.0 prediction file downloaded in full from mirdb.org
+    (miRDB_v6.0_prediction_result.txt.gz, 59,483,982 bytes, sha256
+    446636d2182212f44ff91623f1429f7922f9575b82226962a6213d592a7e109d,
+    sources/services/mirdb/). Score>=80 human arm for the 20 candidates
+    through the committed gate-(b) machinery (results/f4_mirdb_sensitivity.*).
+42. mygene.info - querymany API (free tier), RefSeq->symbol mapping of
+    6,393/6,399 miRDB transcripts (species=human). Feeds the F4 arm only.
