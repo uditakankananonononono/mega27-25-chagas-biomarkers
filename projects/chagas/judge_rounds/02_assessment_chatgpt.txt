@@ -1,0 +1,81 @@
+ASSESSMENT - counted judge round 02 (ChatGPT, user-couriered 2026-09-27 09:17:56,
+wamid...M0VCMEMwMzdDRUQwQjE1RkRBOEJFNwA=). User directive (verbatim, same message):
+"ADD ALL THIS TO IT AND WHEN COMPLETE I WILL CHECK AGAIN".
+Discipline: every adopted ANALYSIS locks in prereg/ADDENDUM_5.md BEFORE any run;
+paper edits follow the framing adoptions below; infeasible items are documented,
+not silently dropped. Overlaps with already-locked ADDENDUM_4 items are mapped, not
+duplicated.
+
+Q1 compartment specificity -> verdict: hypothesis, not conclusion; demands
+   cross-compartment directional concordance (DirectionScore per candidate over
+   serum/hiPSC-CM/blood/heart vs 10k random sets matched on target count,
+   abundance, literature popularity).
+   ASSESSMENT: ADOPT as new analysis E2 (ADDENDUM_5). Complements, does not
+   replace, ADDENDUM_4 D1 (HPA abundance predictors of blood replication) -
+   D1 answers "why does blood fail", E2 answers "is concordance unusual".
+Q2 CORE6 circularity -> verdict: nested bootstrap with FULL discovery inside
+   every bootstrap (KW/FDR -> novelty exclusion -> miRTarBase gate -> AND
+   intersection -> module -> out-of-bootstrap eval); make it the centerpiece.
+   ASSESSMENT: ADOPT as E1 (ADDENDUM_5), the new centerpiece. D2 (done
+   2026-09-27: OOF c 0.7043, perm p 0.000999) already decorrelated
+   selection+weights on the severity screen; E1 extends to the whole discovery
+   pipeline incl. the external-cohort gate. Compute-feasible arm locked in
+   ADDENDUM_5 (external-gate permutations reduced inside bootstraps, disclosed).
+Q3 miRTarBase v8.0 pin -> verdict: pin OK; demand matched negative controls
+   (random miRNAs matched on target count/expression/publication count; random
+   validated targets same family; TargetScan/miRDB predicted-target arm).
+   ASSESSMENT: ADOPT as E3 (ADDENDUM_5). TargetScan arm overlaps ADDENDUM_4 D3
+   (sensitivity, non-gate) - D3 runs as locked; E3 adds the matched-null controls.
+Q4 framing -> verdict: (c) 5-star primary, (b) 4-star ONLY as "tracks the chronic
+   cardiac disease severity spectrum" (never "transition"/"predicts progression"),
+   (a) 2-star never.
+   ASSESSMENT: ADOPT as paper edits (folds into ADDENDUM_4 D4 edits): title/abstract/
+   discussion wording changes; "severity spectrum" replaces "transition"; no
+   progression-claim language anywhere.
+
+WEAKNESS/FIX TABLE (20 items):
+ 1 single-cohort -> ADOPT E2 leave-one-cohort-out biological validation
+    (GSE203525, GSE244827, heart-tissue series among the 15; direction/signature
+    enrichment transport, not severity prediction).
+ 2 CORE6 circular -> ADOPT E1 (centerpiece, see Q2).
+ 3 compartment specificity post-hoc -> ADOPT E2 concordance score (see Q1).
+ 4 blood phenotype mismatch -> ADOPT E4: blood-signature pathway correlation
+    despite no severity labels (disease-pathway enrichment of blood DE, non-gate).
+ 5 miRTarBase popularity bias -> ADOPT E3 matched random-miRNA control.
+ 6 18/20 database artifact -> ADOPT E3 + D3 TargetScan arm.
+ 7 no longitudinal data -> ADOPT as wording (severity-spectrum reframe, D4 edits);
+    trajectory analysis DEFER-INFEASIBLE: all 15 series cross-sectional (already
+    documented); recorded, not hidden.
+ 8 small severe group (n=30) -> ADOPT E5: influence diagnostics (Cook's distance,
+    leave-5%-out, leave-severe-out sensitivity, label permutation already in D2).
+ 9 poor calibration -> ADOPT E6: post-hoc recalibration experiment (isotonic /
+    Platt on OOF predictions, disclosed as post-hoc, not decision-grade claim).
+10 c-index clinical usefulness -> ADOPT E7: decision-curve analysis (net benefit).
+11 researcher df -> ADOPT E8: strict endpoint hierarchy section (1 primary claim,
+    secondaries separated) - paper edit + prereg note.
+12 no modern ML comparison -> ADOPT E9: controlled baselines on identical OOF
+    folds (elastic net, random forest, XGBoost, SVM, ordinal logistic) - same
+    seed 20260926 splits.
+13 feature stability -> covered by E1 selection frequencies + CV-fold member
+    counts (D2 already reports 4/2/4/3/2); fold into E1 report.
+14 batch robustness -> ADOPT E10: batch/stratified sensitivity where batch
+    variables exist; ComBat only if a batch covariate is present in the
+    series metadata (else documented infeasible, not faked).
+15 abundance effects -> ADOPT E3 null models matched for expression level.
+16 confounding age/sex/BMI -> ADOPT E11: adjusted models (age, sex available in
+    GSE299582 characteristics; BMI/comorbidity NOT available -> documented).
+17 assay transfer -> ADOPT E12: qPCR-style reduced-panel simulation (top 3-6
+    markers, OOF eval on locked folds).
+18 druggability weak -> ADOPT as paper edit: de-emphasize, keep as
+    target-program tractability only + remove generic pan-cancer targets from
+    headline count (recompute with exclusion list, disclosed).
+19 generic enrichment -> ADOPT E13: disease-specific enrichment vs
+    Chagas/heart-failure gene sets (non-gate).
+20 mechanistic directionality -> ASSESSED-INFEASIBLE: no miRNA GWAS instruments /
+    MR feasible with public data; documented; causal language avoided throughout.
+
+Verdict's closing condition for "ISEF CBIO-ready": nested bootstrap discovery,
+matched nulls, ML baselines, perturbation robustness, reproducible pipeline -
+all adopted above except as marked deferred/infeasible (7 trajectory, 20 MR).
+Competition framing in the verdict text is ChatGPT's own; project framing rules
+unchanged.
