@@ -339,3 +339,15 @@ internal sanity check; the five-step gap to a usable marker
 the miR-192-5p panel decision deferred to a future amendment); and
 what the lane demonstrates independent of the discovery claim.
 build.sh ORDER updated. Working build: 39 A4 pp.
+
+## SECTION 9.8 PER-MEMBER PATHWAY SIGNATURES - 2026-09-27T08:43 IST (revival agent)
+Per-member Enrichr runs (re-use, Addendum 13; artifacts sha256-hashed):
+signatures converge - AGE-RAGE (miR-1-3p, miR-122-5p), VEGFA-VEGFR2
+(miR-1-3p, matches pooled 557), focal adhesion (miR-192-5p, miR-194-5p,
+matches pooled g:Profiler), TGF-beta/EMT (miR-30c-5p, matches the
+Reactome 2.4 anchor); miR-145-5p generic-cancer background named;
+miR-194-5p weakest (small program, best KEGG adj 9.3e-3 - stated not
+rescued). Both readings (coordinated program vs validation-literature
+bias) presented; claimed as consistent context only. Claim-check before
+writing: the 9.x pooled-enrichment numbers (1.2e-35, 1.2e-33, 1.7e-32,
+5.8e-22, 1.5e-18) all verify against committed artifacts exactly.

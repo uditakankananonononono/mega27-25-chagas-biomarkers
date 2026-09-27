@@ -224,3 +224,10 @@ accession search (returned citing papers only; original publication
 not identifiable this way - recorded as unresolved). Artifact:
 sources/services/europepmc_series_citations.json, sha256-appended.
 Re-use, not a new tool: DISTINCT count stays 40.
+
+## Addendum 13 (2026-09-27T08:43): Enrichr re-use - per-member CORE6 pathway signatures
+Enrichr (service 15/32) re-run per CORE6 member on each strong-support
+target set (23-135 genes), KEGG_2021_Human + WikiPathways_2024_Human;
+sources/services/enrichr/core6_per_member/ with userListIds in meta.json,
+sha256-appended. Post-hoc descriptive context for section 9.8. Re-use,
+not a new tool: DISTINCT count stays 40.

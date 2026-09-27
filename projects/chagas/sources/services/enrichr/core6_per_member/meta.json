@@ -1,0 +1,26 @@
+{
+ "hsa-miR-1-3p": {
+  "n_genes": 76,
+  "userListId": 138584990
+ },
+ "hsa-miR-122-5p": {
+  "n_genes": 67,
+  "userListId": 138584991
+ },
+ "hsa-miR-192-5p": {
+  "n_genes": 41,
+  "userListId": 138584994
+ },
+ "hsa-miR-30c-5p": {
+  "n_genes": 39,
+  "userListId": 138584995
+ },
+ "hsa-miR-145-5p": {
+  "n_genes": 135,
+  "userListId": 138584996
+ },
+ "hsa-miR-194-5p": {
+  "n_genes": 23,
+  "userListId": 138584998
+ }
+}

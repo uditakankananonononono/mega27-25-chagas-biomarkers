@@ -249,3 +249,33 @@ the preregistered design, not tuned away. The druggability profile
 is distributed across members (4-19 Approved-Drug targets each), so
 the target-program tractability of the module does not rest on any
 single candidate either.
+
+## 9.8 Per-member pathway signatures (post-hoc, descriptive)
+To ask whether the six members point at shared biology or six
+unrelated programs, each member's strong-support target set was run
+through Enrichr independently (KEGG_2021_Human and
+WikiPathways_2024_Human; sources/services/enrichr/core6_per_member/,
+userListIds in meta.json; run 2026-09-27, a re-use of the ledgered
+Enrichr service; descriptive, not preregistered). The signatures
+converge more than they diverge. Shared vascular/remodeling terms:
+AGE-RAGE signaling in diabetic complications is a top-two KEGG term
+for both miR-1-3p (adj 4.4e-10) and miR-122-5p (adj 8.8e-6); VEGFA-
+VEGFR2 signaling appears for miR-1-3p (WP3888 adj 6.9e-10), matching
+the pooled 557-gene result above; focal adhesion is significant for
+miR-192-5p (KEGG adj 1.2e-5; WP306 adj 4.4e-5) and miR-194-5p (KEGG
+adj 9.3e-3), again matching the pooled g:Profiler result. miR-30c-5p
+carries the clearest TGF-beta/EMT signature (TGF-beta in EMT WP3859
+adj 6.7e-6; EMT in colorectal cancer WP4239 adj 6.9e-5) - the same
+host pathway the Reactome retrieval anchors in section 2.4.
+miR-145-5p, with the largest program (135 targets), returns the
+generic cancer/senescence terms expected of a large miRNA target
+pool (KEGG pathways in cancer adj 3.9e-13; cellular senescence adj
+6.5e-13). miR-194-5p, with the smallest program (23 targets), shows
+the weakest enrichment overall (best KEGG adj 9.3e-3) - a
+small-denominator property, stated rather than rescued. Two
+readings are honestly available: the shared terms could reflect a
+coordinated vascular-remodeling program, or the common bias of
+experimentally validated miRNA target sets toward well-studied
+signaling pathways. The lane claims the convergence as consistent
+context, not as mechanistic evidence; the generic-cancer-term
+background is named in the same breath.
