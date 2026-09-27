@@ -190,6 +190,10 @@ the reported FDR is conservative against the effectively testable
 1,300. Second, the FDR-only (102) and effect-only (104) stages
 overlap in exactly the 21 - the double gate is doing real work in
 both directions, not rubber-stamping one side. Third, the single
-excluded row is miR-223-3p, the strongest association in the whole
-screen (p = 6.9e-11) - the novelty screen removes the best-looking
-result, and that is the point of it.
+excluded row is miR-223-3p, the strongest association among the 21
+passers (p = 6.9e-11) - the novelty screen removes the best-looking
+passing result, and that is the point of it. (Precision record,
+2026-09-27: the smallest p in the whole 2,632-row screen is NOT a
+passer - miR-629-5p at p = 2.5e-15 fails the effect gate with
+d = 0.03, and miR-26b-5p at p = 1.2e-12 fails with d = 0.00. The
+double gate, not the p-value, decides; see the funnel above.)

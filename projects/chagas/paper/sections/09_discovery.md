@@ -188,7 +188,8 @@ results/druggability_overlay.json (tractability-positive /
 Approved-Drug buckets).
 
 **miR-1-3p.** Gate (a): p = 2.0e-7, FDR 2.2e-5, d = 0.57 - the
-second-strongest association after miR-182-5p. Gate (b): passes both
+second-strongest association among the 20 candidates, after
+miR-182-5p. Gate (b): passes both
 cohorts at FDR 2.5e-4 (blood 5.4% vs 2.5% null; hiPSC-CM 28.3% vs
 6.8% null). LOO 0.737 - removal costs 0.019 c-index, the
 second-largest contribution. Target program: 76 strong targets, 72

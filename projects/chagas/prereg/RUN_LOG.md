@@ -313,3 +313,16 @@ named (miR-125a-5p FDR 0.051 one step from the frozen 0.05 line -
 "had the line been 0.1 the CORE6 would look different; it was not");
 the three p=1.0 blood-zero candidates pass in cardiomyocytes.
 Working build: 36 A4 pp.
+
+## PRECISION CORRECTION + 6b.2 WORKED EXAMPLES - 2026-09-27T08:11 IST (revival agent)
+Precision correction (found while building the worked examples):
+my 7.9 sentence called miR-223-3p "the strongest association in the
+whole screen" - WRONG. miR-629-5p (p=2.5e-15, d=0.03) and
+miR-26b-5p (p=1.2e-12, d=0.00) have smaller p-values but fail the
+effect gate. 7.9 now says "strongest among the 21 passers" and
+records the two smaller-p failures as the double-gate illustration.
+9.7's miR-1-3p card now says "second-strongest among the 20
+candidates" (precision qualifier). 6b.2 adds one worked numeric
+example per formula, every number traced to an artifact (incl. the
+BH rank-1 check 2.508e-15*2632=6.60e-12 exact match; permutation
+p=1/10001 never p=0; Run-1 R2=-55.72 as recorded).
