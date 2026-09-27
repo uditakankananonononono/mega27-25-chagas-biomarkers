@@ -170,3 +170,71 @@ through the prior manifest.
 Every row regenerates from sources/<GSE>_sample_crosswalk.csv
 (sha256-hashed per-GSM GEO SOFT records); the table is a view, not a
 source of truth.
+
+## 4.9 What the source studies themselves concluded
+The depositors' own findings, paraphrased tightly from the summary
+field of each series record (sources/new_series_ledger.csv, verbatim
+GEO text; GSE84796 from the prior-tag record). This is the
+related-work thread the lane builds on: where a source study already
+named a molecule, the lane's novelty screen classifies it as
+REPLICATION, not discovery.
+
+- **GSE299582** (Roma et al., J Infect Dis 2026): 40 differentially
+  expressed miRNAs between Chagas disease patients and healthy
+  controls (miR-199b-5p, miR-153-3p, miR-143-3p, miR-223-3p
+  upregulated; miR-150-3p, miR-4508, miR-486-5p, miR-3960
+  downregulated), with severity-trending candidates named
+  (miR-6734-5p, miR-1285-5p, miR-10527-5p, miR-31-5p, miR-5187-5p,
+  miR-6515-5p higher in severe; miR-30c-2-3p lower). Direct
+  cross-check: the lane's single REPLICATION row is miR-223-3p, one
+  of the source study's headline upregulated markers - the frozen
+  novelty screen agrees with the depositors' own list.
+- **GSE244827** (Duque et al., Lancet Reg Health Am 2025): early CCC
+  is associated with peripheral downregulation of immune-response
+  genes (reduced antigen presentation and T-cell activation),
+  distinct from early cardiomyopathy in Chagas-negative patients -
+  the study that established blood-based early-CCC signal exists.
+- **GSE311812** (Bolivian congenital-transmission cohort): integrative
+  blood + placenta transcriptomics comparing infected
+  transmitter vs non-transmitter mothers; the transmitter-specific
+  maternal blood signature is the depositors' core finding (title
+  audit in section 3.x found 6 transmitter blood samples vs 5 stated
+  - recorded honestly in ACQUISITION_LOG).
+- **GSE333874**: nine candidate placental miRNAs associated with
+  congenital transmission status (DESeq2, BH FDR) - a placenta-side
+  miRNA lead set orthogonal to this lane's blood-severity focus.
+- **GSE348071**: a rare heterozygous DHODH variant (p.Arg135Cys)
+  sensitizes cardiomyocytes to IFN-gamma-driven mitochondrial
+  dysfunction - a gene-environment mechanism for why only ~30% of
+  infected individuals develop CCC.
+- **GSE203525** (Oliveira et al., Front Cell Infect Microbiol 2022):
+  patient-derived hiPSC cardiomyocytes from CCC vs indeterminate
+  donors show different transcriptional responses to T. cruzi
+  reinfection - the deposit behind gate (b)'s cardiomyocyte cohort.
+- **GSE129676** (Bozzi et al., Stem Cell Reports 2019): hiPSC-CMs as
+  a T. cruzi infection model; human cardiomyocyte response
+  timecourse.
+- **GSE158986** (Gil-Jaramillo et al., Front Immunol 2021): 468
+  differentially expressed genes in human dendritic cells at 12h
+  first contact with infective T. cruzi forms.
+- **GSE295194** (Souza-Silva et al., Front Immunol 2025):
+  DERAA-motif HLA-DRB1 alleles (*0103, *0402, *1301, *1302) linked
+  to severe cardiomyopathy; CD4+ T-cell peptide response profiled by
+  scRNA-seq.
+- **GSE107376** (Juiz et al., Am J Pathol 2018): placental gene
+  expression differences between seropositive and seronegative
+  mothers (pooled RNA-seq, 9 pools of 2).
+- **GSE328447** (Lyu et al., Comput Struct Biotechnol J 2026):
+  5'-isomiR dysregulation in the T. cruzi-macrophage context; the
+  deposited design is a miR-1246+1 mimic transfection contrast
+  (section 4.4) - exploratory lead only.
+- **GSE154421**: SNP scan for benznidazole adverse-reaction
+  pharmacogenomics; unpublished at acquisition time.
+- **GSE191081 / GSE191082** (Brochet et al., Front Immunol 2022):
+  bulk RNA-seq + EPIC methylation in left-ventricular tissue;
+  epigenetic regulation of transcription-factor binding motifs in
+  CCC vs dilated cardiomyopathy.
+- **GSE84796** (Cunha-Neto CCC heart array, prior-tagged): carried
+  for provenance continuity with the parent program; the lane holds
+  the crosswalk, not a fresh analysis, and claims nothing new from
+  it.

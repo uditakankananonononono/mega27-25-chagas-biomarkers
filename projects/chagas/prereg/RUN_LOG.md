@@ -283,3 +283,12 @@ descriptive. 10.6 (live-service drift limitation): the STRING
 (hashed responses, revalidation script, claim wording that both
 values support). Working build still 33pp (content grew, page
 boundary not crossed).
+
+## SECTION 4.9 SOURCE-STUDY CONCLUSIONS - 2026-09-27T07:24 IST (revival agent)
+Added 4.9: the depositors' own conclusions per series, paraphrased
+from the verbatim GEO summary fields in new_series_ledger.csv
+(GSE84796 from the prior-tag record). Includes a direct cross-check
+the lane can stand behind: the source study of GSE299582 named
+miR-223-3p among its headline upregulated markers, and the frozen
+novelty screen's single REPLICATION row is exactly miR-223-3p -
+screen agrees with the depositors' list. Working build: 34 A4 pp.
