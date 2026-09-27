@@ -614,3 +614,17 @@ is informative and is stated: E4's blood-DE-INTERSECTED union (220 genes)
 does hit cardiac-remodeling terms - the disease relevance lives in the
 intersection with disease-state expression, not in the target list per
 se (results/e13_disease_specific_enrichment.csv).
+
+F7 - candidate prioritization ranking (ADDENDUM_6, heuristic only, no
+causal wording). The 20 candidates were ranked on four sub-scores drawn
+entirely from committed artifacts: cohort direction-consistency (gate-(b)
+FDR passes), STRING target-degree centrality (committed CORE6 graph;
+computable for the core only and disclosed as NA elsewhere), the E2
+cross-tissue DirectionScore, and disease-pathway proximity against the
+pinned-library Chagas/cardiac term union (140 genes). The six core members
+take ranks 1-5 and 7 (miR-192-5p 0.786, miR-1-3p 0.773, miR-30c-5p 0.758,
+miR-194-5p 0.724, miR-145-5p 0.669); the single interloper is miR-769-5p
+at rank 6, carried by the maximal disease-proximity sub-score (1.000) -
+the same miRNA that survives the F10 corrected cardiac test. The ranking
+is a prioritization heuristic for follow-up design, not evidence of
+mechanism, and is labeled as such (results/f7_prioritization_ranking.csv).

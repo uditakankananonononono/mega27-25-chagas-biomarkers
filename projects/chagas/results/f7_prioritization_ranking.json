@@ -1,0 +1,62 @@
+{
+  "spec": "ADDENDUM_6 F7; prioritization heuristic only; causal wording banned",
+  "disease_union_genes": 140,
+  "string_nodes": 236,
+  "top5": [
+    {
+      "rank": 1,
+      "mirna": "miR-192-5p",
+      "cohort_pass_frac": 1.0,
+      "string_centrality_norm": 0.923,
+      "e2_direction_score": 1.0,
+      "disease_proximity_norm": 0.22,
+      "n_subscores": 4,
+      "composite": 0.7857,
+      "core6": true
+    },
+    {
+      "rank": 2,
+      "mirna": "miR-1-3p",
+      "cohort_pass_frac": 1.0,
+      "string_centrality_norm": 0.698,
+      "e2_direction_score": 1.0,
+      "disease_proximity_norm": 0.395,
+      "n_subscores": 4,
+      "composite": 0.7731,
+      "core6": true
+    },
+    {
+      "rank": 3,
+      "mirna": "miR-30c-5p",
+      "cohort_pass_frac": 1.0,
+      "string_centrality_norm": 1.0,
+      "e2_direction_score": 0.75,
+      "disease_proximity_norm": 0.282,
+      "n_subscores": 4,
+      "composite": 0.758,
+      "core6": true
+    },
+    {
+      "rank": 4,
+      "mirna": "miR-194-5p",
+      "cohort_pass_frac": 1.0,
+      "string_centrality_norm": 0.84,
+      "e2_direction_score": 0.75,
+      "disease_proximity_norm": 0.304,
+      "n_subscores": 4,
+      "composite": 0.7237,
+      "core6": true
+    },
+    {
+      "rank": 5,
+      "mirna": "miR-145-5p",
+      "cohort_pass_frac": 1.0,
+      "string_centrality_norm": 0.697,
+      "e2_direction_score": 0.75,
+      "disease_proximity_norm": 0.23,
+      "n_subscores": 4,
+      "composite": 0.6692,
+      "core6": true
+    }
+  ]
+}

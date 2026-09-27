@@ -673,3 +673,16 @@ non-core candidates fail the blood arm (nearest miR-125a-5p FDR 0.051),
 via scripts/d4b_discordance_audit.py from committed gate CSVs. E8:
 endpoint hierarchy section 6.8 (PRIMARY severity model / SECONDARY
 module with caveats / TERTIARY exploratory); 9b.1 restructured to match.
+
+2026-09-27T12:07 IST - F7 RUN (ADDENDUM_6, compute-only, no causal claims):
+prioritization ranking of the 20 candidates on four artifact-grounded
+sub-scores - cohort direction-consistency (gate-b FDR passes/2), STRING
+target-degree centrality (committed CORE6 graph; NA for the 14 non-core,
+disclosed, excluded from their mean), E2 DirectionScore, disease-pathway
+proximity (pinned-library Chagas/cardiac term union, 140 genes).
+Result: CORE6 occupy ranks 1-5 and 7 (miR-192-5p 0.786 top; miR-1-3p
+0.773); the only interloper is miR-769-5p at rank 6, driven by the
+maximal disease-proximity sub-score (1.0) - the same miRNA that survived
+the F10 corrected cardiac test. Labeled a prioritization heuristic, not
+evidence of mechanism. results/f7_prioritization_ranking.{csv,json},
+scripts/f7_prioritization_ranking.py.
