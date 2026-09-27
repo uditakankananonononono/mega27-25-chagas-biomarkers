@@ -51,7 +51,9 @@ miR-10527-5p, miR-1228-5p, miR-30c-3p) to the replication class; its full
 40-marker list is paywalled, and that residual risk is logged rather than
 ignored (Addendum 2, B1). Any candidate matching this register - by exact
 symbol or unambiguous synonym - is classified as replication, never as
-new discovery. The screen bounds "already named"; it cannot prove global
+new discovery. The F6 expanded screen (9.5) later instantiated this
+limitation concretely: three candidates named in papers the frozen query
+missed were reclassified from novel to reported. The screen bounds "already named"; it cannot prove global
 novelty, and we say so in its own header.
 
 ## 2.3 The approach

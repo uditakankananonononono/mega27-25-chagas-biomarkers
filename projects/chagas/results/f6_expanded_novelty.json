@@ -1,0 +1,26 @@
+{
+ "spec": "ADDENDUM_6 F6; expanded novelty screen; Europe PMC re-use (ledgered)",
+ "stage1_raw_loose": "results/f6_expanded_novelty_raw.json (hyphen-tokenized, upper bounds only)",
+ "stage2_citation_expansion": {
+  "seed": 121,
+  "citing_screened": 1510,
+  "exact_hits": {
+   "miR-145-5p": 1
+  }
+ },
+ "stage3_exact_adjudication": "results/f6_exact_adjudication.json",
+ "downgrades_novel_to_reported": {
+  "miR-145-5p": [
+   "PMID 38300899 (PLoS NTD 2024 review: named among ChCM miRNA biomarker candidates)",
+   "PMID 35082354 (Sci Rep 2022: miR-145-5p modulation linked to parasite load in T. cruzi-infected cardiomyoblasts; proposed parasite-control biomarker)"
+  ],
+  "miR-199b-5p": [
+   "PMID 31434314 (IJMS 2019: miR-199b-5p evaluated as circulating biomarker of cardiac remodeling/fibrosis in CCC patients)"
+  ],
+  "miR-223-5p": [
+   "PMID 36004323 (Front Cell Infect Microbiol 2022: miR-223-5p levels associated with myocardial function/severity in chronic Chagas cardiomyopathy)"
+  ]
+ },
+ "frozen_screen_miss": "all three papers ABSENT from the frozen 121-record screen; \"miR-145\" absent from its full text - concrete coverage limitation, disclosed",
+ "reading": "novel->reported for these 3 per lock; 17/20 remain novel; no candidate added by this screen"
+}

@@ -30,3 +30,14 @@ miR-143-3p, miR-223-3p, miR-486-5p, miR-3960, miR-6734-5p, miR-1285-5p,
 miR-10527-5p, miR-1228-5p, miR-30c-3p -> REPLICATION-class (already named
 as ChD/CCC-severity associated). Full 40-DEM list paywalled; residual-risk
 limitation logged in ADDENDUM_2 B1.
+
+## F6 extension (2026-09-27): expanded-screen reclassifications
+The ADDENDUM_6 expanded screen (Europe PMC full-text + citation expansion
+of the 121-seed + exact-token adjudication) found three candidates that
+ARE named in Chagas-context literature the frozen PubMed screen missed
+(none of the three papers is in the frozen 121; the screen's coverage
+limitation, already logged, is hereby instantiated):
+- miR-145-5p -> REPORTED (PMID 38300899 review; PMID 35082354 parasite-load study)
+- miR-199b-5p -> REPORTED (PMID 31434314, circulating biomarker in CCC)
+- miR-223-5p -> REPORTED (PMID 36004323, severity-associated in CCM)
+Novel class retains 17/20. No candidate is added by this screen.

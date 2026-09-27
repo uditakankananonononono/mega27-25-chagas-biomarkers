@@ -721,3 +721,15 @@ three-database table (validated 18/6, TargetScan 12/12-computable, miRDB
 compartment asymmetry holds under stringent sources and disappears under
 permissive ones - consistent with database bias, and the direct
 motivation for the F10 corrected test. miRWalk = ledger service 43.
+
+2026-09-27T12:29 IST - F6 RUN (ADDENDUM_6): expanded novelty screen.
+Citation expansion: 1,510 citing papers of the 121-seed screened, one
+exact hit (miR-145-5p). Exact-token adjudication of Europe PMC stage-1
+hits: THREE candidates reclassified novel->reported per lock -
+miR-145-5p (PMIDs 38300899, 35082354), miR-199b-5p (PMID 31434314),
+miR-223-5p (PMID 36004323). All three papers absent from the frozen 121
+- the frozen screen's coverage limitation is concrete, disclosed in the
+paper; novel class 17/20. miR-145-5p is CORE6: module/severity claims
+unaffected (novelty is not load-bearing for the module), its "novel"
+label dies. miR-223-5p's severity link was ALREADY reported - its
+novel-severity claim dies specifically. results/f6_expanded_novelty.json.

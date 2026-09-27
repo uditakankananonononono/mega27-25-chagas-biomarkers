@@ -1,0 +1,113 @@
+{
+ "miR-1-3p": [],
+ "miR-122-5p": [
+  {
+   "pmid": "33692368",
+   "chagas_context": false
+  },
+  {
+   "pmid": "35740894",
+   "chagas_context": false
+  },
+  {
+   "pmid": "30546424",
+   "chagas_context": false
+  }
+ ],
+ "miR-125a-5p": [
+  {
+   "pmid": "29951066",
+   "chagas_context": false
+  },
+  {
+   "pmid": "35719399",
+   "chagas_context": false
+  }
+ ],
+ "miR-125b-5p": [
+  {
+   "pmid": "41898241",
+   "chagas_context": false
+  }
+ ],
+ "miR-1285-3p": [],
+ "miR-1294": [],
+ "miR-1301-3p": [],
+ "miR-145-5p": [
+  {
+   "pmid": "39736851",
+   "chagas_context": false
+  },
+  {
+   "pmid": "38300899",
+   "chagas_context": true
+  },
+  {
+   "pmid": "42245289",
+   "chagas_context": false
+  },
+  {
+   "pmid": "35082354",
+   "chagas_context": true
+  }
+ ],
+ "miR-182-5p": [
+  {
+   "pmid": "30207252",
+   "chagas_context": false
+  }
+ ],
+ "miR-192-5p": [
+  {
+   "pmid": "32010618",
+   "chagas_context": false
+  }
+ ],
+ "miR-194-5p": [],
+ "miR-199b-5p": [
+  {
+   "pmid": "31434314",
+   "chagas_context": true
+  }
+ ],
+ "miR-206": [
+  {
+   "pmid": "42512121",
+   "chagas_context": false
+  },
+  {
+   "pmid": "36291684",
+   "chagas_context": false
+  },
+  {
+   "pmid": "34457116",
+   "chagas_context": false
+  },
+  {
+   "pmid": "29105806",
+   "chagas_context": false
+  }
+ ],
+ "miR-20a-3p": [],
+ "miR-223-5p": [
+  {
+   "pmid": "36004323",
+   "chagas_context": true
+  }
+ ],
+ "miR-30c-5p": [],
+ "miR-374b-5p": [
+  {
+   "pmid": "37082606",
+   "chagas_context": false
+  }
+ ],
+ "miR-375-3p": [
+  {
+   "pmid": "39708932",
+   "chagas_context": false
+  }
+ ],
+ "miR-651-5p": [],
+ "miR-769-5p": []
+}

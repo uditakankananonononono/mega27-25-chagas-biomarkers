@@ -17,7 +17,10 @@ transition- or progression-prediction claim is made anywhere in this
 report.
 
 ## 9.2 What is in hand (gates a and c, passed)
-Twenty miRNAs pass the frozen association and novelty gates (section 7):
+Twenty miRNAs pass the frozen association and novelty gates (section 7);
+the F6 expanded screen (9.5) later reclassified three of them
+(miR-145-5p, miR-199b-5p, miR-223-5p) as previously reported, leaving
+17 novel:
 top by FDR miR-182-5p (4.0e-8, decreasing with severity), miR-1-3p,
 miR-206, miR-30c-5p, miR-1294; the set carries a muscle-lineage thread
 (miR-1, miR-206, miR-145-5p, miR-199b-5p) consistent with progressive
@@ -188,7 +191,9 @@ druggability overlay (49/344 Approved-Drug targets - target-program
 framing only) and the module-coherence evidence (STRING 1051 vs 418
 expected edges, p < 1e-16, corroborated by IntAct counts).
 PARTIAL: gate (b) in blood (6/20; three candidates null).
-REPORTED NEGATIVES: the E3 popularity-bias controls (the cardiac gate-(b)
+REPORTED NEGATIVES: the F6 expanded-screen reclassification of
+miR-145-5p, miR-199b-5p and miR-223-5p from novel to reported (frozen
+screen coverage miss, disclosed), the E3 popularity-bias controls (the cardiac gate-(b)
 enrichment is matched-null-consistent: random equally-studied miRNAs pass
 at a median of 17/20; family-target nulls reach the observed p for the
 computable members), the frozen H1 binary benchmark (Run 1), the
@@ -614,6 +619,25 @@ is informative and is stated: E4's blood-DE-INTERSECTED union (220 genes)
 does hit cardiac-remodeling terms - the disease relevance lives in the
 intersection with disease-state expression, not in the target list per
 se (results/e13_disease_specific_enrichment.csv).
+
+F6 - expanded novelty screen (ADDENDUM_6). Europe PMC full-text
+search, citation expansion of the 121-seed (1,510 citing papers
+screened), and exact-token adjudication reclassified three candidates
+from novel to reported, disclosed per the lock: miR-145-5p (named in a
+2024 Chagas-cardiomyopathy biomarker review, PMID 38300899, and in a
+2022 T. cruzi parasite-load study, PMID 35082354), miR-199b-5p
+(evaluated as a circulating biomarker in CCC patients, PMID 31434314)
+and miR-223-5p (expression associated with myocardial function and
+severity in chronic Chagas cardiomyopathy, PMID 36004323). None of the
+three papers is in the frozen 121-record screen - the screen's logged
+coverage limitation is now concrete, and the novelty class stands at
+17/20. For miR-223-5p the prior report is specifically a severity
+association, so its novel-severity claim dies outright; for miR-145-5p
+(a core member) the module and severity claims are unaffected because
+novelty is not load-bearing for them, but its novelty label dies
+(results/f6_expanded_novelty.json). The battery also notes the symmetry:
+the same machinery that kills overclaims here is what found the F10
+survivors.
 
 F7 - candidate prioritization ranking (ADDENDUM_6, heuristic only, no
 causal wording). The 20 candidates were ranked on four sub-scores drawn

@@ -12,9 +12,10 @@ control-to-severe gradient at out-of-fold concordance 0.787, beating both
 a clinical age/sex baseline (+0.167, bootstrap CI [+0.087, +0.242]) and the
 best single miRNA (+0.074, CI [+0.009, +0.136]). Second, a frozen
 novelty-screened association analysis isolates 20 severity-linked miRNAs
-absent from the screened Chagas biomarker literature, with a
-muscle-lineage thread (miR-1, miR-206, miR-145, miR-199b) consistent with
-progressive cardiomyocyte injury. The registered orthogonal replication
+absent from the screened Chagas biomarker literature - 17 of 20 after
+the expanded screen (F6) reclassified three as previously reported -
+with a muscle-lineage thread (miR-1, miR-206, miR-145, miR-199b)
+consistent with progressive cardiomyocyte injury. The registered orthogonal replication
 has now run: direction-predicted enrichment of miRTarBase-validated
 target programs passes for 18/20 candidates in patient-derived
 cardiomyocytes but only 6/20 in peripheral blood - an honest
