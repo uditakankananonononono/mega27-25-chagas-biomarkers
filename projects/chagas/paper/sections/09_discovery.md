@@ -38,9 +38,13 @@ predicted-direction DE targets (p = 1.0).
 
 Strict both-tissue reading: 6/20 candidates carry direction-predicted
 validated-target support in BOTH orthogonal cohorts. Working
-interpretation: the regulatory module is strong in the cardiac-cellular
-compartment and partially visible in peripheral blood - compartment
-specificity, not uniform replication. Reported as-is.
+interpretation (corrected 2026-09-27 after test D1): the regulatory
+module is strong in the cardiac-cellular cohort and partially visible
+in peripheral blood. The compartment-specificity READING of that
+asymmetry was tested (D1, ADDENDUM_4) and is NOT supported by
+abundance predictors (blood abundance null, cardiac specificity
+negative); it survives only as a hypothesis pending the cross-tissue
+concordance test (E2, ADDENDUM_5). Reported as-is.
 
 Module score (formula 10, descriptive in-sample on GSE299582; member
 selection and weights both reuse this cohort, so no generalization claim):
@@ -96,6 +100,21 @@ cohort sits next to the target tissue and shows absolute fraction
 shifts roughly 4-6x the blood cohort's, while blood dilutes the same
 programs into a systemic compartment - stated as a descriptive
 reading, not a tested claim.
+
+Correction (2026-09-27, test D1 of prereg ADDENDUM_4, locked before the
+run): the abundance version of that tissue reading has now been tested
+and is NOT supported. Across the 4,599 mapped validated-target genes, a
+gene's blood-cell abundance (HPA v23, max immune-cell nTPM) does not
+predict its direction-consistent replication in the blood cohort
+(logistic coef -0.087, Wald p = 0.072; locked criterion was positive
+with p < 0.05), and cardiac-specific expression predicts LESS blood
+replication (coef -0.118, p = 0.0036; descriptive AUC 0.557). The
+18/20 vs 6/20 asymmetry itself stands as fact; the earlier
+abundance/dilution interpretation of it is withdrawn as a reading and
+downgraded to hypothesis status. The judge's alternative - that the
+blood cohort's seropositive-vs-seronegative phenotype simply does not
+match the severity question - remains open and is addressed by the
+E2/E4 designs in ADDENDUM_5.
 
 The failures are as structured as the passes. Only two candidates
 fail in BOTH cohorts: miR-206 (blood FDR 0.523, hiPSC FDR 0.283) and
