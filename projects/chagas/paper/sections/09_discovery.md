@@ -750,3 +750,54 @@ are visible in place.
 | F8 | 6 | repro | clean-clone rerun, fraction byte-identical reported | results/f8_* |
 | F10 | 7 | corrected test | 5 candidate-cohort validations survive bias correction | results/f10_* |
 
+## 9.11 The four-source comparison, and the E1 distribution behind the median
+The gate-(b) machinery run under four target sources, same cohorts, same
+null, same BH family (committed artifacts throughout):
+
+| target source | kind | cardiac pass /20 | blood pass /20 | both-cohort |
+|---|---|---|---|---|
+| miRTarBase v8.0 | validated | 1 | 0 | 6 (the core) |
+| TargetScan 8.0 | predicted (family) | 19 computable, all pass | n/a (family mapping) | - |
+| miRDB v6.0 (score>=80) | predicted | 19 | 6 | 6 (4 core) |
+| miRWalk 3.0 (unthresholded) | predicted | 20 | 17 | 17 (all 6 core + 11) |
+
+The monotone reading: as the source moves from validated to permissive
+predicted, the blood arm floods (6 -> 17) while the cardiac arm saturates
+(18 -> 20). Specificity, not sensitivity, is what a stringent source buys;
+it is why the F10 corrected test, not any raw count, is the validation
+claim.
+
+The E1 full-pipeline bootstrap behind the 0.615 median (B = 1000 valid
+resamples, results/e1_bootstrap_detail.csv): OOB c-index quartiles
+2.5%/25%/50%/75%/97.5% = 0.337 / 0.541 / 0.615 / 0.665 / 0.738; module member-count
+distribution {0: 1, 1: 4, 2: 25, 3: 51, 4: 87, 5: 114, 6: 109, 7: 112, 8: 108, 9: 93, 10: 64, 11: 49, 12: 50, 13: 20, 14: 25, 15: 20, 16: 12, 17: 17, 18: 5, 19: 13, 20: 4, 21: 2, 22: 5, 23: 3, 24: 1, 26: 1, 27: 1, 28: 1, 30: 1, 33: 1, 37: 1}; median screen pass count 28. The width of that
+distribution - not the median - is the honest statement of discovery
+fragility (9.5).
+
+
+## 9.12 The corrected test, worked (F10 numbers in full)
+The five survivals, with the matched-popularity null each one beat
+(results/f10_bias_adjusted_enrichment.json): excess = observed
+direction-consistent fraction above expectation; survival requires
+excess beyond the matched null's 95th percentile AND the raw gate-(b)
+FDR pass.
+
+| cohort | miRNA | k targets | excess | null q95 | adjusted p |
+|---|---|---|---|---|---|
+| cardiac | miR-1-3p | 954 | 0.225 | 0.203 | 0.000 |
+| cardiac | miR-30c-5p | 526 | 0.193 | 0.188 | 0.036 |
+| cardiac | miR-769-5p | 228 | 0.125 | 0.123 | 0.028 |
+| cardiac | miR-194-5p | 94 | 0.219 | 0.215 | 0.048 |
+| blood | miR-192-5p | 968 | 0.070 | 0.049 | 0.000 |
+
+The contrast that teaches the method: miR-182-5p posts an exact
+permutation p of 3.4e-101 in the cardiac cohort - an astronomically
+"significant" raw result - and DIES under the correction (excess 0.081
+vs matched-null median 0.090, adjusted p 0.516), because equally
+popular miRNAs do the same. miR-122-5p, a core member, fails the same
+way in the cardiac arm (exact p 3.0e-40, excess 0.165 vs null median
+0.175, adjusted p 0.688) while miR-192-5p survives in blood. The raw
+18/20 cardiac count is full of such cases - 122 of 145 candidate-cohort
+passes survive nowhere - and the five rows above are what remains when
+popularity is priced in. This is the paper's validation claim, stated
+at its true size.
