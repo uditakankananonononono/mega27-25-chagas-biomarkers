@@ -159,3 +159,37 @@ than any single candidate. 17 of 21 passers have the control median
 below every disease-grade median; the exceptions are named by the
 table itself. Descriptive only: no test was added, no threshold
 moved.
+
+## 7.9 The screen's accounting (machine-verified funnel)
+Every stage of the gate-(a) screen regenerates from
+scripts/h2_severity_association.py against the frozen crosswalk and
+matrix; the numbers below were recomputed from
+results/h2_severity_association_all.csv at writing time.
+
+| Stage | n |
+|---|---|
+| Matrix rows tested (no expression filter - every row enters KW) | 2,632 |
+| Rows with p = 1.0 by construction (all-tied/degenerate rows; KW exception mapped to p=1.0 in the locked script) | 1,332 |
+| Effectively testable rows | 1,300 |
+| FDR <= 0.05 alone | 102 |
+| |d(severe-mild)| >= 0.5 alone | 104 |
+| Both gates (the 7.6 table) | 21 |
+| Frozen named-marker exclusion (11 markers, verbatim in the script) | -1 (miR-223-3p) |
+| Candidates carried forward | 20 |
+
+Group sizes behind every test: control 42, mild 37, moderate 37,
+severe 30 (n = 146 of the 192; the 46 indeterminate-class samples are
+excluded from the severity screen by design, not by dropout - the
+crosswalk labels them out of the severity vocabulary).
+
+Three honest consequences, stated rather than smoothed over. First,
+half the matrix (1,332 rows) is degenerate at the recorded depth -
+all-tied rows, mostly structural zeros; the screen tests them and
+spends multiple-testing budget on them (BH over the full 2,632), so
+the reported FDR is conservative against the effectively testable
+1,300. Second, the FDR-only (102) and effect-only (104) stages
+overlap in exactly the 21 - the double gate is doing real work in
+both directions, not rubber-stamping one side. Third, the single
+excluded row is miR-223-3p, the strongest association in the whole
+screen (p = 6.9e-11) - the novelty screen removes the best-looking
+result, and that is the point of it.

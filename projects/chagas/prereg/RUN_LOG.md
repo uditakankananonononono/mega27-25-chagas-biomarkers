@@ -292,3 +292,14 @@ the lane can stand behind: the source study of GSE299582 named
 miR-223-3p among its headline upregulated markers, and the frozen
 novelty screen's single REPLICATION row is exactly miR-223-3p -
 screen agrees with the depositors' list. Working build: 34 A4 pp.
+
+## SECTION 7.9 SCREEN ACCOUNTING - 2026-09-27T07:39 IST (revival agent)
+Added 7.9: the gate-(a) funnel recomputed from
+h2_severity_association_all.csv - 2,632 tested, 1,332 degenerate
+all-tied rows at p=1.0 by construction (half the matrix;
+zero-inflation at matrix scale, BH conservative over the full
+2,632), 102 FDR-only, 104 effect-only, 21 both, -1 replication
+(miR-223-3p, the screen's strongest p=6.9e-11 - the novelty screen
+removes the best-looking result), 20 candidates. Group sizes
+42/37/37/30=146; 46 indeterminate samples excluded by the severity
+design. Working build: 35 A4 pp.
