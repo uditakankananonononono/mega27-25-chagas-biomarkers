@@ -608,3 +608,19 @@ NET: 5 candidate x cohort validations survive the bias correction,
 covering 4 of 6 CORE6 members. The corrected test - not the raw count -
 is the paper's target-validation claim now.
 results/f10_bias_adjusted_enrichment.json.
+
+2026-09-27T11:19 IST - E11+E6+E7 RUNS (ADDENDUM_5).
+E11 confounder adjustment: age/sex-augmented H1' OOF 0.789 vs unadjusted
+0.787 (delta +0.002, no age missingness) - severity signal NOT confounded
+by age/sex; BMI/comorbidity absent from series metadata (documented).
+E6 recalibration (CV-internal, disclosed post-hoc): does NOT fix
+calibration - pre-slopes 0.735/0.198/0.150 (p_ge1/2/3), post-isotonic
+0.295/0.146/0.027, post-Platt 0.200/0.033/0.097; Brier improves only for
+p_ge2 (0.279->0.232) and p_ge3 (0.186->0.166) under isotonic. Honest
+verdict: probabilities remain NOT decision-grade after recalibration -
+the language stays, strengthened by direct test.
+E7 decision curves: full model beats age/sex-only and treat-all at 68% of
+thresholds (0.01-0.5) for severe-vs-rest, only 30% for moderate-plus.
+Descriptive; no clinical-use claim.
+results/e11_confounder_adjustment.json, e6_recalibration.json,
+e7_decision_curve.json.

@@ -1,0 +1,44 @@
+{
+  "spec": "ADDENDUM_5 E6; recalibration disclosed post-hoc; CV-internal",
+  "thresholds": {
+    "p_ge1": {
+      "slope_pre": 0.7354200550724844,
+      "brier_pre": 0.04839372536059434,
+      "isotonic": {
+        "slope_post": 0.2948142858408326,
+        "brier_post": 0.056963166988761166
+      },
+      "platt": {
+        "slope_post": 0.1995535186825657,
+        "brier_post": 0.0547945205479452
+      },
+      "base_rate": 0.7123287671232876
+    },
+    "p_ge2": {
+      "slope_pre": 0.19814799587658688,
+      "brier_pre": 0.27920337993210836,
+      "isotonic": {
+        "slope_post": 0.14623018094060036,
+        "brier_post": 0.23176977293172973
+      },
+      "platt": {
+        "slope_post": 0.03336852228535522,
+        "brier_post": 0.3835616438356164
+      },
+      "base_rate": 0.4589041095890411
+    },
+    "p_ge3": {
+      "slope_pre": 0.14963195022728273,
+      "brier_pre": 0.1863897859586116,
+      "isotonic": {
+        "slope_post": 0.02697661768606692,
+        "brier_post": 0.16573102069781293
+      },
+      "platt": {
+        "slope_post": 0.09735731955507909,
+        "brier_post": 0.2054794520547945
+      },
+      "base_rate": 0.2054794520547945
+    }
+  }
+}

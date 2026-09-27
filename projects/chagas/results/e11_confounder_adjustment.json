@@ -1,0 +1,8 @@
+{
+  "spec": "ADDENDUM_5 E11",
+  "unadjusted_oof": 0.7871056931004148,
+  "age_sex_adjusted_oof": 0.7892421766997613,
+  "delta": 0.0021364835993464837,
+  "age_missing_imputed": 0,
+  "not_adjustable": "BMI/comorbidity absent from GSE299582 series metadata (documented)"
+}

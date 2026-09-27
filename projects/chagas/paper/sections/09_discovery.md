@@ -311,7 +311,7 @@ signaling pathways. The lane claims the convergence as consistent
 context, not as mechanistic evidence; the generic-cancer-term
 background is named in the same breath.
 
-## 9.5 Preregistered robustness battery: D1-D3 (ADDENDUM_4), E1-E2 (ADDENDUM_5) E3/E5 (ADDENDUM_5) and F2/F3/F5/F10 (ADDENDUM_6/7), all locked 2026-09-27 before any run
+## 9.5 Preregistered robustness battery: D1-D3 (ADDENDUM_4), E1-E2 (ADDENDUM_5) E3/E5/E6/E7/E11 (ADDENDUM_5) and F2/F3/F5/F10 (ADDENDUM_6/7), all locked 2026-09-27 before any run
 
 A supplementary review consult (round 02, Gemini; logged supplementary under
 the ChatGPT-only round rule) challenged three load-bearing points. Each was
@@ -505,3 +505,29 @@ members. This corrected test - not the raw 18/20 count - is now the
 paper's target-validation claim: the framework detects its own bias and
 reports what remains after removing it
 (results/f10_bias_adjusted_enrichment.json).
+
+E11 - confounder adjustment (ADDENDUM_5). Augmenting the locked H1'
+pipeline with age and sex on identical folds changes the pooled OOF
+c-index from 0.787 to 0.789 (delta +0.002; no age missingness) - the
+severity signal is not an age/sex confound. BMI and comorbidity are not
+present in the series metadata and are documented as not adjustable
+(results/e11_confounder_adjustment.json).
+
+E6 - recalibration, tested and found wanting (ADDENDUM_5, disclosed
+post-hoc). Isotonic and Platt recalibration of the locked OOF
+probabilities, kept honest by cross-validation inside the OOF set:
+calibration slopes stay far from 1 (pre 0.735/0.198/0.150 for the three
+ordinal thresholds; post-isotonic 0.295/0.146/0.027; post-Platt
+0.200/0.033/0.097). Brier scores improve only for the two upper
+thresholds under isotonic (0.279 to 0.232; 0.186 to 0.166). The honest
+reading: ranking is informative, probabilities are not decision-grade,
+and post-hoc recalibration does not change that - the paper's
+not-decision-grade language now rests on a direct test, not caution
+(results/e6_recalibration.json).
+
+E7 - decision-curve analysis (ADDENDUM_5, descriptive). Net benefit of
+the locked OOF model against age/sex-only, treat-all and treat-none
+across threshold probabilities 0.01-0.5: for the severe-vs-rest contrast
+the full model wins at 68% of thresholds; for moderate-plus only 30%.
+Useful as ranking support at high-severity thresholds, not as utility
+evidence; no clinical-use claim (results/e7_decision_curve.json).
