@@ -146,9 +146,12 @@ PARTIAL: gate (b) in blood (6/20; three candidates null).
 REPORTED NEGATIVES: the frozen H1 binary benchmark (Run 1), the
 18-member superset as a signed module (c-index 0.509), miR-206 and
 miR-374b-5p in the cardiac cohort, three blood-null candidates.
-PENDING: judge rounds 02-10 (round 02 staged, token-gated), full paper
-assembly toward the 50-page floor, and the OPEN world-benchmark audit
-flag - no external champion comparison exists, and none is claimed.
+JUDGE REQUIREMENT MET (settled rule 2026-09-27: one user-provided ChatGPT
+round per project; two provided, rounds 02-03, verdicts archived verbatim
+in judge_rounds/). PENDING: the remaining ADDENDUM_5/ADDENDUM_6 battery
+runs, full paper assembly toward the 50-page floor, and the OPEN
+world-benchmark audit flag - no external champion comparison exists, and
+none is claimed.
 The module claim now rests on the 6-candidate both-tissue core; the
 cardiac-only 12 are secondary support. No single-marker claim.
 
@@ -299,7 +302,7 @@ signaling pathways. The lane claims the convergence as consistent
 context, not as mechanistic evidence; the generic-cancer-term
 background is named in the same breath.
 
-## 9.5 Preregistered robustness battery: D1-D3 (ADDENDUM_4, locked 2026-09-27 before any run)
+## 9.5 Preregistered robustness battery: D1-D3 (ADDENDUM_4) and E1-E2 (ADDENDUM_5), all locked 2026-09-27 before any run
 
 A supplementary review consult (round 02, Gemini; logged supplementary under
 the ChatGPT-only round rule) challenged three load-bearing points. Each was
@@ -330,7 +333,7 @@ p = 0.0036; n = 4,599 genes; descriptive AUC 0.557). The
 abundance/dilution reading of the 18/20-versus-6/20 asymmetry is
 withdrawn; the asymmetry itself stands, with the phenotype-mismatch
 explanation (seropositive infection state versus graded cardiomyopathy)
-open pending the E2 cross-tissue concordance test.
+addressed by the E2 test below.
 
 D3 - TargetScan 8.0 sensitivity (non-gate). Re-running the exact gate-(b)
 pipeline with predicted targets (family-mapped, human): the cardiac arm
@@ -340,3 +343,37 @@ reproduces directionally (7/12), and 5 of the CORE6 keep both-tissue
 support (miR-122-5p loses blood; miR-125a-5p and miR-125b-5p newly pass).
 The enrichment pattern is therefore not a miRTarBase-v8.0 annotation
 artifact; gate-(b) verdicts continue to stand on validated targets only.
+
+E1 - full-pipeline bootstrap discovery (ADDENDUM_5 centerpiece, B = 1000,
+999 valid). Re-running the entire discovery pipeline on patient-resampled
+bootstraps: three CORE6 members are stably re-discovered (miR-192-5p 68.2%,
+miR-1-3p 53.9%, miR-194-5p 51.5% of valid bootstraps), miR-122-5p is
+borderline (46.5%), and miR-30c-5p (1.0%) and miR-145-5p (0%) are not
+stably discoverable. Out-of-bootstrap module c-index: median 0.615,
+interval [0.337, 0.738] - the interval includes chance. The locked
+strengthen condition FAILS: the module's honest generalization ladder is
+in-sample 0.756, D2 OOF 0.704, E1 out-of-bootstrap 0.615. The stable
+discovery core is miR-192-5p / miR-1-3p / miR-194-5p with miR-122-5p
+borderline; miR-30c-5p and miR-145-5p remain in the reported CORE6 (they
+pass the frozen gates) but their discovery instability is disclosed
+wherever the module is claimed (results/e1_nested_bootstrap_discovery.json,
+e1_bootstrap_detail.csv).
+
+E2 - cross-compartment conservation vs matched nulls (ADDENDUM_5). For
+each CORE6 member, expected-direction agreement was scored across the four
+compartments (serum GSE299582, hiPSC-cardiomyocyte GSE203525, blood
+GSE244827, heart tissue GSE191081) and compared against 10,000
+publication-count-matched random miRNA sets (matched pools from the pinned
+Europe PMC publication counts, sources/services/europepmc/
+mirna_pubcounts.json). CORE6 mean direction score 0.833 versus matched-null
+median 0.708 (null q95 0.792): the CORE6 sits at the 95.72th percentile of
+the matched null, clearing the locked 95th-percentile criterion - the
+core's cross-compartment direction conservation is unusual for equally
+studied miRNAs. Per member: miR-1-3p and miR-192-5p agree in all four
+compartments; miR-122-5p, miR-30c-5p, miR-145-5p and miR-194-5p agree in
+three of four, each missing only the heart-tissue leg - consistent with
+the D1 correction that the heart matrix does not support the
+compartment-specificity reading. The 14 non-core candidates average 0.43.
+Caveats carried: the miR-145-5p matched pool is small (n = 4), and the
+heart-leg failures mean conservation is a serum/cellular/blood phenomenon,
+not a four-compartment one (results/e2_cross_tissue_concordance.json).

@@ -1,0 +1,79 @@
+{
+  "core6_direction_scores": {
+    "miR-1-3p": 1.0,
+    "miR-122-5p": 0.75,
+    "miR-192-5p": 1.0,
+    "miR-30c-5p": 0.75,
+    "miR-145-5p": 0.75,
+    "miR-194-5p": 0.75
+  },
+  "core6_legs": {
+    "miR-1-3p": {
+      "serum_GSE299582": true,
+      "hipsc_GSE203525": true,
+      "blood_GSE244827": true,
+      "heart_GSE191081": true
+    },
+    "miR-122-5p": {
+      "serum_GSE299582": true,
+      "hipsc_GSE203525": true,
+      "blood_GSE244827": true,
+      "heart_GSE191081": false
+    },
+    "miR-192-5p": {
+      "serum_GSE299582": true,
+      "hipsc_GSE203525": true,
+      "blood_GSE244827": true,
+      "heart_GSE191081": true
+    },
+    "miR-30c-5p": {
+      "serum_GSE299582": true,
+      "hipsc_GSE203525": true,
+      "blood_GSE244827": true,
+      "heart_GSE191081": false
+    },
+    "miR-145-5p": {
+      "serum_GSE299582": true,
+      "hipsc_GSE203525": true,
+      "blood_GSE244827": true,
+      "heart_GSE191081": false
+    },
+    "miR-194-5p": {
+      "serum_GSE299582": true,
+      "hipsc_GSE203525": true,
+      "blood_GSE244827": true,
+      "heart_GSE191081": false
+    }
+  },
+  "core6_mean_ds": 0.8333333333333334,
+  "null_n": 10000,
+  "null_median": 0.7083333333333334,
+  "null_q95": 0.7916666666666666,
+  "core6_percentile_vs_matched_null": 95.72,
+  "pool_sizes": {
+    "miR-1-3p": 22,
+    "miR-122-5p": 14,
+    "miR-192-5p": 10,
+    "miR-30c-5p": 19,
+    "miR-145-5p": 4,
+    "miR-194-5p": 22
+  },
+  "candidates_ds": {
+    "miR-182-5p": 0.5,
+    "miR-206": 0.25,
+    "miR-1294": 0.25,
+    "miR-125b-5p": 0.5,
+    "miR-125a-5p": 0.75,
+    "miR-374b-5p": 0.25,
+    "miR-199b-5p": 0.5,
+    "miR-20a-3p": 0.5,
+    "miR-769-5p": 0.5,
+    "miR-1285-3p": 0.25,
+    "miR-223-5p": 0.5,
+    "miR-651-5p": 0.25,
+    "miR-375-3p": 0.5,
+    "miR-1301-3p": 0.5
+  },
+  "spec": "ADDENDUM_5 E2; unusual only if >=95th percentile of matched null",
+  "runtime_s": 738.9
+}

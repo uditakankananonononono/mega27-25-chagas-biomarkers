@@ -517,3 +517,15 @@ sha256 98e954d1b87e0ba23be908b5ad26a41e870dc5ccdb217c4242fd087cd45a779c.
 Retrieval pinned free-tier Europe PMC REST; substitution for NCBI esearch
 (backend down 500/SOLR ~09:39) disclosed per lock intent. E2 relaunched
 10:03 after cohort-unpack bugfix (495925d).
+
+2026-09-27T10:18 IST - E2 RUN (ADDENDUM_5): cross-compartment conservation
+vs matched nulls. CORE6 mean direction score 0.833 across 4 cohorts
+(serum GSE299582, hiPSC GSE203525, blood GSE244827, heart GSE191081);
+10,000 publication-count-matched null sets (pinned Europe PMC counts):
+null median 0.708, q95 0.792; CORE6 at 95.72th percentile - CLEARS the
+locked >=95 criterion. miR-1-3p/miR-192-5p 4/4; other four 3/4, each
+missing only the heart leg (consistent with D1 correction). Caveats:
+miR-145-5p pool n=4; conservation is serum/cellular/blood, not
+four-compartment. results/e2_cross_tissue_concordance.json, runtime 739s.
+E1 PAPER FIX: 1da8d2d's message overclaimed a "9.6" section - only the
+abstract line landed. E1/E2 battery paragraphs now added to 9.5.
