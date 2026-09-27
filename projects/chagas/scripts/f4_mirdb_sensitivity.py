@@ -59,8 +59,8 @@ def enrichment(genes, fc, p, targets, direction, label):
     pval = (1 + (nulls >= obs).sum())/10001
     return {'label':label, 'n_targets_mapped':k, 'frac_DE':obs, 'null_mean':nulls.mean(), 'p':pval}
 
-r2s = json.load(open('/tmp/refseq2symbol.json'))
-mirdb = json.load(open('/tmp/mirdb_candidates_ge80.json'))
+r2s = json.load(open('sources/services/mirdb/refseq2symbol_mygene.json'))
+mirdb = json.load(open('sources/services/mirdb/mirdb_candidates_ge80.json'))
 pred = {m[4:]: sorted(set(r2s[t] for t, s in v if t in r2s)) for m, v in mirdb.items()}
 
 cand = pd.read_csv('results/h2_gate_a_passing.csv')
