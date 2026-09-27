@@ -64,17 +64,20 @@ module/druggability execution (2026-09-26/27, RUN_LOG). Every amendment
 predates the outcomes it governs; the chain is re-readable in git.
 
 ## Appendix D: judge rounds
-The owner's standing rule counts ChatGPT-fired rounds only ("min 10
-ChatGPT judge rounds"); the canonical tally is X-JUDGE-ROUNDS.md.
-Counted: 1/10 - round 01 verbatim: judge_rounds/01_prompt.txt,
-01_response.txt, 01_assessment.txt, 01_novelty_change.txt (ChatGPT
-thread 6ab7e9ef, model-tagged). Supplementary (not counted): round 02,
-a Gemini Flash fresh consult fired 2026-09-27 (verbatim
-02_response_gemini.txt, thread-tagged; assessment
-02_assessment_gemini.txt with erratum). Counted ChatGPT rounds 02-10
-are staged (02_prompt.txt thread-continuation; a DeepSeek variant
-stays credential-blocked) and fire as the provider free-tier cap
-allows; records will be committed verbatim with model tags.
+The owner's settled rule (2026-09-27, verbatim: "EACH PROJECTS NEED ONE
+FROM ME TO PASS") counts one USER-PROVIDED ChatGPT judge round per
+project; only verdicts she provides count. The canonical tally is
+X-JUDGE-ROUNDS.md. Counted: 2 of 1 required - REQUIREMENT MET: round 02
+(verdict couriered 2026-09-27T09:17, verbatim 02_response_chatgpt.txt +
+02_assessment_chatgpt.txt; adoptions locked in ADDENDUM_5) and round 03
+(manuscript self-review couriered 2026-09-27T10:00, verbatim
+03_response_chatgpt.txt + 03_assessment_chatgpt.txt; new analyses locked
+in ADDENDUM_6). Historical/supplementary (never counted): round 01
+(agent-initiated ChatGPT thread 6ab7e9ef, verbatim 01_*) and a Gemini
+Flash consult (02_response_gemini.txt + assessment with erratum).
+Prior requirement wordings ("min 10 ChatGPT judge rounds", then
+10:00:07's one-provided) are superseded and recorded in
+X-JUDGE-ROUNDS.md's correction history.
 
 ## Appendix E: the 750->716 count correction
 The second acquisition pass counted 750 records; the uniqueness

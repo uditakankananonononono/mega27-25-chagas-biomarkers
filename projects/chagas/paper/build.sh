@@ -10,6 +10,5 @@ for s in $ORDER; do cat "sections/$s.md"; printf '\n\\clearpage\n\n'; done > /tm
 pandoc /tmp/chagas_paper_all.md -o manuscript_working.pdf --pdf-engine=pdflatex \
   --template=template_min.tex --toc \
   -M title="A provenance-first public-data compendium and preregistered comparator analysis for chronic Chagas disease biomarkers" \
-  -M author="MEGA-PROGRAM-27 chagas project - working manuscript" \
   -M date="$(date +%Y-%m-%d) - not yet complete"
 pdfinfo manuscript_working.pdf | grep -E 'Pages|Page size'
